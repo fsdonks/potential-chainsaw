@@ -8,12 +8,13 @@
 #+LATEX_HEADER: \hyphenation{MAR-A-THON}
 
 * Position Paper on Modernizing the Center For Army Analysis Policy Towards Open Source Software and Releasability
-
+- add prose 
 * Paradigm Shift in Software Development: Towards Open Source 
+- set the stage
 ** DOD Adoption of Open Source Software 
-   
+- walk the dog
 ** DOD-CIO/G6 Clarification Guidance Regarding Open Source Software (OSS), 16 October 2009
-
+- overview of memorandum
 ** DOD-CIO/G6 Open Source Software Frequently Asked Questions (FAQ)
 Regarding the use of OSS on our systems, the DOD-CIO/G6 memorandum (and FAQ) provides the 
 nearest DOD-level guidance.  Note: the guidance mentions nothing of release-ability; then 
@@ -35,7 +36,9 @@ provisions of a specific license.
 - Advertisement
 
 * POTUS Orders (2013-Present)
+- Add history
 ** Executive Order 13642, "Making Open and Machine Readable the New Default for Government Information"
+- Mention data.gov? 
 ** OMB M-16-21, "Federal Source Code Policy Memorandum"
 As a consequence of EO 13642, the OMB established Federal Source Code Poilicy via memorandum 
 M-16-21.  The Federal Source Code Policy prescribes mandatory requirements for federal agency 
