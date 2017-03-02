@@ -189,10 +189,12 @@ codified by Executive Order 13642 and OMB M-16-21.
 
 ** "Protect Army Interests"
 "we've always done it this way" or "we run the model, they don't. they ask us for the analysis."  
+- flesh this out or drop the example.
+
 ** "We'd expose ourselves to vulnerability."
-- DOD CIO/G6 
-- FSP Quote
-- Hack the Pentagon
+- DOD CIO/G6 quote
+- FSP quote 
+- Hack the Pentagon results
 
 ** "We have no obligation to release if no-one asks."
 Federal Source Code policy mandates that our non-exempt software, like MARATHON 4, is - at 
@@ -206,7 +208,6 @@ until 2019.
 If a contractor grabs it, and uses it to make something cool or even better, then under
 the EO and OMB guidance we actually should get their modifications back! I'd be cool with other
 agencies devoting resources to improve MARATHON.
-
 
 * Desired End State
 Ideally, CAA will join the ranks of other Federal agencies and embrace the general modernization
