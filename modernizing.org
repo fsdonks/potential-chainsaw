@@ -1,5 +1,5 @@
 #+TITLE:  Ensuring Center For Army Analysis Compliance With Federal Source Code Policy
-#+AUTHOR: Tom Spoon
+#+AUTHOR: Tom Spoon and Rick Hanson III
 #+DATE: 17 Aug 2016
 #+VERSION: 1.2
 #+STARTUP: showall
@@ -155,7 +155,7 @@ software community.
   Per the policy, agencies will coordinate and publicize their software with the OMB-managed 
   website https://code.gov .  This website serves as an accessible repository of all known 
   government source code, to facilitate discovery and ease reuse.
-
+  
 ** Participation in the Open Source Community (Excerpt from FSCP)
 When agencies release custom-developed source code as OSS to the public, they should develop and release 
 the code in a manner that 
@@ -218,28 +218,8 @@ the distribution processes defined by the AR, specifically for interagency - eve
 Army distribution - seems to directly contradict both the Executive Order, and the OMB 
 implementation memorandum.  Further, none of the regulations referenced in AR 5-11 address
 the possibility or even acknowledgement of open-source software, or the executive directives 
-specified by the EO and the OMB memorandum.  Finally, the AR 5-11 terms of reference and 
-glossary are poorly written to the point of being laughable.  
-
-** Poorly-Defined Definitions
-Case in point, the Authoritative  Army M&S definition of a simulation is 
-"a method for implementing a model over time." 
-
-Another gem is "Configuration management," "the application of technical and administrative direction 
-and surveillance to identify and document the functional and physical characteristics of a model 
-or simulation, control changes, and record and report change processing and implementation status." 
-
-** Ignorance of POTUS Directives and Subsequent OMB M-16-21 Directives
-I think the prevailing government-wide directives are simply not accounted for in the 
-2014 AR 5-11 guidance.  I further argue that we (CAA, in a broader sense the Army and DOD) 
-are not in compliance with either the Executive Order or with OMB M-16-21.  In general, AR 5-11 
-should be refreshed and/or rewritten to account for these new developments, and to clean up 
-poorly defined, possibly legacy terminology.
-
-On the flip side, since AR 5-11 does not address Open Source Software or reference the Federal Software
-Policy, following the mandates and practices established by the EO and OMB guidance are actually completely
-"fine," allowing one to effectively ignore the antiquated nature of the reg.  
-Simply conform to the POTUS guidance.
+specified by the EO and the OMB memorandum. In general, AR 5-11 should be refreshed and/or 
+rewritten to account for the FSCP, and to clean up antiquated terminology.
 
 * Forcing Functions
 There is, at a minimum, a federal mandate for sharing source code across the government, and 
