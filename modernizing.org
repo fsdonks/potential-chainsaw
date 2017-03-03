@@ -222,7 +222,7 @@ for "Participation in the Open Source Community." Github repositories are then r
 https://code.gov to satisfy the discoverability and coordination requirements in the FSCP.
 
 * Toward Open Sourcing MARATHON 4
-MARATHON 4 is Written in an Open Source Language (Clojure), managed with Open Source 
+MARATHON 4 is written in an Open Source Language (Clojure), managed with Open Source 
 tools (git), and has emphasised unclassified development from inception.  MARATHON 4 
 is intentionally written and maintained in such a way as to facilitate sharing and 
 discovery, particularly to enable flexible development among remote work locations 
