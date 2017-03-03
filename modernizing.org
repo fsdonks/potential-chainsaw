@@ -32,7 +32,8 @@ legacy policy that delegates to the preference of CAA leadership rather than man
 Unfortunately CAA's position, and the policy in AR 5-11, is not compliant with Federal Source Code Policy as directed by 
 Executive Order and subsequent Office of Management and Budget (OMB) policy.  Initiated by President Obama, and continued 
 by President Trump, the default position of the federal government towards source code is openness.  
-This position emerged under Executive Order No. 13642 (EO13642) in 2013, when the Obama administration mandated sharing 
+This position emerged in 2013 under Executive Order No. 13642, "Making Open and Machine Readable the New Default
+ for Government Information" (EO13642). Via EO13642, the Obama administration mandated sharing 
 government data - including source code - between federal agencies, and embraced open-sourcing federal software to spur 
 cost-reduction, reduce redundancy, and place tax-payer funded works in the public domain.
 
@@ -123,47 +124,89 @@ According to DOD  (DOD/CIO-G6 Clarifying Guidance on Open Source Sofware, p. 4-5
     where the ability to “test drive” the software with minimal costs and administrative 
     delays can be important." 
 
-Open Source Software has had such undeniable success that even When historically closed-source,
-proprietary companies like Microsoft begin making significant investments in opening their 
+Open Source Software has had such undeniable success that even historically closed-source,
+proprietary companies like Microsoft have been making significant investments in opening their 
 infrastructure and significantly contributing to the Open Source community, including helping 
-historical competitors like the Linux operating system.
+historical "threats" like the Linux operating system.
 
-* POTUS Orders (2013-Present)
-- Add history
-** Executive Order 13642, "Making Open and Machine Readable the New Default for Government Information"
-- Mention data.gov? 
-** OMB M-16-21, "Federal Source Code Policy Memorandum"
+* OMB M-16-21, "Federal Source Code Policy Memorandum" 
 As a consequence of EO 13642, the OMB established Federal Source Code Poilicy via memorandum 
 M-16-21.  The Federal Source Code Policy prescribes mandatory requirements for federal agency 
 practices for sharing source code, open sourcing software, and participating in the open source 
 software community.
-** Government-wide Source Code Sharing
-At a minimum, government agenciees are mandated to make source code available to the federal government 
-for interagency reuse.
 
-** Open Source Software Pilot Program
-Government agencies (including DOD) are automatically part of a 3-year open source pilot program.
-During the pilot program, policy mandates that 20% of newly created custom software is to be open source.
-This applies to software created by government employees, and software created in execution of a 
-government contract.
+** Major provisions of the FSCP include:
+- Government-wide Source Code Sharing
+  At a minimum, government agenciees are mandated to make source code available to the federal government 
+  for interagency reuse.
 
-Open sourcing software is highly encouraged, and even temporarily mandated for a portion of 
-our new custom software projects for the duration of the "pilot program."  Open source 
-software is intended to be broadly accesible, and developed with "open" practices, disseminated 
-on - possibly 3rd party - platforms with established open source communities.
+- Open Source Software Pilot Program
+  - Government agencies (including DOD) are automatically part of a 3-year open source pilot program.
+    During the pilot program, policy mandates that 20% of newly created custom software is to be open source.
+    This applies to software created by government employees, and software created in execution of a 
+    government contract.
 
-** code.gov
-Per the policy, agencies will coordinate and publicize their software with the OMB-managed 
-website https://code.gov .  This website serves as an accessible repository of all known 
-government source code, to facilitate discovery and ease reuse.
+  - Open sourcing software is highly encouraged, and even temporarily mandated for a portion of 
+    our new custom software projects for the duration of the "pilot program."  Open source 
+    software is intended to be broadly accesible, and developed with "open" practices, disseminated 
+    on - possibly 3rd party - platforms with established open source communities.
 
-** Exceptions
-The only exception we could possibly fall under would be related to security concerns, that 
-is if the software in question is a National Security System (see reference), or classification
-provides a security restriction.
+- code.gov
+  Per the policy, agencies will coordinate and publicize their software with the OMB-managed 
+  website https://code.gov .  This website serves as an accessible repository of all known 
+  government source code, to facilitate discovery and ease reuse.
+
+** Participation in the Open Source Community (Excerpt from FSCP)
+When agencies release custom-developed source code as OSS to the public, they should develop and release 
+the code in a manner that 
+  (1) fosters communities around shared challenges, 
+  (2) improves the ability of the OSS community to provide feedback on, and make contributions to, the source code, and 
+  (3) encourages Federal employees and contractors to contribute back to the broader OSS community by making
+      contributions to existing OSS projects.
+
+In furtherance of this strategy, agencies should comply with the following principles:
+- Leverage Existing Communities: 
+  Whenever possible, teams releasing custom-developed code to the public as OSS should appropriately engage and
+  coordinate with existing communities relevant to the project. Government agencies should only develop their own  
+  communities when existing communities do not satisfy their needs.
+- Engage in Open Development: 
+  Software that is custom-developed for or by agencies should, to the extent possible and appropriate, be developed using
+  open development practices. These practices provide an environment in which OSS can flourish and be repurposed. This principle,
+  as well as the one below for releasing source code, include distributing a minimum viable product as OSS; engaging the public 
+  before official release;30 and drawing upon the public’s knowledge to make improvements to the project.
+- Adopt a Regular Release Schedule: 
+  In instances where software cannot be developed using open development practices, but is otherwise appropriate for 
+  release to the public, agencies should establish an incremental release schedule to make the source code and associated 
+  documentation available for public use.
+- Engage with the Community: 
+  Similar to the requirement in the Administration’s Open Data Policy, agencies should create a process to engage in two-way 
+  communication with users and contributors to solicit help in prioritizing the release of source code and feedback on the agencies’
+  engagement with the community.
+- Consider Code Contributions: 
+  One of the potential benefits of OSS lies within the communities that grow around OSS projects, whereby any party can contribute new code,
+  modify existing code, or make other suggestions to improve the software throughout the software development lifecycle. 
+  Communities help monitor changes to code, track potential errors and flaws in code, and other related activities. 
+  These kinds of contributions should be anticipated and, where appropriate, considered for integration into
+  custom-developed Government software or associated materials.
+- Documentation: 
+  It is important to provide OSS users and contributors with adequate documentation of source code in an effort to
+  facilitate use and adoption. Agencies must ensure that their repositories include enough information to allow reuse
+  and participation by third parties. In participating in community-maintained repositories, agencies should follow community  
+  documentation standards. 
+  At a minimum, OSS repositories maintained by agencies must include the following information:
+   - Status of software (e.g., prototype, alpha, beta, release, etc.);
+   - Intended purpose of software;
+   - Expected engagement level (i.e., how frequently the community can expect agency activity);
+   - License details; and
+   - Any other relevant technical details on how to build, make, install, or use the software, including dependencies (if applicable).
+
+- Exceptions
+  FSCP acknowledges exceptions to policy where legislation, or national security precludes 
+  the release of source code.  If source code is either classified, or classified as National 
+  Security System under 44 U.S. Code § 3542, the software is excepted.
 
 ** Management and Oversight
-DOD (and Army) CIO(s) are required to coordinate with OMB to define and execute 
+DOD (and Army) CIO(s) are required to coordinate with the OMB CIO to define and execute 
 an implementation plan for the OMB guidance.  OMB provides quarterly processes that 
 oversee the growth, maintenance, and overall progress of both the pilot program, and 
 the Federal Source Code Policy compliance.
@@ -198,73 +241,63 @@ Policy, following the mandates and practices established by the EO and OMB guida
 "fine," allowing one to effectively ignore the antiquated nature of the reg.  
 Simply conform to the POTUS guidance.
 
-
-* Opening up to the larger analytic community
-I have no idea why we wouldn't encourage interaction with international
-partners.....but I can't read his mind. So, after a quick bout of afternoon research
-(thanks for pointing out AR 5-11 Heather), a couple of things are apparent to me.
-
 * Forcing Functions
-There is, at a minimum, a forcing function for sharing code across the government.  Given the EO,
-and OMB guidance, we are DEFINITELY supposed to be sharing our source in an open, unimpeded manner
-with other government agencies so that there is government-wide reuse and cost saving.  That's a
-mandate, not an option.  The official vehicle for that is code.gov (for open source contributions).  
+There is, at a minimum, a federal mandate for sharing source code across the government, and 
+a mandate to open-source 20% of our custom code during the course of the 3-year Open Source Pilot 
+program. Under the Federal Source Code Policy, CAA must share our source in an open, unimpeded manner
+with other government agencies so that there is government-wide reuse and cost saving.
 
-Some agencies are choosing to cut to the chase, and open source / openly develop their code on Github,
-while advertising on code.gov.  I think we should do that to the greatest extent possible.  
-Another option for "publishing" code is, rather than hanging the source out for anyone to grab,
-we make it available upon request (typically via email).  I don't like this option as much,
-but it would be better than nothing.
-
-Ponying up the cash for a private repository is another option.  Finally,
-Gitea running an one of our govcloud instances could be a bridging solution that may provide
-some of the current benefits of github without the need for funding for private repos. 
-
-There's a bit more involved here, in particular locking down who can - and cannot - login to
-the Gitea service (basically a simple github clone), but it could be a feasible backup while
-the other stuff pans out - a backup that requires no actions like additional funding or crossing
-lines with the leadership.
+Some agencies, such as NASA and the US Army Research Laboratories, are choosing to cut to the chase, 
+and both open source and openly develop their code on Github. Github is the largest 3rd-party open source
+community that offers source code hosting services, and meets every prescription of the FSCP guidance
+for "Participation in the Open Source Community." Github repositories are then registered with 
+https://code.gov to satisfy the discoverability and coordination requirements in the FSCP.
 
 * Toward Open Sourcing MARATHON 4
-** Rationale
-Written in an Open Source Language (Clojure), managed with Open Source 
-tools (git), with an emphasis on unclassified development from inception.
+MARATHON 4 is Written in an Open Source Language (Clojure), managed with Open Source 
+tools (git), and has emphasised unclassified development from inception.  MARATHON 4 
+is intentionally written and maintained in such a way as to facilitate sharing and 
+discovery, particularly to enable flexible development among remote work locations 
+and to enable sharing of code for research purposes, peer-review, external verification,
+and publication in professional forums like MORS, WinterSim, and INFORMS.  
+MARATHON 4 is, for all intents and purposes, open-source ready and entirely compliant 
+with the practices established by the FSCP.  Consequently, MARATHON 4 is an obvious 
+Open Source candidate, preferably hosted on Github.
 
-** Practical Benefits
-*** Flexible Team-based Collaboration 
-Developers can work remotely, from home, the office, at odd hours, etc.
-Using git, we have a rich collaborative platform for managing the source code, enabling
-concurrent, asynchronous development that maximizes development team productivity without
-sacrificing version control.  This complements existing technology like DCS
-(Defense Collaboration Services), allowing teams to communicate in real-time to resolve
-issues, learn about the software architecture, and even modify the source code.  
+** Practical Benefits of Open Source Via Gitub
+- Flexible Team-based Collaboration 
+  Developers can work remotely, from home, the office, at odd hours, etc.
+  Using git, we have a rich collaborative platform for managing the source code, enabling
+  concurrent, asynchronous development that maximizes development team productivity without
+  sacrificing version control.  This complements existing technology like DCS
+  (Defense Collaboration Services), allowing teams to communicate in real-time to resolve
+  issues, learn about the software architecture, and even modify the source code.  
 
-*** Empirical Evidence at CAA
-CAA has repeatedly maintained a developer shortfall; MARATHON 4 is a shining example of the 
-scarcity of developer talent.  Tom Spoon was allowed to continue working remotely because of 
-his decision to maintain MARATHON 4 development in an unclassified format, thus enabling exactly 
-the kind of remote/telework opportunity mentioned above.  CAA has been able to avert the loss of 
-critical infrastructure development precisely due to the flexibility enabled by distributed version 
-control, unclassified development, and openness. 
+- Empirical Evidence at CAA
+  CAA has repeatedly maintained a developer shortfall; MARATHON 4 is a shining example of the 
+  scarcity of developer talent.  The sole developer (Mr. Spoon) was allowed to continue working 
+  remotely because of his decision to maintain MARATHON 4 development in an unclassified format, 
+  thus enabling exactly the kind of remote/telework opportunity mentioned above.  
+  CAA has been able to avert the loss of critical infrastructure development precisely due to 
+  the flexibility enabled by distributed version control, unclassified development, and openness. 
 
-With the addition of new team members, leveraging github as a synchronization point has already
-been incredibly useful for distance-based training, collaboration, source code revision, and
-real-time pair-programming.
+  With the addition of new team members, leveraging github as a synchronization point has already
+  been incredibly useful for distance-based training, collaboration, source code revision, and
+  real-time pair-programming.
 
-*** Industry Standard Version Control via Github.
-Github provides a seamlessly integrated suite of tools that enhance the git DVCS 
-developer experience with 
-- source code repository hosting 
-- web-based interface for examining source code history, diffs, branches, etc.
-- web-based issue tracking, team communication, and other collaboration features.
+- Industry Standard Version Control via Github.
+  Github provides a seamlessly integrated suite of tools that enhance the git DVCS 
+  developer experience with 
+  - source code repository hosting 
+  - web-based interface for examining source code history, diffs, branches, etc.
+  - web-based issue tracking, team communication, and other collaboration features.
 
-** Compliance with Federal Software Policy
+** Compliance with Federal Source Code Policy
 - At a minimum, MARATHON 4 must be shared with other federal agencies.
 - Hosting as an open source project, hosted on Github, satisfies the existing 
   Federal Source Code Policy, in addition to the spirit of the executive order.
-- Can be used to fulfill the 20% mandate for open-sourcing custom software during the 
-  current Pilot Program period.
-
+- MARATHON 4 could be used to fulfill the 20% mandate for open-sourcing custom 
+  software during the current Pilot Program period.
 
 * Possible Objections and Risks 
 Despite the encouraging remarks I recall from ARB, I see an apparent vacillation to an - 
