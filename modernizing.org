@@ -97,29 +97,29 @@ source code available promotes
 
 According to DOD  (DOD/CIO-G6 Clarifying Guidance on Open Source Sofware, p. 4-5),
 
-1) "The continuous and broad peer-review enabled by publicly available source code supports 
-    software reliability and security efforts through the identification and elimination of 
-    defects that might otherwise go unrecognized by a more limited core development team." 
-2) "The unrestricted ability to modify software source code enables the 
-    Department to respond more rapidly to changing situations, missions, 
-    and future threats."  
-3) "Reliance on a particular software developer or vendor due to proprietary 
-    restrictions may be reduced by the use of OSS, which can be operated and 
-    maintained by multiple vendors, thus reducing barriers to entry and exit." 
-4) "Open source licenses do not restrict who can use the software or the fields 
-    of endeavor in which the software can be used.  Therefore, OSS provides a net-centric 
-    licensing model that enables rapid provisioning of both known and unanticipated users." 
-5) "Since OSS typically does not have a per-seat licensing cost, it can provide 
-    a cost advantage in situations where many copies of the software may be required, and 
-    can mitigate risk of cost growth due to licensing in situations where the total number of 
-    users may not be known in advance." 
-6) "By sharing the responsibility for maintenance of OSS with other users, 
-    the Department can benefit by reducing the total cost of ownership for software, 
-    particularly compared with software for which the Department has sole responsibility for 
-    maintenance (e.g., GOTS)." 
-7) "OSS is particularly suitable for rapid prototyping and experimentation, 
-    where the ability to “test drive” the software with minimal costs and administrative 
-    delays can be important." 
+1) The continuous and broad peer-review enabled by publicly available source code supports 
+   software reliability and security efforts through the identification and elimination of 
+   defects that might otherwise go unrecognized by a more limited core development team. 
+2) The unrestricted ability to modify software source code enables the 
+   Department to respond more rapidly to changing situations, missions, 
+   and future threats.  
+3) Reliance on a particular software developer or vendor due to proprietary 
+   restrictions may be reduced by the use of OSS, which can be operated and 
+   maintained by multiple vendors, thus reducing barriers to entry and exit. 
+4) Open source licenses do not restrict who can use the software or the fields 
+   of endeavor in which the software can be used.  Therefore, OSS provides a net-centric 
+   licensing model that enables rapid provisioning of both known and unanticipated users. 
+5) Since OSS typically does not have a per-seat licensing cost, it can provide 
+   a cost advantage in situations where many copies of the software may be required, and 
+   can mitigate risk of cost growth due to licensing in situations where the total number of 
+   users may not be known in advance. 
+6) By sharing the responsibility for maintenance of OSS with other users, 
+   the Department can benefit by reducing the total cost of ownership for software, 
+   particularly compared with software for which the Department has sole responsibility for 
+   maintenance (e.g., GOTS). 
+7) OSS is particularly suitable for rapid prototyping and experimentation, 
+   where the ability to “test drive” the software with minimal costs and administrative 
+   delays can be important. 
 
 Open Source Software has had such undeniable success that even historically closed-source,
 proprietary companies like Microsoft have been making significant investments in opening their 
@@ -133,11 +133,11 @@ practices for sharing source code, open sourcing software, and participating in 
 software community.
 
 ** Major provisions of the FSCP include:
-- Government-wide Source Code Sharing
+*** Government-wide Source Code Sharing
   At a minimum, government agenciees are mandated to make source code available to the federal government 
   for interagency reuse.
 
-- Open Source Software Pilot Program
+*** Open Source Software Pilot Program
   - Government agencies (including DOD) are automatically part of a 3-year open source pilot program.
     During the pilot program, policy mandates that 20% of newly created custom software is to be open source.
     This applies to software created by government employees, and software created in execution of a 
@@ -148,7 +148,7 @@ software community.
     software is intended to be broadly accesible, and developed with "open" practices, disseminated 
     on - possibly 3rd party - platforms with established open source communities.
 
-- code.gov
+*** code.gov
   Per the policy, agencies will coordinate and publicize their software with the OMB-managed 
   website https://code.gov .  This website serves as an accessible repository of all known 
   government source code, to facilitate discovery and ease reuse.
@@ -163,44 +163,44 @@ the code in a manner that
 
 In furtherance of this strategy, agencies should comply with the following principles:
 - Leverage Existing Communities: 
-  Whenever possible, teams releasing custom-developed code to the public as OSS should appropriately engage and
-  coordinate with existing communities relevant to the project. Government agencies should only develop their own  
-  communities when existing communities do not satisfy their needs.
+    - Whenever possible, teams releasing custom-developed code to the public as OSS should appropriately engage and
+      coordinate with existing communities relevant to the project. Government agencies should only develop their own  
+      communities when existing communities do not satisfy their needs.
 - Engage in Open Development: 
-  Software that is custom-developed for or by agencies should, to the extent possible and appropriate, be developed using
-  open development practices. These practices provide an environment in which OSS can flourish and be repurposed. This principle,
-  as well as the one below for releasing source code, include distributing a minimum viable product as OSS; engaging the public 
-  before official release;30 and drawing upon the public’s knowledge to make improvements to the project.
+  - Software that is custom-developed for or by agencies should, to the extent possible and appropriate, be developed using
+    open development practices. These practices provide an environment in which OSS can flourish and be repurposed. This principle,
+    as well as the one below for releasing source code, include distributing a minimum viable product as OSS; engaging the public 
+    before official release;30 and drawing upon the public’s knowledge to make improvements to the project.
 - Adopt a Regular Release Schedule: 
-  In instances where software cannot be developed using open development practices, but is otherwise appropriate for 
-  release to the public, agencies should establish an incremental release schedule to make the source code and associated 
-  documentation available for public use.
+  - In instances where software cannot be developed using open development practices, but is otherwise appropriate for 
+    release to the public, agencies should establish an incremental release schedule to make the source code and associated 
+    documentation available for public use.
 - Engage with the Community: 
-  Similar to the requirement in the Administration’s Open Data Policy, agencies should create a process to engage in two-way 
-  communication with users and contributors to solicit help in prioritizing the release of source code and feedback on the agencies’
-  engagement with the community.
+  - Similar to the requirement in the Administration’s Open Data Policy, agencies should create a process to engage in two-way 
+    communication with users and contributors to solicit help in prioritizing the release of source code and feedback on the agencies’
+    engagement with the community.
 - Consider Code Contributions: 
-  One of the potential benefits of OSS lies within the communities that grow around OSS projects, whereby any party can contribute new code,
-  modify existing code, or make other suggestions to improve the software throughout the software development lifecycle. 
-  Communities help monitor changes to code, track potential errors and flaws in code, and other related activities. 
-  These kinds of contributions should be anticipated and, where appropriate, considered for integration into
-  custom-developed Government software or associated materials.
+  - One of the potential benefits of OSS lies within the communities that grow around OSS projects, whereby any party can contribute new code,
+    modify existing code, or make other suggestions to improve the software throughout the software development lifecycle. 
+    Communities help monitor changes to code, track potential errors and flaws in code, and other related activities. 
+    These kinds of contributions should be anticipated and, where appropriate, considered for integration into
+    custom-developed Government software or associated materials.
 - Documentation: 
-  It is important to provide OSS users and contributors with adequate documentation of source code in an effort to
-  facilitate use and adoption. Agencies must ensure that their repositories include enough information to allow reuse
-  and participation by third parties. In participating in community-maintained repositories, agencies should follow community  
-  documentation standards. 
-  At a minimum, OSS repositories maintained by agencies must include the following information:
-   - Status of software (e.g., prototype, alpha, beta, release, etc.);
-   - Intended purpose of software;
-   - Expected engagement level (i.e., how frequently the community can expect agency activity);
-   - License details; and
-   - Any other relevant technical details on how to build, make, install, or use the software, including dependencies (if applicable).
+  - It is important to provide OSS users and contributors with adequate documentation of source code in an effort to
+    facilitate use and adoption. Agencies must ensure that their repositories include enough information to allow reuse
+    and participation by third parties. In participating in community-maintained repositories, agencies should follow community  
+    documentation standards. 
+  - At a minimum, OSS repositories maintained by agencies must include the following information:
+     - Status of software (e.g., prototype, alpha, beta, release, etc.);
+     - Intended purpose of software;
+     - Expected engagement level (i.e., how frequently the community can expect agency activity);
+     - License details; and
+    - Any other relevant technical details on how to build, make, install, or use the software, including dependencies (if applicable).
 
 - Exceptions
-  FSCP acknowledges exceptions to policy where legislation, or national security precludes 
-  the release of source code.  If source code is either classified, or classified as National 
-  Security System under 44 U.S. Code § 3542, the software is excepted.
+  - FSCP acknowledges exceptions to policy where legislation, or national security precludes 
+    the release of source code.  If source code is either classified, or classified as National 
+    Security System under 44 U.S. Code § 3542, the software is excepted.
 
 ** Management and Oversight
 DOD (and Army) CIO(s) are required to coordinate with the OMB CIO to define and execute 
@@ -243,31 +243,31 @@ Open Source candidate, preferably hosted on Github.
 
 ** Practical Benefits of Open Source Via Gitub
 - Flexible Team-based Collaboration 
-  Developers can work remotely, from home, the office, at odd hours, etc.
-  Using git, we have a rich collaborative platform for managing the source code, enabling
-  concurrent, asynchronous development that maximizes development team productivity without
-  sacrificing version control.  This complements existing technology like DCS
-  (Defense Collaboration Services), allowing teams to communicate in real-time to resolve
-  issues, learn about the software architecture, and even modify the source code.  
+  - Developers can work remotely, from home, the office, at odd hours, etc.
+    Using git, we have a rich collaborative platform for managing the source code, enabling
+    concurrent, asynchronous development that maximizes development team productivity without
+    sacrificing version control.  This complements existing technology like DCS
+    (Defense Collaboration Services), allowing teams to communicate in real-time to resolve
+    issues, learn about the software architecture, and even modify the source code.  
 
 - Empirical Evidence at CAA
-  CAA has repeatedly maintained a developer shortfall; MARATHON 4 is a shining example of the 
-  scarcity of developer talent.  The sole developer (Mr. Spoon) was allowed to continue working 
-  remotely because of his decision to maintain MARATHON 4 development in an unclassified format, 
-  thus enabling exactly the kind of remote/telework opportunity mentioned above.  
-  CAA has been able to avert the loss of critical infrastructure development precisely due to 
-  the flexibility enabled by distributed version control, unclassified development, and openness. 
+  - CAA has repeatedly maintained a developer shortfall; MARATHON 4 is a shining example of the 
+    scarcity of developer talent.  The sole developer (Mr. Spoon) was allowed to continue working 
+    remotely because of his decision to maintain MARATHON 4 development in an unclassified format, 
+    thus enabling exactly the kind of remote/telework opportunity mentioned above.  
+    CAA has been able to avert the loss of critical infrastructure development precisely due to 
+    the flexibility enabled by distributed version control, unclassified development, and openness. 
 
-  With the addition of new team members, leveraging github as a synchronization point has already
-  been incredibly useful for distance-based training, collaboration, source code revision, and
-  real-time pair-programming.
+  - With the addition of new team members, leveraging github as a synchronization point has already
+    been incredibly useful for distance-based training, collaboration, source code revision, and
+    real-time pair-programming.
 
 - Industry Standard Version Control via Github.
-  Github provides a seamlessly integrated suite of tools that enhance the git DVCS 
-  developer experience with 
-  - source code repository hosting 
-  - web-based interface for examining source code history, diffs, branches, etc.
-  - web-based issue tracking, team communication, and other collaboration features.
+  - Github provides a seamlessly integrated suite of tools that enhance the git DVCS 
+    developer experience with 
+    - source code repository hosting 
+    - web-based interface for examining source code history, diffs, branches, etc.
+    - web-based issue tracking, team communication, and other collaboration features.
 
 ** Compliance with Federal Source Code Policy
 - At a minimum, MARATHON 4 must be shared with other federal agencies.
@@ -277,95 +277,88 @@ Open Source candidate, preferably hosted on Github.
   software during the current Pilot Program period.
 
 * Possible Objections and Risks 
-Despite the encouraging remarks I recall from ARB, I see an apparent vacillation to an - 
-in my opinion - unnecessarily protective posture over our (CAA's) "Intellectual Property."  
-IP is quoted because, outside of national security systems (as defined by US Code), actual
-classified source code, or specific preventative legislation, we (CAA/Army/DOD) have no cause
-to restrict our source code from being published in the public domain (it's already public domain....
-most folks just don't know about it or ask for the source).  
-
 - "Army Policy Prevents Us From Doing So" 
-  The AMSO guidance in AR 5-11 contradicts (or in the best case, ignores/doesn't account for) 
-  Federal Source Code Policy.  The apparent reflexive response to "not share" with federal 
-  agencies, and  international partners, is contrary to both the spirit and the policy 
-  codified by EO13642 and OMB M-16-21.
+  - The AMSO guidance in AR 5-11 contradicts (or in the best case, ignores/doesn't account for) 
+    Federal Source Code Policy.  The apparent reflexive response to "not share" with federal 
+    agencies, and  international partners, is contrary to both the spirit and the policy 
+    codified by EO13642 and OMB M-16-21.
 
 - "We should protect Army / CAA interests by not sharing source code."
-  The numerous benefits delineated by the DOD/CIO-G6, as well as decades of 
-  empirical confirmation that "sharing is beneficial" from the software 
-  industry and academia support an alternate prospect: CAA would be 
-  protecting CAA / Army interests by taking advantage of the massive 
-  benefits of open source, and by compliying with policy set forth by the 
-  President of the United States.
+  - The numerous benefits delineated by the DOD/CIO-G6, as well as decades of 
+    empirical confirmation that "sharing is beneficial" from the software 
+    industry and academia support an alternate prospect: CAA would be 
+    protecting CAA / Army interests by taking advantage of the massive 
+    benefits of open source, and by compliying with policy set forth by the 
+    President of the United States.
  
 - "We should run the model, they don't need the source. They can ask us for the analysis."
-  This service-minded aspect of Army M&S is detailed in AR 5-11, and is the predominant 
-  "business model" that CAA, and indeed many analytic agencies, have followed.  
-  Sharing code does not equate to sharing expertise.  Indeed, the dominant open 
-  source software business model is to provide support and service in exchange 
-  for remuneration.  Many clients or sponsors simply lack the developer talent 
-  or inclination to modify the source code, and will still be interested in the 
-  services provided.  The legacy service-based model can - and will - survive, 
-  with the added benefit of collaboration and possible community engagement. 
+  - This service-minded aspect of Army M&S is detailed in AR 5-11, and is the predominant 
+    "business model" that CAA, and indeed many analytic agencies, have followed.  
+    Sharing code does not equate to sharing expertise.  Indeed, the dominant open 
+    source software business model is to provide support and service in exchange 
+    for remuneration.  Many clients or sponsors simply lack the developer talent 
+    or inclination to modify the source code, and will still be interested in the 
+    services provided.  The legacy service-based model can - and will - survive, 
+    with the added benefit of collaboration and possible community engagement. 
 
 - "We'd expose ourselves to security vulnerability."
-  MARATHON 4 is merely an instantation of AR 525-29, a publicly available document 
-  detailing Army Force Generation.  Started as a purely unclassified development 
-  effort, MARATHON 4 maintains that the source code for the simulation - including 
-  comments, notional test data, and related documentation - neither requires nor 
-  includes classified information.  Rather, the data upon which MARATHON 4 is applied, 
-  and the resulting analysis, executed on a secure network, will be classified.  
-  Nor is MARATHON 4 a "National Security System" as defined by 44 U.S. Code § 3542.
+  - MARATHON 4 is merely an instantation of AR 525-29, a publicly available document 
+    detailing Army Force Generation.  Started as a purely unclassified development 
+    effort, MARATHON 4 maintains that the source code for the simulation - including 
+    comments, notional test data, and related documentation - neither requires nor 
+    includes classified information.  Rather, the data upon which MARATHON 4 is applied, 
+    and the resulting analysis, executed on a secure network, will be classified.  
+    Nor is MARATHON 4 a "National Security System" as defined by 44 U.S. Code § 3542.
   
-  Finally, the security benefits of sharing and open sourcing are well-known, even 
-  within DOD and the Army.  
-  Per the (DOD-CIO/G6 OSS FAQ, "Q: Doesn't hiding source code automatically make
-  software more secure?"):
-  - "Even when the original source is necessary for in-depth analysis, making source
-     code available to the public significantly aids defenders and not just attackers. 
-     Continuous and broad peer-review, enabled by publicly available source code, 
-     improves software reliability and security through the identification and 
-     elimination of defects that might otherwise go unrecognized by the core development
-     team."
-  - "Conversely, where source code is hidden from the public, attackers can attack the 
-     software anyway as described above.  In addition, an attacker can often acquire the
-     original source code from suppliers anyway (either because the supplier voluntarily
-     provides it, or via attacks against the supplier); in such cases, if only the 
-     attacker has the source code, the attacker ends up with another advantage." 
-  - "Hiding source code does inhibit the ability of third parties to respond to 
-     vulnerabilities (because changing software is more difficult without the 
-     source code), but this is obviously not a security advantage. 
-     In general, “Security by Obscurity” is widely denigrated."
+  - The security benefits of sharing and open sourcing are well-known, even 
+    within DOD and the Army.  
+    Per the (DOD-CIO/G6 OSS FAQ, "Q: Doesn't hiding source code automatically make
+    software more secure?"):
+     - "Even when the original source is necessary for in-depth analysis, making source
+       code available to the public significantly aids defenders and not just attackers. 
+       Continuous and broad peer-review, enabled by publicly available source code, 
+       improves software reliability and security through the identification and 
+       elimination of defects that might otherwise go unrecognized by the core development
+       team."
+     - "Conversely, where source code is hidden from the public, attackers can attack the 
+       software anyway as described above.  In addition, an attacker can often acquire the
+       original source code from suppliers anyway (either because the supplier voluntarily
+       provides it, or via attacks against the supplier); in such cases, if only the 
+       attacker has the source code, the attacker ends up with another advantage." 
+     - "Hiding source code does inhibit the ability of third parties to respond to 
+       vulnerabilities (because changing software is more difficult without the 
+       source code), but this is obviously not a security advantage. 
+       In general, “Security by Obscurity” is widely denigrated."
 
-  The Office of the Secretary of Defense piloted a succesful program to harden
-  Pentagon defeneses by engaging the broader community of security experts 
-  (Hack the Pentagon Results):
-  - "Hack the Pentagon" was a recent US Digital Service initiative, where
-    DOD software systems and services at the Pentagon were promoted on a "bug bounty" 
-    system that allowed 3rd party security experts to test the system.
-  - "...allowed more than 1,400 registered hackers to test the defenses of select 
-    open source DoD websites such as Defense.gov. 
-    Hackers who identified security gaps that qualified as valid vulnerabilities were
-    then rewarded with a corresponding bounty price."
-  - "...138 unique and previously undisclosed vulnerabilities were identified by security 
-     researchers and remediated in near real-time by the Defense Media Activity."  
+  - The Office of the Secretary of Defense piloted a succesful program to harden
+    Pentagon defeneses by engaging the broader community of security experts 
+    (Hack the Pentagon Results):
+    - "Hack the Pentagon" was a recent US Digital Service initiative, where
+      DOD software systems and services at the Pentagon were promoted on a "bug bounty" 
+      system that allowed 3rd party security experts to test the system.
+    - "...allowed more than 1,400 registered hackers to test the defenses of select 
+      open source DoD websites such as Defense.gov. 
+      Hackers who identified security gaps that qualified as valid vulnerabilities were
+      then rewarded with a corresponding bounty price."
+    - "...138 unique and previously undisclosed vulnerabilities were identified by security 
+       researchers and remediated in near real-time by the Defense Media Activity."  
 
 - "We have no obligation to release if no-one asks."
-  Federal Source Code policy mandates that our non-exempt software, like MARATHON 4, is - at 
-  a minimum - advertised via https://code.gov and accessible to other federal agencies for reuse.
-  Additionally, we are required to open-source  20% of our software during the current pilot 
-  program period.
+  - Federal Source Code policy mandates that our non-exempt software, like MARATHON 4, is - at 
+    a minimum - advertised via https://code.gov and accessible to other federal agencies for reuse.
+    Additionally, we are required to open-source  20% of our software during the current pilot 
+    program period.
 
-  Additionally, Federal Source Code Policy mandates that 20% of created or acquired custom 
-  software must be released as open source during the current pilot program, which lasts 
-  until 2019.
+  - Additionally, Federal Source Code Policy mandates that 20% of created or acquired custom 
+    software must be released as open source during the current pilot program, which lasts 
+    until 2019.
 
 - "Contractors will just repackage it and sell it back to us." 
-  If a contractor grabs it, and uses it to make something cool or even better, then under
-  the EO and OMB guidance we actually should get their modifications back. Other agencies 
-  devoting resources to improve MARATHON 4, with CAA controlling the integration and 
-  merging of improvements, serves to extend the range of support for MARATHON 4 development, 
-  further helping the chronic developer capability gap at CAA.
+  - If a contractor grabs it, and uses it to make something cool or even better, then under
+    the EO and OMB guidance we actually should get their modifications back. Other agencies 
+    devoting resources to improve MARATHON 4, with CAA controlling the integration and 
+    merging of improvements, serves to extend the range of support for MARATHON 4 development, 
+    further helping the chronic developer capability gap at CAA.
 
 * Desired End State
 Ideally, CAA will join the ranks of other Federal agencies and embrace the general modernization
