@@ -65,10 +65,28 @@ open source software.  Until the emergence of the Federal Source Code Policy, DO
 had the ability to use Open Source Software for mission execution, without the mandate to
 share or otherwise release source code.
   
-* Benefits of Open Source
+* Benefits of Open Source and Sharing
+Much like the impostion of an autarky - an economy that is intentionally isolated to promote 
+independence or self-sufficience -  
+
+Open Source Software fundamentally rests on the idea that the open sharing of information 
+yields numerous second and third order benefits.  In the case of software, making the 
+source code available promotes 
 - Open Source as Means of Publication
+  - Particularly in the case of reproducible research, releasing the source code is a 
+    modern pre-requisite to validate any scientific or academic observations.  
+  - Similarly, making even amateur or experimental source code available serves as an 
+    entry point for establishing communication with other interested parties that 
+    may form a community.
 - Collaboration
+  - Freedom of information fosters communication, allowing interested parties to collaborate 
+    across various domains
+    - including research, development, issue tracking, patching source code, and more.
 - Reuse
+  - The "community" can freely build upon and extend existing works, ideally bypassing 
+    the need to constantly reinvent the wheel or duplicate effort.
+  - Much like academia and industry, reuseable source code allows the state of the art 
+    to advance more rapidly.
 - Continuous Peer Review 
   - "Continuous and  broad peer review enabled by publicly available source code enable ..."
   - Security
@@ -78,6 +96,37 @@ share or otherwise release source code.
   - "Free" labor
 - Public Relations
 - Advertisement
+
+According to DOD  (DOD/CIO-G6 Clarifying Guidance on Open Source Sofware, p. 4-5),
+
+1) "The continuous and broad peer-review enabled by publicly available source code supports 
+    software reliability and security efforts through the identification and elimination of 
+    defects that might otherwise go unrecognized by a more limited core development team." 
+2) "The unrestricted ability to modify software source code enables the 
+    Department to respond more rapidly to changing situations, missions, 
+    and future threats."  
+3) "Reliance on a particular software developer or vendor due to proprietary 
+    restrictions may be reduced by the use of OSS, which can be operated and 
+    maintained by multiple vendors, thus reducing barriers to entry and exit." 
+4) "Open source licenses do not restrict who can use the software or the fields 
+    of endeavor in which the software can be used.  Therefore, OSS provides a net-centric 
+    licensing model that enables rapid provisioning of both known and unanticipated users." 
+5) "Since OSS typically does not have a per-seat licensing cost, it can provide 
+    a cost advantage in situations where many copies of the software may be required, and 
+    can mitigate risk of cost growth due to licensing in situations where the total number of 
+    users may not be known in advance." 
+6) "By sharing the responsibility for maintenance of OSS with other users, 
+    the Department can benefit by reducing the total cost of ownership for software, 
+    particularly compared with software for which the Department has sole responsibility for 
+    maintenance (e.g., GOTS)." 
+7) "OSS is particularly suitable for rapid prototyping and experimentation, 
+    where the ability to “test drive” the software with minimal costs and administrative 
+    delays can be important." 
+
+Open Source Software has had such undeniable success that even When historically closed-source,
+proprietary companies like Microsoft begin making significant investments in opening their 
+infrastructure and significantly contributing to the Open Source community, including helping 
+historical competitors like the Linux operating system.
 
 * POTUS Orders (2013-Present)
 - Add history
@@ -354,7 +403,7 @@ leveraging github.
 
   https://obamawhitehouse.archives.gov/blog/2016/08/08/peoples-code
 
-- Definition of "national security system" from "44 U.S. Code � 3542 - Definitions"
+- Definition of "national security system" from "44 U.S. Code § 3542 - Definitions"
 
   https://www.law.cornell.edu/uscode/text/44/3542
 
