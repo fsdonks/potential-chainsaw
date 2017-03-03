@@ -5,6 +5,16 @@
 #+STARTUP: showall
 #+LANGUAGE: en
 #+OPTIONS: ':t toc:nil
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS: [letterpaper,10pt,oneside,onecolumn,draft]
+#+LATEX_HEADER: \usepackage{enumitem}
+#+LATEX_HEADER: \setlist[itemize,1]{leftmargin=*}
+#+LATEX_HEADER: \setlist[itemize,2,3]{leftmargin=*,topsep=0mm}
+#+LATEX_HEADER: \textwidth=6.5truein
+#+LATEX_HEADER: \oddsidemargin=0.0truein
+#+LATEX_HEADER: \evensidemargin=0.0truein
+#+LATEX_HEADER: \topmargin=-0.6truein
+#+LATEX_HEADER: \textheight=9truein
 #+LATEX_HEADER: \hyphenation{MAR-A-THON}
 
 * Position Paper on Modernizing the Center For Army Analysis Policy Towards Open Source Software and Releasability
@@ -257,56 +267,63 @@ leveraging github.
 
 * References	
 
-- Code.gov (probably run by the OMB)	
-  https://code.gov	
+#+LATEX: \begin{footnotesize}
 
-- Code.mil (run by Defense Digital Service of the US Digital Service)	
-  https://code.mil	
-  - which (currently) redirects to:	
-    https://github.com/deptofdefense/code.mil#welcome-to-codemil---an-experiment-in-open-source-at-the-department-of-defense	
+- Code.gov: https://code.gov
 
-  - Defense Digital Service	
-    https://www.dds.mil	
+- Code.mil: https://code.mil
 
-  - US Digital Service	
-    https://www.usds.gov	
+  - This is run by Defense Digital Service of the US Digital Service.
+
+  - Defense Digital Service: https://www.dds.mil
+
+  - US Digital Service: https://www.usds.gov
 
 - AR 5-11 (Management of Army Modeling and Simulation, 30 May 2014)	
+
   http://www.apd.army.mil/epubs/DR_pubs/DR_a/pdf/web/r5_11.pdf	
 
 - AR 25-1 (Army Information Technology, 25 June 2013)	
+
   http://www.apd.army.mil/epubs/DR_pubs/DR_a/pdf/web/r25_1.pdf	
 
 - DOD-CIO/G6 (Clarification Guidance Regarding Open Source Software (OSS), 16 October 2009)	
+
   http://dodcio.defense.gov/Portals/0/Documents/FOSS/2009OSS.pdf	
 
 - DOD-CIO/G6 (Open Source Software FAQ)	
+
   http://dodcio.defense.gov/Open-Source-Software-FAQ/	
 
 - Federal Source Code Policy Memorandum	
-  - PDF:  https://obamawhitehouse.archives.gov/sites/default/files/omb/memoranda/2016/m_16_21.pdf	
-  - Web:	
-    - https://sourcecode.cio.gov	
-    - https://sourcecode.cio.gov/Exceptions	
+
+  https://obamawhitehouse.archives.gov/sites/default/files/omb/memoranda/2016/m_16_21.pdf
+
+  https://sourcecode.cio.gov
+
+  https://sourcecode.cio.gov/Exceptions
 
 - Executive Order 13642, May 9, 2013	
   "Making Open and Machine Readable the New Default for Government Information"	
-  - Initial guidance for the Federal Source Code Policy	
-  - PDF: https://www.gpo.gov/fdsys/pkg/DCPD-201300318/pdf/DCPD-201300318.pdf	
-  - Web: https://obamawhitehouse.archives.gov/the-press-office/2013/05/09/executive-order-making-open-and-machine-readable-new-default-government-	
 
-- Obama's Digital Government Initiative	
-  - https://obamawhitehouse.archives.gov/sites/default/files/omb/egov/digital-government/digital-government.html	
-  - https://obamawhitehouse.archives.gov/blog/2016/08/08/peoples-code	
+  https://www.gpo.gov/fdsys/pkg/DCPD-201300318/pdf/DCPD-201300318.pdf
 
-- Definition of "national security system" from "44 U.S. Code § 3542 - Definitions"	
-  - https://www.law.cornell.edu/uscode/text/44/3542	
-  - This term shows up in Federal Source Code Policy Memorandum (esp. in section "Exceptions")	
+  #+LATEX: \iffalse
+  https://obamawhitehouse.archives.gov/the-press-office/2013/05/09/executive-order-making-open-and-machine-readable-new-default-government-
+  #+LATEX: \fi
 
+  - Initial guidance for the Federal Source Code Policy
 
+- Obama's Digital Government Initiative
 
+  https://obamawhitehouse.archives.gov/sites/default/files/omb/egov/digital-government/digital-government.html
 
+  https://obamawhitehouse.archives.gov/blog/2016/08/08/peoples-code
 
-	
+- Definition of "national security system" from "44 U.S. Code § 3542 - Definitions"
 
-	
+  https://www.law.cornell.edu/uscode/text/44/3542
+
+  - This term shows up in Federal Source Code Policy Memorandum (esp. in section "Exceptions")
+
+#+LATEX: \end{footnotesize}
