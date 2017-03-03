@@ -54,8 +54,8 @@ legacy policy that delegates to the preference of CAA leadership rather than man
 This becomes problematic when considering the overall benefits accrued
 to the government and the American public --- that have been
 identified by the Executive Branch and formalized into policy --- for
-*openness and sharing*, the exact opposite operating procedures of the
-legacy one of *closedness and isolation* continued to be maintained at
+/openness and sharing/, the exact opposite operating procedures of the
+legacy one of /closedness and isolation/ continued to be maintained at
 some lower echelons.  Also problematic is when agencies leverage the
 technology of open source (implying, mutually shared) technology,
 meanwhile ironically, and to our eventual detriment, refusing to share
