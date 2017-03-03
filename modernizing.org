@@ -1,4 +1,4 @@
-#+TITLE:  Modernizing the Center For Army Analysis Policy Towards Open Source Software and Releasability
+#+TITLE:  Ensuring Center For Army Analysis Compliance With Federal Source Code Policy
 #+AUTHOR: Tom Spoon
 #+DATE: 17 Aug 2016
 #+VERSION: 1.2
@@ -17,8 +17,32 @@
 #+LATEX_HEADER: \textheight=9truein
 #+LATEX_HEADER: \hyphenation{MAR-A-THON}
 
-* Position Paper on Modernizing the Center For Army Analysis Policy Towards Open Source Software and Releasability
-- add prose 
+* Aligning the Center For Army Analysis Policy Towards Open Source Software and Releasability With Modern Federal Source Code Policy
+Like many government agencies, the Center for Army Analysis (CAA) is both a consumer and producer of software.
+From decades-old legacy models and simulations that support Army and Department of Defense Analysis, to simple
+utilities, scripts, and tools that enable rapid research, analysis, and improved productivity, the federal 
+employees at CAA have created a bevy of source code.  CAA's default position regarding sharing these creative works,
+particularly the realm of modeling and simulation source, is one of closed-source and non-sharing.  Objections to releasing
+source code range from security and classification risks, to loss of a competitive analytic edge, to lacking indemnity from
+potential consumers of CAA software, to an absence of a mandate to share.  These concerns are more or less codified in 
+the prevailing Army Modeling and Simulation Office (AMSO) releasibility policy in AR 5-11 (2014), which leaves the 
+decision to share almost entirely up to the agency.  Until recently, CAA's default position has been supported by 
+legacy policy that delegates to the preference of CAA leadership rather than mandating sharing and openness. 
+
+Unfortunately CAA's position, and the policy in AR 5-11, is not compliant with Federal Source Code Policy as directed by 
+Executive Order and subsequent Office of Management and Budget (OMB) policy.  Initiated by President Obama, and continued 
+by President Trump, the default position of the federal government towards source code is openness.  
+This position emerged under Executive Order No. 13642 (EO13642) in 2013, when the Obama administration simultaneously  
+mandated sharing government data - including source code - between federal agencies, and embraced open-sourcing federal 
+software to spur cost-reduction, reduce redundancy, and place tax-payer funded works in the public domain.
+
+EO13642 authorized and directed the OMB to define and implement the federal policy to execute the order, which 
+OMB detailed under the Digital Government Initiative (a.k.a. "The People's Code") in August of 2016.  The ultimate 
+result detailed in M-16-21, the Federal Source Code Policy (FSCP), is the governing policy for all federal agencies.
+Since the policy's inception, marked by the rollout of the central coordinating repository of government 
+code https://code.gov in 2016, CAA has not been compliant with the mandates of the FSCP and the federal government's 
+modernized policy on sharing and open source software.
+
 * Paradigm Shift in Software Development: Towards Open Source 
 - set the stage
 ** DOD Adoption of Open Source Software 
