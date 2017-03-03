@@ -67,9 +67,6 @@ had the ability to use Open Source Software for mission execution, without the m
 share or otherwise release source code.
   
 * Benefits of Open Source and Sharing
-Much like the impostion of an autarky - an economy that is intentionally isolated to promote 
-independence or self-sufficience -  
-
 Open Source Software fundamentally rests on the idea that the open sharing of information 
 yields numerous second and third order benefits.  In the case of software, making the 
 source code available promotes 
