@@ -370,9 +370,8 @@ Access to the source code does not imply knowledge in how to build, execute, mod
 model.  Nor does access predicate an innate desire to do so.  The established model-as-service 
 approach still works under the open source paradigm.
 
-CAA should choose to lead from the front on the issue of open sourcing, taking advantage of the 
-open source paradigm under the auspices of the governing Federal Source Code Policy.  MARATHON 4 
-can directly benefit from open development and hosting on Github.  
+MARATHON 4 can directly benefit from open development and hosting on Github by taking advantage of 
+the open source paradigm under the auspices of the governing Federal Source Code Policy.  
 
 * Recommendations
 1) CAA Should Comply With Federal Source Code Policy
