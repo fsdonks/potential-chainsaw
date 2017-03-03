@@ -301,7 +301,7 @@ Open Source candidate, preferably hosted on Github.
 - MARATHON 4 could be used to fulfill the 20% mandate for open-sourcing custom 
   software during the current Pilot Program period.
 
-* Possible Objections and Risks 
+** Possible Objections and Risks 
 - "Army Policy Prevents Us From Doing So" 
   - The AMSO guidance in AR 5-11 contradicts (or in the best case, ignores/doesn't account for) 
     Federal Source Code Policy.  The apparent reflexive response to "not share" with federal 
