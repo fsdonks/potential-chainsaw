@@ -22,39 +22,49 @@ Like many government agencies, the Center for Army Analysis (CAA) is both a cons
 From decades-old legacy models and simulations that support Army and Department of Defense Analysis, to simple
 utilities, scripts, and tools that enable rapid research, analysis, and improved productivity, the federal 
 employees at CAA have created a bevy of source code.  CAA's default position regarding sharing these creative works,
-particularly the realm of modeling and simulation source, is one of closed-source and non-sharing.  Objections to releasing
+particularly the realm of modeling and simulation source, is one of closed-source and isolation.  Objections to releasing
 source code range from security and classification risks, to loss of a competitive analytic edge, to lacking indemnity from
-potential consumers of CAA software, to an absence of a mandate to share.  These concerns are more or less codified in 
-the prevailing Army Modeling and Simulation Office (AMSO) releasibility policy in AR 5-11 (2014), which leaves the 
-decision to share almost entirely up to the agency.  Until recently, CAA's default position has been supported by 
+potential consumers of CAA software, to the simple absence of a mandate to share.  These concerns are more or less codified in 
+the prevailing Army Modeling and Simulation Office (AMSO) releasibility policy in AR 5-11 (2014), which fundamentally 
+leaves the decision to share source code to CAA.  Until recently, CAA's default position has been supported by 
 legacy policy that delegates to the preference of CAA leadership rather than mandating sharing and openness. 
 
 Unfortunately CAA's position, and the policy in AR 5-11, is not compliant with Federal Source Code Policy as directed by 
 Executive Order and subsequent Office of Management and Budget (OMB) policy.  Initiated by President Obama, and continued 
 by President Trump, the default position of the federal government towards source code is openness.  
-This position emerged under Executive Order No. 13642 (EO13642) in 2013, when the Obama administration simultaneously  
-mandated sharing government data - including source code - between federal agencies, and embraced open-sourcing federal 
-software to spur cost-reduction, reduce redundancy, and place tax-payer funded works in the public domain.
+This position emerged under Executive Order No. 13642 (EO13642) in 2013, when the Obama administration mandated sharing 
+government data - including source code - between federal agencies, and embraced open-sourcing federal software to spur 
+cost-reduction, reduce redundancy, and place tax-payer funded works in the public domain.
 
 EO13642 authorized and directed the OMB to define and implement the federal policy to execute the order, which 
 OMB detailed under the Digital Government Initiative (a.k.a. "The People's Code") in August of 2016.  The ultimate 
-result detailed in M-16-21, the Federal Source Code Policy (FSCP), is the governing policy for all federal agencies.
-Since the policy's inception, marked by the rollout of the central coordinating repository of government 
-code https://code.gov in 2016, CAA has not been compliant with the mandates of the FSCP and the federal government's 
-modernized policy on sharing and open source software.
+result emerged in OMB M-16-21, "Federal Source Code Policy Memorandum," when the detailed Federal Source Code Policy 
+(FSCP) became the governing policy for all federal agencies.  Since the policy's inception, marked by the 2016 rollout of 
+the central coordinating repository of government code https://code.gov, CAA has not been compliant with the 
+mandates of the FSCP and the federal government's modernized policy on sharing and open source software.  
 
-* Paradigm Shift in Software Development: Towards Open Source 
-- set the stage
-** DOD Adoption of Open Source Software 
-- walk the dog
-** DOD-CIO/G6 Clarification Guidance Regarding Open Source Software (OSS), 16 October 2009
-- overview of memorandum
-** DOD-CIO/G6 Open Source Software Frequently Asked Questions (FAQ)
-Regarding the use of OSS on our systems, the DOD-CIO/G6 memorandum (and FAQ) provides the 
-nearest DOD-level guidance.  Note: the guidance mentions nothing of release-ability; then 
-again, by its nature, open source is "released" either in the public domain, or under the 
-provisions of a specific license.
+* Paradigm Shift in Software Development: Embracing Open Source 
+DOD has been an early-adopter and general proponent of the utility of Open Source Software.
+The DOD Chief Information Officer (DOD-CIO/G6) paved the way for broad adoption and use of superior 
+Open Source tools on DOD networks with its 2009 policy, "DOD-CIO/G6 Clarification Guidance Regarding 
+Open Source Software (OSS)".  In conjunction with the memorandum, DOD/CIO-G6 provided an official
+website addressing the benefits, risks, legalities, and practical questions surrounding the use of
+Open Source Software on DOD networks (http://dodcio.defense.gov/Open-Source-Software-FAQ/).
 
+In many ways, the policy and the website were merely addressing the reality of prevelant usage
+of Open Source Software throughout DOD.  Case in point, CAA initiated and maintains exceptions to 
+Army Policy for internal networks specifically to leverage the superior capability of both closed 
+and Open Source Software that may not have a Certificate of Networthiness, or otherwise be "approved" 
+software.  Even legacy CAA models and simulations rely heavily on Open Source Software for 
+development, scripting, and processing (both pre and post).
+
+Still, the DOD/CIO-G6 policy focuses on access and use of Open Source Software, rather than
+the sharing existing federal source code or releasing source code into the public domain.
+Notably, the Army CIO/G6 has no additional policy addressing either the use or release of 
+open source software.  Until the emergence of the Federal Source Code Policy, DOD agencies
+had the ability to use Open Source Software for mission execution, without the mandate to
+share or otherwise release source code.
+  
 * Benefits of Open Source
 - Open Source as Means of Publication
 - Collaboration
