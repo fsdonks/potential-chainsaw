@@ -1,5 +1,5 @@
 #+TITLE:  Ensuring Center for Army Analysis Compliance with Federal Source Code Policy
-#+AUTHOR: Tom Spoon and Rick Hanson III
+#+AUTHOR: Tom Spoon and Rick Hanson
 #+DATE: 17 Aug 2016
 #+VERSION: 1.2
 #+STARTUP: showall
