@@ -379,61 +379,68 @@ most folks just don't know about it or ask for the source).
   Additionally, we are required to open-source  20% of our software during the current pilot 
   program period.
 
-Additionally, Federal Source Code Policy mandates that 20% of created or acquired custom 
-software must be released as open source during the current pilot program, which lasts 
-until 2019.
+  Additionally, Federal Source Code Policy mandates that 20% of created or acquired custom 
+  software must be released as open source during the current pilot program, which lasts 
+  until 2019.
 
-** "Contractors will just repackage it and sell it back to us." 
-If a contractor grabs it, and uses it to make something cool or even better, then under
-the EO and OMB guidance we actually should get their modifications back! I'd be cool with other
-agencies devoting resources to improve MARATHON.
+- "Contractors will just repackage it and sell it back to us." 
+  If a contractor grabs it, and uses it to make something cool or even better, then under
+  the EO and OMB guidance we actually should get their modifications back. Other agencies 
+  devoting resources to improve MARATHON 4, with CAA controlling the integration and 
+  merging of improvements, serves to extend the range of support for MARATHON 4 development, 
+  further helping the chronic developer capability gap at CAA.
 
 * Desired End State
 Ideally, CAA will join the ranks of other Federal agencies and embrace the general modernization
 of government technology, specifically the realization of the benefits of open source software 
 development and sharing source code. The tendency to reflexively lock down source code without 
 assessing the benefits - if not the mandate - to share our knowledge across the government and 
-the public domain, serves to ensure isolated, resource-constrained devlepment devoid of the 
+the public domain, serves to ensure isolated, resource-constrained development devoid of the 
 known value of external collaboration.  In pursuance of modernizing the Army technology space, 
-and in accordance with Federal Source Code Policy, CAA and AMSO could lead from the front.
+and in accordance with Federal Source Code Policy, CAA and AMSO should lead this effort 
+from the front.
 
 In an ideal world, the benefits of sharing source code, allowing for interop with other agencies 
-(even individuals like kids in college, researchers, or industry pros) can pay dividends in 
-improving the source, aiding in verification, and generally building a community of interest. 
+(even individuals like college students, researchers, or industry professionals) can pay dividends
+in improving the source, aiding in verification, and generally building a community of interest. 
 
-Just because you have the source doesn't mean you know (or even "want" to know) how to build,
-run, and modify, or extend the model either.  The established model-as-service approach still 
-works under the open source paradigm.
+Access to the source code does not imply knowledge in how to build, execute, modify, or extend the 
+model.  Nor does access predicate an innate desire to do so.  The established model-as-service 
+approach still works under the open source paradigm.
 
-CAA should choose to lead from the front on this. We'll continue formulating the position paper
-with the recent revelations, and plan to engage more subtly, looking for a feasible bridging
-strategy in the meantime to maintain the significant developer momentum that's occurred since 
-leveraging github.
+CAA should choose to lead from the front on the issue of open sourcing, taking advantage of the 
+open source paradigm under the auspices of the governing Federal Source Code Policy.  MARATHON 4 
+can directly benefit from open development and hosting on Github.  
 
 * Recommendations
-** CAA Should Comply With Federal Source Code Policy
-  - CAA should provision the sharing of source code with federal agencies, and 
-    advertise repositories on code.gov and / or code.mil as appropriate.
-  - CAA should comply with the provisions of the pilot program from M-16-21, that 
-    20% of newly-created (or acquired) custom software must be released as open source.
-** AR 5-11 "Management of Army Modeling and Simulation, 30 May 2014" Should be Made Consistent With Federal Source Code Policy
-  - AR 5-11 does not account for the paradigm shift toward open source software development, and
-    currently countermands the governing orders regarding Federal Source Code Policy.
-** MARATHON 4 should be hosted on github to enable collaborative team development
-  - CAA should actively leverage modern technology (github and DCS) to address 
-    the long-standing MARATHON developer capability gap.
-  - Until CAA refines its position on compliance with the Federal Source Code Policy, 
-    MARATHON should be maintained as a private repository on github to enable 
-    rapid development and verification in the near-term.
-    - Private Github repositories are available, but require additional 
-      $25/month funding to support 5 developers for an organization. 
-
-** MARATHON 4 should be released into the open as public domain software.
-  - The U.S. Government has no copyright or intellectual property claim to MARATHON or 
+1) CAA Should Comply With Federal Source Code Policy
+   - CAA should provision the sharing of source code with federal agencies, and 
+     advertise repositories on code.gov and / or code.mil as appropriate.
+   - CAA should comply with the provisions of the pilot program from M-16-21, that 
+     20% of newly-created (or acquired) custom software must be released as open source.
+2) AR 5-11 "Management of Army Modeling and Simulation, 30 May 2014" Should be Made Consistent With Federal Source Code Policy
+   - AR 5-11 does not account for the paradigm shift toward open source software development, and
+     currently countermands the governing orders regarding Federal Source Code Policy.
+3) MARATHON 4 should be hosted on github to enable collaborative team development
+   - CAA should actively leverage modern technology (github and DCS) to address 
+     the long-standing MARATHON developer capability gap.
+   - Until CAA refines its position on compliance with the Federal Source Code Policy, 
+     MARATHON should be maintained as a private repository on github to enable 
+     rapid development and verification in the near-term.
+     - Private Github repositories are available, but require additional 
+       $25/month funding to support 5 developers for an organization. 
+     - Should CAA decide to openly develop MARATHON, github hosting is 
+       free for public repositories.
+4) CAA should follow the exampe set by US Army Research Laboratories, and 
+   release MARATHON 4 into the open as public domain software.
+  - The U.S. Government has no copyright or intellectual property claim to MARATHON 4 or 
     any taxpayer-funded creative work.
   - MARATHON does not meet the exceptions provided by the Federal Source Code Policy, 
     namely the legal, classification, or "National Security System" exceptions.
-
+  - Open development can only serve to strengthen the quality of MARATHON 4 via 
+    easing collaboration and community engagement, while fulfilling the 
+    Federal Source Code Policy mandate for the Open Source Software Pilot Program.
+    
 * References	
 
 #+LATEX: \begin{footnotesize}
