@@ -85,15 +85,6 @@ source code available promotes
     the need to constantly reinvent the wheel or duplicate effort.
   - Much like academia and industry, reuseable source code allows the state of the art 
     to advance more rapidly.
-- Continuous Peer Review 
-  - "Continuous and  broad peer review enabled by publicly available source code enable ..."
-  - Security
-  - Verification
-  - Optimization
-- Communities as a Force Multiplier
-  - "Free" labor
-- Public Relations
-- Advertisement
 
 According to DOD  (DOD/CIO-G6 Clarifying Guidance on Open Source Sofware, p. 4-5),
 
