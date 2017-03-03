@@ -356,11 +356,11 @@ Open Source candidate, preferably hosted on Github.
 Ideally, CAA will join the ranks of other Federal agencies and embrace the general modernization
 of government technology, specifically the realization of the benefits of open source software 
 development and sharing source code. The tendency to reflexively lock down source code without 
-assessing the benefits - if not the mandate - to share our knowledge across the government and 
-the public domain, serves to ensure isolated, resource-constrained development devoid of the 
-known value of external collaboration.  In pursuance of modernizing the Army technology space, 
-and in accordance with Federal Source Code Policy, CAA and AMSO should lead this effort 
-from the front.
+assessing the benefits - let alone the current mandate - to share our knowledge across the 
+government and the public domain, serves to ensure isolated, resource-constrained development
+devoid of the known value of external collaboration.  In pursuance of modernizing the Army 
+technology space, and in accordance with Federal Source Code Policy, CAA and AMSO should 
+lead this effort from the front.
 
 In an ideal world, the benefits of sharing source code, allowing for interop with other agencies 
 (even individuals like college students, researchers, or industry professionals) can pay dividends
