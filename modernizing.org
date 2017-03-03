@@ -19,19 +19,52 @@
 #+LATEX_HEADER: \textheight=9truein
 #+LATEX_HEADER: \hyphenation{MAR-A-THON}
 
-* Aligning the Center for Army Analysis Policy Towards Open Source Software and Releasability with Modern Federal Source Code Policy
+
+* Abstract
+
+Center for Army Analysis should be re-aligning its policy towards open
+source software, and its releasability, with the current federal
+policy mandated by Executive Order and outlined by further guidance
+such as the Federal Source Code Policy.  This re-alignment will take
+CAA (and other agencies) from the 1950s "communication channels of
+inability", and the mistrust which entails from that, to the modern
+era of facility of communication, of sharing of technology, and of
+collaboration.  This will accrue manifold benefits across the federal
+government and, when warranted, with the public itself, both of which
+have been observed and proven to work time and again in settings such
+as in the development and maintenance of open source software and the
+collaborative work enabled by internet discussion boards and (pre-web)
+newsgroups.
+
+* Background
+
 Like many government agencies, the Center for Army Analysis (CAA) is both a consumer and producer of software.
-From decades-old legacy models and simulations that support Army and Department of Defense analysis, to simple
-utilities, scripts, and tools that enable rapid research, analysis, and improved productivity, the federal 
-employees at CAA have created a bevy of source code.  CAA's default position regarding sharing these creative works,
-particularly the realm of modeling and simulation source, is one of closed-source and isolation.  Objections to releasing
+From decades-old legacy models and simulations that support Army and Department of Defense analyses, to the
+utilities, scripts, and tools of today that enable rapid research, analysis, and improved productivity, the federal
+employees at CAA have created a bevy of source code.
+
+CAA's default position regarding sharing these creative works,
+particularly in the realm of modeling and simulation source, is one of closed-source and isolation.  Objections to releasing
 source code range from security and classification risks, to loss of a competitive analytic edge, to lacking indemnity from
 potential consumers of CAA software, to the simple absence of a mandate to share.  These concerns are more or less codified in 
 the prevailing Army Modeling and Simulation Office (AMSO) releasibility policy in AR 5-11 (2014), which fundamentally 
 leaves the decision to share source code to CAA.  Until recently, CAA's default position has been supported by 
-legacy policy that delegates to the preference of CAA leadership rather than mandating sharing and openness. 
+legacy policy that delegates to the preference of CAA leadership rather than mandating sharing and openness.
 
-Unfortunately CAA's position, and the policy in AR 5-11, is not compliant with Federal Source Code Policy as directed by 
+This becomes problematic when considering the overall benefits accrued
+to the government and the American public --- that have been
+identified by the Executive Branch and formalized into policy --- for
+*openness and sharing*, the exact opposite operating procedures of the
+legacy one of *closedness and isolation* continued to be maintained at
+some lower echelons.  Also problematic is when agencies leverage the
+technology of open source (implying, mutually shared) technology,
+meanwhile ironically, and to our eventual detriment, refusing to share
+the advancements they made upon them (when national security concerns
+are not involved).
+
+* Problem
+
+Unfortunately CAA's position, and the policy in AR 5-11, is not compliant with current policy, namely the Federal Source Code Policy as directed by
 Executive Order and subsequent Office of Management and Budget (OMB) policy.  Initiated by President Obama, and continued 
 by President Trump, the default position of the federal government towards source code is openness.  
 This position emerged in 2013 under Executive Order No. 13642, "Making Open and Machine Readable the New Default
