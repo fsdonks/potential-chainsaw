@@ -1,4 +1,4 @@
-#+TITLE:  Ensuring Center For Army Analysis Compliance With Federal Source Code Policy
+#+TITLE:  Ensuring Center for Army Analysis Compliance with Federal Source Code Policy
 #+AUTHOR: Tom Spoon and Rick Hanson III
 #+DATE: 17 Aug 2016
 #+VERSION: 1.2
@@ -17,9 +17,9 @@
 #+LATEX_HEADER: \textheight=9truein
 #+LATEX_HEADER: \hyphenation{MAR-A-THON}
 
-* Aligning the Center For Army Analysis Policy Towards Open Source Software and Releasability With Modern Federal Source Code Policy
+* Aligning the Center for Army Analysis Policy Towards Open Source Software and Releasability with Modern Federal Source Code Policy
 Like many government agencies, the Center for Army Analysis (CAA) is both a consumer and producer of software.
-From decades-old legacy models and simulations that support Army and Department of Defense Analysis, to simple
+From decades-old legacy models and simulations that support Army and Department of Defense analysis, to simple
 utilities, scripts, and tools that enable rapid research, analysis, and improved productivity, the federal 
 employees at CAA have created a bevy of source code.  CAA's default position regarding sharing these creative works,
 particularly the realm of modeling and simulation source, is one of closed-source and isolation.  Objections to releasing
@@ -78,8 +78,7 @@ source code available promotes
     may form a community.
 - Collaboration
   - Freedom of information fosters communication, allowing interested parties to collaborate 
-    across various domains
-    - including research, development, issue tracking, patching source code, and more.
+    across various domains including research, development, issue tracking, patching source code, and more.
 - Reuse
   - The "community" can freely build upon and extend existing works, ideally bypassing 
     the need to constantly reinvent the wheel or duplicate effort.
@@ -161,7 +160,7 @@ In furtherance of this strategy, agencies should comply with the following princ
   - Software that is custom-developed for or by agencies should, to the extent possible and appropriate, be developed using
     open development practices. These practices provide an environment in which OSS can flourish and be repurposed. This principle,
     as well as the one below for releasing source code, include distributing a minimum viable product as OSS; engaging the public 
-    before official release;30 and drawing upon the public’s knowledge to make improvements to the project.
+    before official release; and drawing upon the public’s knowledge to make improvements to the project.
 - Adopt a Regular Release Schedule: 
   - In instances where software cannot be developed using open development practices, but is otherwise appropriate for 
     release to the public, agencies should establish an incremental release schedule to make the source code and associated 
@@ -175,7 +174,7 @@ In furtherance of this strategy, agencies should comply with the following princ
     modify existing code, or make other suggestions to improve the software throughout the software development lifecycle. 
     Communities help monitor changes to code, track potential errors and flaws in code, and other related activities. 
     These kinds of contributions should be anticipated and, where appropriate, considered for integration into
-    custom-developed Government software or associated materials.
+    custom-developed government software or associated materials.
 - Documentation: 
   - It is important to provide OSS users and contributors with adequate documentation of source code in an effort to
     facilitate use and adoption. Agencies must ensure that their repositories include enough information to allow reuse
@@ -203,11 +202,11 @@ the Federal Source Code Policy compliance.
 AR 5-11 is problematic for a number of reasons. First, there is no mention (specifically 
 nothing precluding) distribution of models and simulations as open source software.  Further, 
 the distribution processes defined by the AR, specifically for interagency - even internal 
-Army distribution - seems to directly contradict both the Executive Order, and the OMB 
+Army distribution - seems to directly contradict both the Executive Order and the OMB 
 implementation memorandum.  Further, none of the regulations referenced in AR 5-11 address
-the possibility or even acknowledgement of open-source software, or the executive directives 
+the possibility or even acknowledgement of open-source software or the executive directives 
 specified by the EO and the OMB memorandum. In general, AR 5-11 should be refreshed and/or 
-rewritten to account for the FSCP, and to clean up antiquated terminology.
+rewritten to account for the FSCP and to clean up antiquated terminology.
 
 * Forcing Functions
 There is, at a minimum, a federal mandate for sharing source code across the government, and 
@@ -235,10 +234,10 @@ Open Source candidate, preferably hosted on Github.
 ** Practical Benefits of Open Source Via Gitub
 - Flexible Team-based Collaboration 
   - Developers can work remotely, from home, the office, at odd hours, etc.
-    Using git, we have a rich collaborative platform for managing the source code, enabling
+    Using Git, we have a rich collaborative platform for managing the source code, enabling
     concurrent, asynchronous development that maximizes development team productivity without
-    sacrificing version control.  This complements existing technology like DCS
-    (Defense Collaboration Services), allowing teams to communicate in real-time to resolve
+    sacrificing version control.  This complements existing technology like
+    Defense Collaboration Services (DCS), allowing teams to communicate in real-time to resolve
     issues, learn about the software architecture, and even modify the source code.  
 
 - Empirical Evidence at CAA
@@ -249,15 +248,15 @@ Open Source candidate, preferably hosted on Github.
     CAA has been able to avert the loss of critical infrastructure development precisely due to 
     the flexibility enabled by distributed version control, unclassified development, and openness. 
 
-  - With the addition of new team members, leveraging github as a synchronization point has already
+  - With the addition of new team members, leveraging Github as a synchronization point has already
     been incredibly useful for distance-based training, collaboration, source code revision, and
     real-time pair-programming.
 
 - Industry Standard Version Control via Github.
-  - Github provides a seamlessly integrated suite of tools that enhance the git DVCS 
+  - Github provides a seamlessly integrated suite of tools that enhance the Git distributed version control system (DVCS) 
     developer experience with 
-    - source code repository hosting 
-    - web-based interface for examining source code history, diffs, branches, etc.
+    - source code repository hosting; 
+    - web-based interface for examining source code history, diffs, branches, etc.; and
     - web-based issue tracking, team communication, and other collaboration features.
 
 ** Compliance with Federal Source Code Policy
@@ -283,8 +282,8 @@ Open Source candidate, preferably hosted on Github.
     President of the United States.
  
 - "We should run the model, they don't need the source. They can ask us for the analysis."
-  - This service-minded aspect of Army M&S is detailed in AR 5-11, and is the predominant 
-    "business model" that CAA, and indeed many analytic agencies, have followed.  
+  - This service-minded aspect of Army M&S is detailed in AR 5-11 and is the predominant 
+    "business model" that CAA and many analytic agencies have followed.  
     Sharing code does not equate to sharing expertise.  Indeed, the dominant open 
     source software business model is to provide support and service in exchange 
     for remuneration.  Many clients or sponsors simply lack the developer talent 
@@ -299,7 +298,7 @@ Open Source candidate, preferably hosted on Github.
     comments, notional test data, and related documentation - neither requires nor 
     includes classified information.  Rather, the data upon which MARATHON 4 is applied, 
     and the resulting analysis, executed on a secure network, will be classified.  
-    Nor is MARATHON 4 a "National Security System" as defined by 44 U.S. Code § 3542.
+    MARATHON 4 is not a "National Security System" as defined by 44 U.S. Code § 3542.
   
   - The security benefits of sharing and open sourcing are well-known, even 
     within DOD and the Army.  
@@ -314,7 +313,7 @@ Open Source candidate, preferably hosted on Github.
      - "Conversely, where source code is hidden from the public, attackers can attack the 
        software anyway as described above.  In addition, an attacker can often acquire the
        original source code from suppliers anyway (either because the supplier voluntarily
-       provides it, or via attacks against the supplier); in such cases, if only the 
+       provides it or via attacks against the supplier). In such cases where only the 
        attacker has the source code, the attacker ends up with another advantage." 
      - "Hiding source code does inhibit the ability of third parties to respond to 
        vulnerabilities (because changing software is more difficult without the 
@@ -359,10 +358,10 @@ development and sharing source code. The tendency to reflexively lock down sourc
 assessing the benefits - let alone the current mandate - to share our knowledge across the 
 government and the public domain, serves to ensure isolated, resource-constrained development
 devoid of the known value of external collaboration.  In pursuance of modernizing the Army 
-technology space, and in accordance with Federal Source Code Policy, CAA and AMSO should 
+technology space and in accordance with Federal Source Code Policy, CAA and AMSO should 
 lead this effort from the front.
 
-In an ideal world, the benefits of sharing source code, allowing for interop with other agencies 
+In an ideal world, the benefits of sharing source code and allowing for interop with other agencies 
 (even individuals like college students, researchers, or industry professionals) can pay dividends
 in improving the source, aiding in verification, and generally building a community of interest. 
 
@@ -374,25 +373,25 @@ MARATHON 4 can directly benefit from open development and hosting on Github by t
 the open source paradigm under the auspices of the governing Federal Source Code Policy.  
 
 * Recommendations
-1) CAA Should Comply With Federal Source Code Policy
+1) CAA should comply with  Federal Source Code Policy.
    - CAA should provision the sharing of source code with federal agencies, and 
      advertise repositories on code.gov and / or code.mil as appropriate.
    - CAA should comply with the provisions of the pilot program from M-16-21, that 
      20% of newly-created (or acquired) custom software must be released as open source.
-2) AR 5-11 "Management of Army Modeling and Simulation, 30 May 2014" Should be Made Consistent With Federal Source Code Policy
-   - AR 5-11 does not account for the paradigm shift toward open source software development, and
+2) AR 5-11 "Management of Army Modeling and Simulation, 30 May 2014" should be made consistent with federal source code policy.
+   - AR 5-11 does not account for the paradigm shift toward open source software development and
      currently countermands the governing orders regarding Federal Source Code Policy.
-3) MARATHON 4 should be hosted on github to enable collaborative team development
-   - CAA should actively leverage modern technology (github and DCS) to address 
+3) MARATHON 4 should be hosted on Github to enable collaborative team development.
+   - CAA should actively leverage modern technology (Github and DVCS) to address 
      the long-standing MARATHON developer capability gap.
    - Until CAA refines its position on compliance with the Federal Source Code Policy, 
-     MARATHON should be maintained as a private repository on github to enable 
+     MARATHON should be maintained as a private repository on Github to enable 
      rapid development and verification in the near-term.
      - Private Github repositories are available, but require additional 
        $25/month funding to support 5 developers for an organization. 
-     - Should CAA decide to openly develop MARATHON, github hosting is 
+     - Should CAA decide to openly develop MARATHON, Gthub hosting is 
        free for public repositories.
-4) CAA should follow the exampe set by US Army Research Laboratories, and 
+4) CAA should follow the exampe set by US Army Research Laboratories and 
    release MARATHON 4 into the open as public domain software.
   - The U.S. Government has no copyright or intellectual property claim to MARATHON 4 or 
     any taxpayer-funded creative work.
