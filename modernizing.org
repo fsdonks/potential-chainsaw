@@ -345,11 +345,12 @@ Open Source candidate, preferably hosted on Github.
     until 2019.
 
 - "Contractors will just repackage it and sell it back to us." 
-  - If a contractor grabs it, and uses it to make something cool or even better, then under
-    the EO and OMB guidance we actually should get their modifications back. Other agencies 
-    devoting resources to improve MARATHON 4, with CAA controlling the integration and 
-    merging of improvements, serves to extend the range of support for MARATHON 4 development, 
-    further helping the chronic developer capability gap at CAA.
+  - If a contractor  uses the source code it to make something even marginally better, 
+    then under the EO and OMB guidance we (the federal government) actually should get their
+    modifications back in full. Other agencies devoting resources to improve MARATHON 4,
+    with CAA controlling the integration and  merging of improvements, serves to extend the 
+    range of support for MARATHON 4 development, further helping the chronic developer capability
+    gap at CAA.
 
 * Desired End State
 Ideally, CAA will join the ranks of other Federal agencies and embrace the general modernization
