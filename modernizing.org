@@ -1,11 +1,12 @@
 #+TITLE:  Ensuring Center for Army Analysis Compliance with Federal Source Code Policy
-#+AUTHOR: Tom Spoon and Rick Hanson
-#+DATE: 17 Aug 2016
+#+SUBTITLE: Working Paper
+#+AUTHOR: Tom Spoon, Rick Hanson and Craig Flewelling
+#+DATE: 3 March 2017
 #+VERSION: 1.2
 #+STARTUP: showall
 #+LANGUAGE: en
 #+OPTIONS: ':t toc:nil
-#+LATEX_CLASS: amsart
+# #+LATEX_CLASS: amsart 
 #+LATEX_CLASS_OPTIONS: [letterpaper,10pt]
 #+LATEX_HEADER: \usepackage{enumitem}
 #+LATEX_HEADER: \setlist[itemize,1]{leftmargin=*}
@@ -18,23 +19,25 @@
 #+LATEX_HEADER: \topmargin=-0.6truein
 #+LATEX_HEADER: \textheight=9truein
 #+LATEX_HEADER: \hyphenation{MAR-A-THON}
+#+LATEX_HEADER: \hypersetup{colorlinks,citecolor=black, filecolor=black, linkcolor=blue, urlcolor=black}
 
 
 * Abstract
 
-Center for Army Analysis should be re-aligning its policy towards open
-source software, and its releasability, with the current federal
-policy mandated by Executive Order and outlined by further guidance
-such as the Federal Source Code Policy.  This re-alignment will take
-CAA (and other agencies) from the 1950s "communication channels of
-inability", and the mistrust which entails from that, to the modern
-era of facility of communication, of sharing of technology, and of
-collaboration.  This will accrue manifold benefits across the federal
-government and, when warranted, with the public itself, both of which
-have been observed and proven to work time and again in settings such
-as in the development and maintenance of open source software and the
-collaborative work enabled by internet discussion boards and (pre-web)
-newsgroups.
+The Center for Army Analysis (CAA) should re-align its policy for the 
+creation and releasability of Open Source Software (OSS), with the current 
+federal policy mandated by Executive Order and detailed by  the Federal
+Source Code Policy (FSCP).  This re-alignment will take CAA (and other agencies)
+from the 1950s "communication channels of inability", and the mistrust
+which follows from that, to the modern era of facilitating communication,
+sharing technology, and collaboration.  As the Office of the President of 
+the United States notes, this will accrue manifold benefits across the federal 
+government and, when warranted, with the public. Time and again, engagement 
+across both communities - such as in the development and maintenance of 
+Open Source Software and the collaborative work enabled by internet discussion 
+boards and (pre-web) newsgroups - successfully brought vast, previously 
+untapped technical resources to bear to solve complicated problems.
+
 
 * Background
 
@@ -47,28 +50,27 @@ CAA's default position regarding sharing these creative works,
 particularly in the realm of modeling and simulation source, is one of closed-source and isolation.  Objections to releasing
 source code range from security and classification risks, to loss of a competitive analytic edge, to lacking indemnity from
 potential consumers of CAA software, to the simple absence of a mandate to share.  These concerns are more or less codified in 
-the prevailing Army Modeling and Simulation Office (AMSO) releasibility policy in AR 5-11 (2014), which fundamentally 
+the prevailing Army Modeling and Simulation Office (AMSO) releasability policy in AR 5-11 (2014), which fundamentally 
 leaves the decision to share source code to CAA.  Until recently, CAA's default position has been supported by 
-legacy policy that delegates to the preference of CAA leadership rather than mandating sharing and openness.
+legacy policy that defers to the preference of CAA leadership rather than mandating sharing and openness.
 
 This becomes problematic when considering the overall benefits accrued
 to the government and the American public --- that have been
 identified by the Executive Branch and formalized into policy --- for
 /openness and sharing/, the exact opposite operating procedures of the
-legacy one of /closedness and isolation/ continued to be maintained at
-some lower echelons.  Also problematic is when agencies leverage the
-technology of open source (implying, mutually shared) technology,
-meanwhile ironically, and to our eventual detriment, refusing to share
-the advancements they made upon them (when national security concerns
+legacy one of /closedness and isolation/ maintained at some lower echelons.  
+Also problematic is when agencies leverage the technology of open source 
+(implying, mutually shared), meanwhile ironically, and to our eventual detriment, 
+refusing to share the advancements they made upon them (when national security concerns
 are not involved).
 
 * Problem
 
 Unfortunately CAA's position, and the policy in AR 5-11, is not compliant with current policy, namely the Federal Source Code Policy as directed by
-Executive Order and subsequent Office of Management and Budget (OMB) policy.  Initiated by President Obama, and continued 
-by President Trump, the default position of the federal government towards source code is openness.  
-This position emerged in 2013 under Executive Order No. 13642, "Making Open and Machine Readable the New Default
- for Government Information" (EO13642). Via EO13642, the Obama administration mandated sharing 
+Executive Order and subsequent Office of Management and Budget, Executive Office of the President (OMB) policy.  
+Initiated by President Obama, and continued by President Trump, the default position of the federal
+government towards source code is openness.  This position emerged in 2013 under Executive Order No. 13642,
+"Making Open and Machine Readable the New Default for Government Information" (EO13642). Via EO13642, the Obama administration mandated sharing 
 government data - including source code - between federal agencies, and embraced open-sourcing federal software to spur 
 cost-reduction, reduce redundancy, and place tax-payer funded works in the public domain.
 
@@ -77,7 +79,7 @@ OMB detailed under the Digital Government Initiative (a.k.a. "The People's Code"
 result emerged in OMB M-16-21, "Federal Source Code Policy Memorandum," when the detailed Federal Source Code Policy 
 (FSCP) became the governing policy for all federal agencies.  Since the policy's inception, marked by the 2016 rollout of 
 the central coordinating repository of government code https://code.gov, CAA has not been compliant with the 
-mandates of the FSCP and the federal government's modernized policy on sharing and open source software.  
+mandates of the FSCP and the federal government's modernized policy on sharing and Open Source Software(OSS).  
 
 * Paradigm Shift in Software Development: Embracing Open Source 
 DOD has been an early-adopter and general proponent of the utility of Open Source Software.
@@ -87,9 +89,9 @@ Open Source Software (OSS)".  In conjunction with the memorandum, DOD/CIO-G6 pro
 website addressing the benefits, risks, legalities, and practical questions surrounding the use of
 Open Source Software on DOD networks (http://dodcio.defense.gov/Open-Source-Software-FAQ/).
 
-In many ways, the policy and the website were merely addressing the reality of prevelant usage
-of Open Source Software throughout DOD.  Case in point, CAA initiated and maintains exceptions to 
-Army Policy for internal networks specifically to leverage the superior capability of both closed 
+In many ways, the policy and the website were merely addressing the reality of prevalent usage
+of OSS throughout DOD.  Case in point: CAA initiated and maintains exceptions to 
+Army policy for internal networks specifically to leverage the superior capability of both closed 
 and Open Source Software that may not have a Certificate of Networthiness, or otherwise be "approved" 
 software.  Even legacy CAA models and simulations rely heavily on Open Source Software for 
 development, scripting, and processing (both pre and post).
@@ -105,7 +107,7 @@ share or otherwise release source code.
 Open Source Software fundamentally rests on the idea that the open sharing of information 
 yields numerous second and third order benefits.  In the case of software, making the 
 source code available promotes 
-- Open Source as Means of Publication
+- Publication
   - Particularly in the case of reproducible research, releasing the source code is a 
     modern pre-requisite to validate any scientific or academic observations.  
   - Similarly, making even amateur or experimental source code available serves as an 
@@ -117,10 +119,10 @@ source code available promotes
 - Reuse
   - The "community" can freely build upon and extend existing works, ideally bypassing 
     the need to constantly reinvent the wheel or duplicate effort.
-  - Much like academia and industry, reuseable source code allows the state of the art 
+  - Much like academia and industry, reusable source code allows the state of the art 
     to advance more rapidly.
 
-According to DOD  (DOD/CIO-G6 Clarifying Guidance on Open Source Sofware, p. 4-5),
+According to DOD  (DOD/CIO-G6 Clarifying Guidance on Open Source Software, p. 4-5),
 
 1) The continuous and broad peer-review enabled by publicly available source code supports 
    software reliability and security efforts through the identification and elimination of 
@@ -152,25 +154,25 @@ infrastructure and significantly contributing to the Open Source community, incl
 historical "threats" like the Linux operating system.
 
 * OMB M-16-21, "Federal Source Code Policy Memorandum" 
-As a consequence of EO 13642, the OMB established Federal Source Code Poilicy via memorandum 
+As a consequence of EO 13642, the OMB established Federal Source Code Policy via memorandum 
 M-16-21.  The Federal Source Code Policy prescribes mandatory requirements for federal agency 
-practices for sharing source code, open sourcing software, and participating in the open source 
-software community.
+practices for sharing source code, open-sourcing software, and participating in the Open Source 
+Software community.
 
 ** Major provisions of the FSCP include:
 *** Government-wide Source Code Sharing
-  At a minimum, government agenciees are mandated to make source code available to the federal government 
+  At a minimum, government agencies are mandated to make source code available to the federal government 
   for interagency reuse.
 
 *** Open Source Software Pilot Program
-  - Government agencies (including DOD) are automatically part of a 3-year open source pilot program.
+  - Government agencies (including DOD) are automatically part of a 3-year Open Source Pilot Program.
     During the pilot program, policy mandates that 20% of newly created custom software is to be open source.
     This applies to software created by government employees, and software created in execution of a 
     government contract.
 
-  - Open sourcing software is highly encouraged, and even temporarily mandated for a portion of 
+  - Open-sourcing software is highly encouraged, and even temporarily mandated for a portion of 
     our new custom software projects for the duration of the "pilot program."  Open source 
-    software is intended to be broadly accesible, and developed with "open" practices, disseminated 
+    software is intended to be broadly accessible, and developed with "open" practices, disseminated 
     on - possibly 3rd party - platforms with established open source communities.
 
 *** code.gov
@@ -235,38 +237,38 @@ the Federal Source Code Policy compliance.
 
 * AR 5-11 "Management of Army Modeling and Simulation, 30 May 2014"
 AR 5-11 is problematic for a number of reasons. First, there is no mention (specifically 
-nothing precluding) distribution of models and simulations as open source software.  Further, 
+nothing precluding) distribution of models and simulations as Open Source Software.  Further, 
 the distribution processes defined by the AR, specifically for interagency - even internal 
 Army distribution - seems to directly contradict both the Executive Order and the OMB 
 implementation memorandum.  Further, none of the regulations referenced in AR 5-11 address
-the possibility or even acknowledgement of open-source software or the executive directives 
+the possibility or even acknowledgement of Open Source Software or the executive directives 
 specified by the EO and the OMB memorandum. In general, AR 5-11 should be refreshed and/or 
 rewritten to account for the FSCP and to clean up antiquated terminology.
 
 * Forcing Functions
 There is, at a minimum, a federal mandate for sharing source code across the government, and 
 a mandate to open-source 20% of our custom code during the course of the 3-year Open Source Pilot 
-program. Under the Federal Source Code Policy, CAA must share our source in an open, unimpeded manner
+Program. Under the Federal Source Code Policy, CAA must share our source in an open, unimpeded manner
 with other government agencies so that there is government-wide reuse and cost saving.
 
 Some agencies, such as NASA and the US Army Research Laboratories, are choosing to cut to the chase, 
-and both open source and openly develop their code on Github. Github is the largest 3rd-party open source
+and both open source and openly develop their code on GitHub. GitHub is the largest 3rd-party open source
 community that offers source code hosting services, and meets every prescription of the FSCP guidance
-for "Participation in the Open Source Community." Github repositories are then registered with 
+for "Participation in the Open Source Community." GitHub repositories are then registered with 
 https://code.gov to satisfy the discoverability and coordination requirements in the FSCP.
 
 * Toward Open Sourcing MARATHON 4
-MARATHON 4 is written in an Open Source Language (Clojure), managed with Open Source 
-tools (git), and has emphasised unclassified development from inception.  MARATHON 4 
+MARATHON 4 is written in an open source language (Clojure), managed with open source 
+tools (Git), and has emphasized unclassified development from inception.  MARATHON 4 
 is intentionally written and maintained in such a way as to facilitate sharing and 
 discovery, particularly to enable flexible development among remote work locations 
 and to enable sharing of code for research purposes, peer-review, external verification,
 and publication in professional forums like MORS, WinterSim, and INFORMS.  
 MARATHON 4 is, for all intents and purposes, open-source ready and entirely compliant 
 with the practices established by the FSCP.  Consequently, MARATHON 4 is an obvious 
-Open Source candidate, preferably hosted on Github.
+open source release candidate, preferably hosted on GitHub.
 
-** Practical Benefits of Open Source Via Gitub
+** Practical Benefits of Open Source Via GitHub
 - Flexible Team-based Collaboration 
   - Developers can work remotely, from home, the office, at odd hours, etc.
     Using Git, we have a rich collaborative platform for managing the source code, enabling
@@ -283,27 +285,29 @@ Open Source candidate, preferably hosted on Github.
     CAA has been able to avert the loss of critical infrastructure development precisely due to 
     the flexibility enabled by distributed version control, unclassified development, and openness. 
 
-  - With the addition of new team members, leveraging Github as a synchronization point has already
+  - With the addition of new team members, leveraging GitHub as a synchronization point has already
     been incredibly useful for distance-based training, collaboration, source code revision, and
     real-time pair-programming.
 
-- Industry Standard Version Control via Github.
-  - Github provides a seamlessly integrated suite of tools that enhance the Git distributed version control system (DVCS) 
-    developer experience with 
+  - This very document has been collaboratively built and revised on GitHub by CAA personnel.
+
+- Industry Standard Version Control via GitHub.
+  - GitHub provides a seamlessly integrated suite of tools that enhance the Git distributed version
+    control system (DVCS) developer experience with 
     - source code repository hosting; 
     - web-based interface for examining source code history, diffs, branches, etc.; and
     - web-based issue tracking, team communication, and other collaboration features.
 
 ** Compliance with Federal Source Code Policy
 - At a minimum, MARATHON 4 must be shared with other federal agencies.
-- Hosting as an open source project, hosted on Github, satisfies the existing 
+- Hosting as an open source project, hosted on GitHub, satisfies the existing 
   Federal Source Code Policy, in addition to the spirit of the executive order.
 - MARATHON 4 could be used to fulfill the 20% mandate for open-sourcing custom 
-  software during the current Pilot Program period.
+  software during the current FSCP pilot program period.
 
 * Possible Objections and Risks 
 - "Army Policy Prevents Us From Doing So" 
-  - The AMSO guidance in AR 5-11 contradicts (or in the best case, ignores/doesn't account for) 
+  - The AMSO guidance in AR 5-11 contradicts (or in the best case, is ignorant of) 
     Federal Source Code Policy.  The apparent reflexive response to "not share" with federal 
     agencies, and  international partners, is contrary to both the spirit and the policy 
     codified by EO13642 and OMB M-16-21.
@@ -313,28 +317,29 @@ Open Source candidate, preferably hosted on Github.
     empirical confirmation that "sharing is beneficial" from the software 
     industry and academia support an alternate prospect: CAA would be 
     protecting CAA / Army interests by taking advantage of the massive 
-    benefits of open source, and by compliying with policy set forth by the 
-    President of the United States.
+    benefits of open source, and by complying with policy set forth by the 
+    Executive Office of the President of the United States.
  
 - "We should run the model, they don't need the source. They can ask us for the analysis."
   - This service-minded aspect of Army M&S is detailed in AR 5-11 and is the predominant 
-    "business model" that CAA and many analytic agencies have followed.  
-    Sharing code does not equate to sharing expertise.  Indeed, the dominant open 
-    source software business model is to provide support and service in exchange 
-    for remuneration.  Many clients or sponsors simply lack the developer talent 
-    or inclination to modify the source code, and will still be interested in the 
-    services provided.  The legacy service-based model can - and will - survive, 
-    with the added benefit of collaboration and possible community engagement. 
+    "business model" that CAA and many analytic agencies follow.  Sharing code does not 
+    equate to sharing expertise.  Indeed, the dominant open source software business 
+    model is to provide support and service in exchange for remuneration.  Many clients 
+    or sponsors simply lack the developer talent or inclination to modify the source 
+    code, and will still be interested in the services provided.  The legacy 
+    service-based model can - and will - survive, with the added benefit of collaboration 
+    and possible community engagement. 
 
 - "We'd expose ourselves to security vulnerability."
-  - MARATHON 4 is merely an instantation of AR 525-29, a publicly available document 
+  - MARATHON 4 is not a  "National Security System" as defined by 44 U.S. Code § 3542.
+    MARATHON 4 is merely an instantiation of AR 525-29, a publicly available document 
     detailing Army Force Generation.  Started as a purely unclassified development 
     effort, MARATHON 4 maintains that the source code for the simulation - including 
     comments, notional test data, and related documentation - neither requires nor 
-    includes classified information.  Rather, the data upon which MARATHON 4 is applied, 
-    and the resulting analysis, executed on a secure network, will be classified.  
-    MARATHON 4 is not a "National Security System" as defined by 44 U.S. Code § 3542.
-  
+    includes classified information.  Rather, only the data upon which MARATHON 4 is 
+    applied, and the resulting analysis, if performed on a secure network with
+    classified input, would be classified.
+
   - The security benefits of sharing and open sourcing are well-known, even 
     within DOD and the Army.  
     Per the (DOD-CIO/G6 OSS FAQ, "Q: Doesn't hiding source code automatically make
@@ -355,8 +360,8 @@ Open Source candidate, preferably hosted on Github.
        source code), but this is obviously not a security advantage. 
        In general, “Security by Obscurity” is widely denigrated."
 
-  - The Office of the Secretary of Defense piloted a succesful program to harden
-    Pentagon defeneses by engaging the broader community of security experts 
+  - The Office of the Secretary of Defense piloted a successful program to harden
+    Pentagon defenses by engaging the broader community of security experts 
     (Hack the Pentagon Results):
     - "Hack the Pentagon" was a recent US Digital Service initiative, where
       DOD software systems and services at the Pentagon were promoted on a "bug bounty" 
@@ -371,24 +376,25 @@ Open Source candidate, preferably hosted on Github.
 - "We have no obligation to release if no-one asks."
   - Federal Source Code policy mandates that our non-exempt software, like MARATHON 4, is - at 
     a minimum - advertised via https://code.gov and accessible to other federal agencies for reuse.
-    Additionally, we are required to open-source  20% of our software during the current pilot 
-    program period.
-
-  - Additionally, Federal Source Code Policy mandates that 20% of created or acquired custom 
+  - Federal Source Code Policy mandates that 20% of created or acquired custom 
     software must be released as open source during the current pilot program, which lasts 
     until 2019.
 
 - "Contractors will just repackage it and sell it back to us." 
-  - If a contractor  uses the source code it to make something even marginally better, 
+  - If a contractor  uses the source code to make something even marginally better, 
     then under the EO and OMB guidance we (the federal government) actually should get their
     modifications back in full. Other agencies devoting resources to improve MARATHON 4,
     with CAA controlling the integration and  merging of improvements, serves to extend the 
     range of support for MARATHON 4 development, further helping the chronic developer capability
     gap at CAA.
+- "CAA will be legally liable for support and any problems users encounter if we open source."
+  - The default open source posture provided by the FSCP, and DOD/CIO-G6, precludes this possibility.
+    Where applicable, open source licenses vetted by DCS/CIO-G6, specifically indemnify the original
+    author of the code and provision no warranty for fitness of use or guarantee of support.
 
 * Desired End State
 Ideally, CAA will join the ranks of other Federal agencies and embrace the general modernization
-of government technology, specifically the realization of the benefits of open source software 
+of government technology, specifically the realization of the benefits of Open Source Software 
 development and sharing source code. The tendency to reflexively lock down source code without 
 assessing the benefits - let alone the current mandate - to share our knowledge across the 
 government and the public domain, serves to ensure isolated, resource-constrained development
@@ -401,10 +407,10 @@ In an ideal world, the benefits of sharing source code and allowing for interop 
 in improving the source, aiding in verification, and generally building a community of interest. 
 
 Access to the source code does not imply knowledge in how to build, execute, modify, or extend the 
-model.  Nor does access predicate an innate desire to do so.  The established model-as-service 
+model.  Nor does access engender an innate desire to do so.  The established model-as-service 
 approach still works under the open source paradigm.
 
-MARATHON 4 can directly benefit from open development and hosting on Github by taking advantage of 
+MARATHON 4 can directly benefit from open development and hosting on GitHub by taking advantage of 
 the open source paradigm under the auspices of the governing Federal Source Code Policy.  
 
 * Recommendations
@@ -414,27 +420,28 @@ the open source paradigm under the auspices of the governing Federal Source Code
    - CAA should comply with the provisions of the pilot program from M-16-21, that 
      20% of newly-created (or acquired) custom software must be released as open source.
 2) AR 5-11 "Management of Army Modeling and Simulation, 30 May 2014" should be made consistent with federal source code policy.
-   - AR 5-11 does not account for the paradigm shift toward open source software development and
+   - AR 5-11 does not account for the paradigm shift toward Open Source Software development and
      currently countermands the governing orders regarding Federal Source Code Policy.
-3) MARATHON 4 should be hosted on Github to enable collaborative team development.
-   - CAA should actively leverage modern technology (Github and DVCS) to address 
+3) MARATHON 4 should be hosted on GitHub to enable collaborative team development.
+   - CAA should actively leverage modern technology (GitHub and DVCS) to address 
      the long-standing MARATHON developer capability gap.
    - Until CAA refines its position on compliance with the Federal Source Code Policy, 
-     MARATHON should be maintained as a private repository on Github to enable 
+     MARATHON should be maintained as a private repository on GitHub to enable 
      rapid development and verification in the near-term.
-     - Private Github repositories are available, but require additional 
+     - Private GitHub repositories are available, but require additional 
        $25/month funding to support 5 developers for an organization. 
-     - Should CAA decide to openly develop MARATHON, Gthub hosting is 
+     - Should CAA decide to openly develop MARATHON, GitHub hosting is 
        free for public repositories.
-4) CAA should follow the exampe set by US Army Research Laboratories and 
+4) CAA should follow the example set by US Army Research Laboratories and 
    release MARATHON 4 into the open as public domain software.
   - The U.S. Government has no copyright or intellectual property claim to MARATHON 4 or 
     any taxpayer-funded creative work.
   - MARATHON does not meet the exceptions provided by the Federal Source Code Policy, 
     namely the legal, classification, or "National Security System" exceptions.
-  - Open development can only serve to strengthen the quality of MARATHON 4 via 
+  - Open development can only serve to strengthen the quality of MARATHON 4 by 
     easing collaboration and community engagement, while fulfilling the 
-    Federal Source Code Policy mandate for the Open Source Software Pilot Program.
+    Federal Source Code Policy mandate for the Open Source Software Pilot Program, 
+    and establishing CAA as a leader in modern federal Open Source Software development.
     
 * References	
 
