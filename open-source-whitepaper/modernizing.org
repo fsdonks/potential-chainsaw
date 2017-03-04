@@ -33,9 +33,9 @@ which follows from that, to the modern era of facilitating communication,
 sharing technology, and collaboration.  As the Office of the President of 
 the United States notes, this will accrue manifold benefits across the federal 
 government and, when warranted, with the public. Time and again, engagement 
-across both communities - such as in the development and maintenance of 
+across both communities --- such as in the development and maintenance of 
 Open Source Software and the collaborative work enabled by internet discussion 
-boards and (pre-web) newsgroups - successfully brought vast, previously 
+boards and (pre-web) newsgroups --- successfully brought vast, previously 
 untapped technical resources to bear to solve complicated problems.
 
 
@@ -71,7 +71,7 @@ Executive Order and subsequent Office of Management and Budget, Executive Office
 Initiated by President Obama, and continued by President Trump, the default position of the federal
 government towards source code is openness.  This position emerged in 2013 under Executive Order No. 13642,
 "Making Open and Machine Readable the New Default for Government Information" (EO13642). Via EO13642, the Obama administration mandated sharing 
-government data - including source code - between federal agencies, and embraced open-sourcing federal software to spur 
+government data --- including source code --- between federal agencies, and embraced open-sourcing federal software to spur 
 cost-reduction, reduce redundancy, and place tax-payer funded works in the public domain.
 
 EO13642 authorized and directed the OMB to define and implement the federal policy to execute the order, which 
@@ -173,7 +173,7 @@ Software community.
   - Open-sourcing software is highly encouraged, and even temporarily mandated for a portion of 
     our new custom software projects for the duration of the "pilot program."  Open source 
     software is intended to be broadly accessible, and developed with "open" practices, disseminated 
-    on - possibly 3rd party - platforms with established open source communities.
+    on --- possibly 3rd party --- platforms with established open source communities.
 
 *** code.gov
   Per the policy, agencies will coordinate and publicize their software with the OMB-managed 
@@ -238,8 +238,8 @@ the Federal Source Code Policy compliance.
 * AR 5-11 "Management of Army Modeling and Simulation, 30 May 2014"
 AR 5-11 is problematic for a number of reasons. First, there is no mention (specifically 
 nothing precluding) distribution of models and simulations as Open Source Software.  Further, 
-the distribution processes defined by the AR, specifically for interagency - even internal 
-Army distribution - seems to directly contradict both the Executive Order and the OMB 
+the distribution processes defined by the AR, specifically for interagency --- even internal 
+Army distribution --- seems to directly contradict both the Executive Order and the OMB 
 implementation memorandum.  Further, none of the regulations referenced in AR 5-11 address
 the possibility or even acknowledgement of Open Source Software or the executive directives 
 specified by the EO and the OMB memorandum. In general, AR 5-11 should be refreshed and/or 
@@ -327,15 +327,15 @@ open source release candidate, preferably hosted on GitHub.
     model is to provide support and service in exchange for remuneration.  Many clients 
     or sponsors simply lack the developer talent or inclination to modify the source 
     code, and will still be interested in the services provided.  The legacy 
-    service-based model can - and will - survive, with the added benefit of collaboration 
+    service-based model can --- and will --- survive, with the added benefit of collaboration 
     and possible community engagement. 
 
 - "We'd expose ourselves to security vulnerability."
   - MARATHON 4 is not a  "National Security System" as defined by 44 U.S. Code § 3542.
     MARATHON 4 is merely an instantiation of AR 525-29, a publicly available document 
     detailing Army Force Generation.  Started as a purely unclassified development 
-    effort, MARATHON 4 maintains that the source code for the simulation - including 
-    comments, notional test data, and related documentation - neither requires nor 
+    effort, MARATHON 4 maintains that the source code for the simulation --- including 
+    comments, notional test data, and related documentation --- neither requires nor 
     includes classified information.  Rather, only the data upon which MARATHON 4 is 
     applied, and the resulting analysis, if performed on a secure network with
     classified input, would be classified.
@@ -374,8 +374,8 @@ open source release candidate, preferably hosted on GitHub.
        researchers and remediated in near real-time by the Defense Media Activity."  
 
 - "We have no obligation to release if no-one asks."
-  - Federal Source Code policy mandates that our non-exempt software, like MARATHON 4, is - at 
-    a minimum - advertised via https://code.gov and accessible to other federal agencies for reuse.
+  - Federal Source Code policy mandates that our non-exempt software, like MARATHON 4, is --- at 
+    a minimum --- advertised via https://code.gov and accessible to other federal agencies for reuse.
   - Federal Source Code Policy mandates that 20% of created or acquired custom 
     software must be released as open source during the current pilot program, which lasts 
     until 2019.
@@ -396,7 +396,7 @@ open source release candidate, preferably hosted on GitHub.
 Ideally, CAA will join the ranks of other Federal agencies and embrace the general modernization
 of government technology, specifically the realization of the benefits of Open Source Software 
 development and sharing source code. The tendency to reflexively lock down source code without 
-assessing the benefits - let alone the current mandate - to share our knowledge across the 
+assessing the benefits --- let alone the current mandate --- to share our knowledge across the 
 government and the public domain, serves to ensure isolated, resource-constrained development
 devoid of the known value of external collaboration.  In pursuance of modernizing the Army 
 technology space and in accordance with Federal Source Code Policy, CAA and AMSO should 
