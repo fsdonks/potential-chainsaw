@@ -305,7 +305,7 @@ open source release candidate, preferably hosted on GitHub.
 - MARATHON 4 could be used to fulfill the 20% mandate for open-sourcing custom 
   software during the current FSCP pilot program period.
 
-* Possible Objections and Risks 
+** Possible Objections and Risks 
 - "Army Policy Prevents Us From Doing So" 
   - The AMSO guidance in AR 5-11 contradicts (or in the best case, is ignorant of) 
     Federal Source Code Policy.  The apparent reflexive response to "not share" with federal 
