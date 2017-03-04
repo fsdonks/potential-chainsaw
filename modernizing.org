@@ -97,7 +97,7 @@ software.  Even legacy CAA models and simulations rely heavily on Open Source So
 development, scripting, and processing (both pre and post).
 
 Still, the DOD/CIO-G6 policy focuses on access and use of Open Source Software, rather than
-the sharing existing federal source code or releasing source code into the public domain.
+sharing existing federal source code or releasing source code into the public domain.
 Notably, the Army CIO/G6 has no additional policy addressing either the use or release of 
 open source software.  Until the emergence of the Federal Source Code Policy, DOD agencies
 had the ability to use Open Source Software for mission execution, without the mandate to
