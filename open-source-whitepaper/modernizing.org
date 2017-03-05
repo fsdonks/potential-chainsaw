@@ -1,4 +1,4 @@
-#+TITLE:  Ensuring Center for Army Analysis Compliance with Federal Source Code Policy
+#+TITLE:  Ensuring Center for Army Analysis Compliance with the Federal Source Code Policy
 #+SUBTITLE: Working Paper
 #+AUTHOR: Tom Spoon, Rick Hanson and Craig Flewelling
 #+DATE: 3 March 2017
@@ -154,7 +154,7 @@ infrastructure and significantly contributing to the Open Source community, incl
 historical "threats" like the Linux operating system.
 
 * OMB M-16-21, "Federal Source Code Policy Memorandum" 
-As a consequence of EO 13642, the OMB established Federal Source Code Policy via memorandum 
+As a consequence of EO 13642, the OMB established the Federal Source Code Policy via memorandum 
 M-16-21.  The Federal Source Code Policy prescribes mandatory requirements for federal agency 
 practices for sharing source code, open-sourcing software, and participating in the Open Source 
 Software community.
@@ -232,8 +232,8 @@ In furtherance of this strategy, agencies should comply with the following princ
 ** Management and Oversight
 DoD (and Army) CIO(s) are required to coordinate with the OMB CIO to define and execute 
 an implementation plan for the OMB guidance.  OMB provides quarterly processes that 
-oversee the growth, maintenance, and overall progress of both the pilot program, and 
-the Federal Source Code Policy compliance.
+oversee the growth, maintenance, and overall progress of both the pilot program and 
+compliance with the Federal Source Code Policy.
 
 * AR 5-11 "Management of Army Modeling and Simulation, 30 May 2014"
 AR 5-11 is problematic for a number of reasons. First, there is no mention (specifically 
@@ -298,7 +298,7 @@ open source release candidate, preferably hosted on GitHub.
     - web-based interface for examining source code history, diffs, branches, etc.; and
     - web-based issue tracking, team communication, and other collaboration features.
 
-** Compliance with Federal Source Code Policy
+** Compliance with the Federal Source Code Policy
 - At a minimum, MARATHON 4 must be shared with other federal agencies.
 - Hosting as an open source project, hosted on GitHub, satisfies the existing 
   Federal Source Code Policy, in addition to the spirit of the executive order.
@@ -308,7 +308,7 @@ open source release candidate, preferably hosted on GitHub.
 * Possible Objections and Risks 
 - "Army Policy Prevents Us From Doing So" 
   - The AMSO guidance in AR 5-11 contradicts (or in the best case, is ignorant of) 
-    Federal Source Code Policy.  The apparent reflexive response to "not share" with federal 
+    the Federal Source Code Policy.  The apparent reflexive response to "not share" with federal 
     agencies, and  international partners, is contrary to both the spirit and the policy 
     codified by EO 13642 and OMB M-16-21.
 
@@ -374,9 +374,9 @@ open source release candidate, preferably hosted on GitHub.
        researchers and remediated in near real-time by the Defense Media Activity."  
 
 - "We have no obligation to release if no-one asks."
-  - Federal Source Code policy mandates that our non-exempt software, like MARATHON 4, is --- at 
+  - The Federal Source Code Policy mandates that our non-exempt software, like MARATHON 4, is --- at 
     a minimum --- advertised via https://code.gov and accessible to other federal agencies for reuse.
-  - Federal Source Code Policy mandates that 20% of created or acquired custom 
+  - The Federal Source Code Policy mandates that 20% of created or acquired custom 
     software must be released as open source during the current pilot program, which lasts 
     until 2019.
 
@@ -399,7 +399,7 @@ development and sharing source code. The tendency to reflexively lock down sourc
 assessing the benefits --- let alone the current mandate --- to share our knowledge across the 
 government and the public domain, serves to ensure isolated, resource-constrained development
 devoid of the known value of external collaboration.  In pursuance of modernizing the Army 
-technology space and in accordance with Federal Source Code Policy, CAA and AMSO should 
+technology space and in accordance with the Federal Source Code Policy, CAA and AMSO should 
 lead this effort from the front.
 
 In an ideal world, the benefits of sharing source code and allowing for interop with other agencies 
@@ -414,14 +414,14 @@ MARATHON 4 can directly benefit from open development and hosting on GitHub by t
 the open source paradigm under the auspices of the governing Federal Source Code Policy.  
 
 * Recommendations
-1) CAA should comply with  Federal Source Code Policy.
+1) CAA should comply with the Federal Source Code Policy.
    - CAA should provision the sharing of source code with federal agencies, and 
      advertise repositories on code.gov and / or code.mil as appropriate.
    - CAA should comply with the provisions of the pilot program from M-16-21, that 
      20% of newly-created (or acquired) custom software must be released as open source.
-2) AR 5-11 "Management of Army Modeling and Simulation, 30 May 2014" should be made consistent with federal source code policy.
+2) AR 5-11 "Management of Army Modeling and Simulation, 30 May 2014" should be made consistent with the Federal Source Code Policy.
    - AR 5-11 does not account for the paradigm shift toward Open Source Software development and
-     currently countermands the governing orders regarding Federal Source Code Policy.
+     currently countermands the governing orders regarding the Federal Source Code Policy.
 3) MARATHON 4 should be hosted on GitHub to enable collaborative team development.
    - CAA should actively leverage modern technology (GitHub and DVCS) to address 
      the long-standing MARATHON developer capability gap.
@@ -502,7 +502,7 @@ the open source paradigm under the auspices of the governing Federal Source Code
 
   https://www.law.cornell.edu/uscode/text/44/3542
 
-  - This term shows up in Federal Source Code Policy Memorandum (esp. in section "Exceptions")
+  - This term shows up in the Federal Source Code Policy Memorandum (esp. in section "Exceptions")
 
 - Hack the Pentagon Results, "DoD Announces Hack the Pentagon Follow-up Initiative"
   https://www.defense.gov/News/Article/Article/981160/dod-announces-hack-the-pentagon-follow-up-initiative
