@@ -103,7 +103,7 @@ software.  Even legacy CAA models and simulations rely heavily on Open Source So
 development, scripting, and processing (both pre and post).
 
 Still, the DoD/CIO-G6 policy focuses on access and use of Open Source Software, rather than
-sharing existing federal source code or releasing source code into the public domain.
+on sharing existing federal source code or releasing source code into the public domain.
 Notably, the Army CIO/G6 has no additional policy addressing either the use or release of 
 open source software.  Until the emergence of the Federal Source Code Policy, DoD agencies
 had the ability to use Open Source Software for mission execution, without the mandate to
@@ -112,7 +112,8 @@ share or otherwise release source code.
 * Benefits of Open Source and Sharing
 Open Source Software fundamentally rests on the idea that the open sharing of information 
 yields numerous second and third order benefits.  In the case of software, making the 
-source code available promotes 
+source code available promotes the following principles.
+
 - Publication
   - Particularly in the case of reproducible research, releasing the source code is a 
     modern pre-requisite to validate any scientific or academic observations.  
@@ -177,7 +178,10 @@ M-16-21.  The Federal Source Code Policy prescribes mandatory requirements for f
 practices for sharing source code, open-sourcing software, and participating in the Open Source 
 Software community.
 
-** Major provisions of the FSCP include:
+** Provisions
+
+Major provisions of the FSCP include the following.
+
 *** Government-wide Source Code Sharing
   At a minimum, government agencies are mandated to make source code available to the federal government 
   for interagency reuse.
@@ -189,7 +193,7 @@ Software community.
     government contract.
 
   - Open-sourcing software is highly encouraged, and even temporarily mandated for a portion of 
-    our new custom software projects for the duration of the "pilot program."  Open source 
+    our new custom software projects for the duration of the pilot program.  Open source 
     software is intended to be broadly accessible, and developed with "open" practices, disseminated 
     on --- possibly 3rd party --- platforms with established open source communities.
 
@@ -263,7 +267,8 @@ nothing precluding) distribution of models and simulations as Open Source Softwa
 the distribution processes defined by the AR, specifically for interagency --- even internal 
 Army distribution --- seems to directly contradict both the Executive Order and the OMB 
 implementation memorandum.  Further, none of the regulations referenced in AR 5-11 address
-the possibility or even acknowledgement of Open Source Software or the executive directives 
+the possibility of Open Source Software --- or even acknowledge it per se --- nor do they
+address the legal and regulatory issues and mandates regarding OSS in the executive directives 
 specified by the EO and the OMB memorandum. In general, AR 5-11 should be refreshed and/or 
 rewritten to account for the FSCP and to clean up antiquated terminology.
 
@@ -291,7 +296,7 @@ with the practices established by the FSCP.  Consequently, MARATHON 4 is an obvi
 open source release candidate, preferably hosted on GitHub.
 
 ** Practical Benefits of Open Source Via GitHub
-- Flexible Team-based Collaboration 
+- It allows for flexible team-based collaboration. 
   - Developers can work remotely, from home, the office, at odd hours, etc.
     Using Git, we have a rich collaborative platform for managing the source code, enabling
     concurrent, asynchronous development that maximizes development team productivity without
@@ -299,7 +304,7 @@ open source release candidate, preferably hosted on GitHub.
     Defense Collaboration Services (DCS), allowing teams to communicate in real-time to resolve
     issues, learn about the software architecture, and even modify the source code.  
 
-- Empirical Evidence at CAA
+- There is empirical evidence at CAA of its usefulness/value.
   - CAA has repeatedly maintained a developer shortfall; MARATHON 4 is a shining example of the 
     scarcity of developer talent.  The sole developer (Mr. Spoon) was allowed to continue working 
     remotely because of his decision to maintain MARATHON 4 development in an unclassified format, 
@@ -313,7 +318,7 @@ open source release candidate, preferably hosted on GitHub.
 
   - This very document has been collaboratively built and revised on GitHub by CAA personnel.
 
-- Industry Standard Version Control via GitHub.
+- It is industry-standard version control.
   - GitHub provides a seamlessly integrated suite of tools that enhance the Git distributed version
     control system (DVCS) developer experience with 
     - source code repository hosting; 
@@ -339,7 +344,7 @@ open source release candidate, preferably hosted on GitHub.
     empirical confirmation that "sharing is beneficial" from the software 
     industry and academia support an alternate prospect: CAA would be 
     protecting CAA / Army interests by taking advantage of the massive 
-    benefits of open source, and by complying with policy set forth by the 
+    benefits of open source collaboration, and by complying with policy set forth by the 
     Executive Office of the President of the United States.
  
 - "We should run the model, they don't need the source. They can ask us for the analysis."
@@ -430,12 +435,12 @@ devoid of the known value of external collaboration.  In pursuance of modernizin
 technology space and in accordance with the Federal Source Code Policy, CAA and AMSO should 
 lead this effort from the front.
 
-In an ideal world, the benefits of sharing source code and allowing for interop with other agencies 
+In an ideal world, the benefits of sharing source code and allowing for interoperability with other agencies 
 (even individuals like college students, researchers, or industry professionals) can pay dividends
 in improving the source, aiding in verification, and generally building a community of interest. 
 
-Access to the source code does not imply knowledge in how to build, execute, modify, or extend the 
-model.  Nor does access engender an innate desire to do so.  The established model-as-service 
+Access to the source code does not imply knowledge of how to build, execute, modify, or extend the 
+model; nor does access engender an innate desire to do so.  The established model-as-service 
 approach still works under the open source paradigm.
 
 MARATHON 4 can directly benefit from open development and hosting on GitHub by taking advantage of 
@@ -533,6 +538,7 @@ the open source paradigm under the auspices of the governing Federal Source Code
   - This term shows up in the Federal Source Code Policy Memorandum (esp. in section "Exceptions")
 
 - Hack the Pentagon Results, "DoD Announces Hack the Pentagon Follow-up Initiative"
+
   https://www.defense.gov/News/Article/Article/981160/dod-announces-hack-the-pentagon-follow-up-initiative
 
 #+LATEX: \end{footnotesize}
