@@ -22,7 +22,7 @@
 #+LATEX_HEADER: \hyphenation{MAR-A-THON}
 #+LATEX_HEADER: \hypersetup{colorlinks,citecolor=black, filecolor=black, linkcolor=blue, urlcolor=black}
 # Put quotes in italics, so we don't have to quote them.
-#+HTML: <style>blockquote{font-style: italic;}</style>
+#+HTML_HEAD: <style>blockquote{font-style: italic;}</style>
 # Source of hack below: http://tex.stackexchange.com/questions/47306/change-the-font-of-the-block-quote
 #+LATEX_HEADER: \usepackage{etoolbox}
 #+LATEX_HEADER: \AtBeginEnvironment{quote}{\itshape\parskip=0em}
