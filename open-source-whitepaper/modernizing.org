@@ -408,7 +408,7 @@ open source release candidate, preferably hosted on GitHub.
       corresponding bounty price.  As a result of this pilot, 138
       unique and previously undisclosed vulnerabilities were
       identified by security researchers and remediated in near
-      real-time by the Defense Media Activity."
+      real-time by the Defense Media Activity.
     #+END_QUOTE
 
 - "We have no obligation to release if no-one asks."
