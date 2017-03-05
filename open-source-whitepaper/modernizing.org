@@ -11,6 +11,7 @@
 #+LATEX_HEADER: \usepackage{enumitem}
 #+LATEX_HEADER: \setlist[itemize,1]{leftmargin=*}
 #+LATEX_HEADER: \setlist[itemize,2,3]{leftmargin=*,topsep=0mm}
+#+LATEX_HEADER: \setlist[enumerate,1]{leftmargin=*,topsep=0mm,partopsep=0mm}
 #+LATEX_HEADER: \parindent=0em
 #+LATEX_HEADER: \parskip=1em
 #+LATEX_HEADER: \textwidth=6.5truein
@@ -20,6 +21,11 @@
 #+LATEX_HEADER: \textheight=9truein
 #+LATEX_HEADER: \hyphenation{MAR-A-THON}
 #+LATEX_HEADER: \hypersetup{colorlinks,citecolor=black, filecolor=black, linkcolor=blue, urlcolor=black}
+# Put quotes in italics, so we don't have to quote them.
+#+HTML: <style>blockquote{font-style: italic;}</style>
+# Source of hack below: http://tex.stackexchange.com/questions/47306/change-the-font-of-the-block-quote
+#+LATEX_HEADER: \usepackage{etoolbox}
+#+LATEX_HEADER: \AtBeginEnvironment{quote}{\itshape\parskip=0em}
 
 
 * Abstract
@@ -124,29 +130,41 @@ source code available promotes
 
 According to DoD  (DoD/CIO-G6 Clarifying Guidance on Open Source Software, p. 4-5),
 
-1) The continuous and broad peer-review enabled by publicly available source code supports 
-   software reliability and security efforts through the identification and elimination of 
-   defects that might otherwise go unrecognized by a more limited core development team. 
-2) The unrestricted ability to modify software source code enables the 
-   Department to respond more rapidly to changing situations, missions, 
-   and future threats.  
-3) Reliance on a particular software developer or vendor due to proprietary 
-   restrictions may be reduced by the use of OSS, which can be operated and 
-   maintained by multiple vendors, thus reducing barriers to entry and exit. 
-4) Open source licenses do not restrict who can use the software or the fields 
-   of endeavor in which the software can be used.  Therefore, OSS provides a net-centric 
-   licensing model that enables rapid provisioning of both known and unanticipated users. 
-5) Since OSS typically does not have a per-seat licensing cost, it can provide 
-   a cost advantage in situations where many copies of the software may be required, and 
-   can mitigate risk of cost growth due to licensing in situations where the total number of 
-   users may not be known in advance. 
-6) By sharing the responsibility for maintenance of OSS with other users, 
-   the Department can benefit by reducing the total cost of ownership for software, 
-   particularly compared with software for which the Department has sole responsibility for 
-   maintenance (e.g., GOTS). 
-7) OSS is particularly suitable for rapid prototyping and experimentation, 
-   where the ability to “test drive” the software with minimal costs and administrative 
-   delays can be important. 
+#+BEGIN_QUOTE
+(i) The continuous and broad peer-review enabled by publicly available
+source code supports software reliability and security efforts through
+the identification and elimination of defects that might otherwise go
+unrecognized by a more limited core development team.
+
+(ii) The unrestricted ability to modify software source code enables
+the Department to respond more rapidly to changing situations,
+missions, and future threats.
+
+(iii) Reliance on a particular software developer or vendor due to
+proprietary restrictions may be reduced by the use of OSS, which can
+be operated and maintained by multiple vendors, thus reducing barriers
+to entry and exit.
+
+(iv) Open source licenses do not restrict who can use the software or
+the fields of endeavor in which the software can be used.  Therefore,
+OSS provides a net-centric licensing model that enables rapid
+provisioning of both known and unanticipated users.
+
+(v) Since OSS typically does not have a per-seat licensing cost, it
+can provide a cost advantage in situations where many copies of the
+software may be required, and can mitigate risk of cost growth due to
+licensing in situations where the total number of users may not be
+known in advance.
+
+(vi) By sharing the responsibility for maintenance of OSS with other
+users, the Department can benefit by reducing the total cost of
+ownership for software, particularly compared with software for which
+the Department has sole responsibility for maintenance (e.g., GOTS).
+
+(vii) OSS is particularly suitable for rapid prototyping and
+experimentation, where the ability to “test drive” the software with
+minimal costs and administrative delays can be important.
+#+END_QUOTE
 
 Open Source Software has had such undeniable success that even historically closed-source,
 proprietary companies like Microsoft have been making significant investments in opening their 
@@ -180,14 +198,18 @@ Software community.
   website https://code.gov .  This website serves as an accessible repository of all known 
   government source code, to facilitate discovery and ease reuse.
   
-** Participation in the Open Source Community (Excerpt from FSCP)
+** Participation
+
+The FSCP encourages participation in the OSS community.  Here is the
+relevant excerpt taken from the FSCP memorandum, pp. 8-10.
+
+#+BEGIN_QUOTE
 When agencies release custom-developed source code as OSS to the public, they should develop and release 
 the code in a manner that 
   (1) fosters communities around shared challenges, 
   (2) improves the ability of the OSS community to provide feedback on, and make contributions to, the source code, and 
   (3) encourages Federal employees and contractors to contribute back to the broader OSS community by making
       contributions to existing OSS projects.
-
 In furtherance of this strategy, agencies should comply with the following principles:
 - Leverage Existing Communities: 
     - Whenever possible, teams releasing custom-developed code to the public as OSS should appropriately engage and
@@ -223,9 +245,9 @@ In furtherance of this strategy, agencies should comply with the following princ
      - Expected engagement level (i.e., how frequently the community can expect agency activity);
      - License details; and
     - Any other relevant technical details on how to build, make, install, or use the software, including dependencies (if applicable).
-
-- Exceptions
-  - FSCP acknowledges exceptions to policy where legislation, or national security precludes 
+#+END_QUOTE
+** Exceptions
+    The FSCP acknowledges exceptions to policy where legislation, or national security precludes 
     the release of source code.  If source code is either classified, or classified as a "national 
     security system" under 44 U.S. Code § 3542, the software is excepted.
 
@@ -344,34 +366,40 @@ open source release candidate, preferably hosted on GitHub.
     within DoD and the Army.  
     Per the (DoD-CIO/G6 OSS FAQ, "Q: Doesn't hiding source code automatically make
     software more secure?"):
-     - "Even when the original source is necessary for in-depth analysis, making source
+    #+BEGIN_QUOTE
+     - Even when the original source is necessary for in-depth analysis, making source
        code available to the public significantly aids defenders and not just attackers. 
        Continuous and broad peer-review, enabled by publicly available source code, 
        improves software reliability and security through the identification and 
        elimination of defects that might otherwise go unrecognized by the core development
-       team."
-     - "Conversely, where source code is hidden from the public, attackers can attack the 
+       team.
+     - Conversely, where source code is hidden from the public, attackers can attack the 
        software anyway as described above.  In addition, an attacker can often acquire the
        original source code from suppliers anyway (either because the supplier voluntarily
        provides it or via attacks against the supplier). In such cases where only the 
-       attacker has the source code, the attacker ends up with another advantage." 
-     - "Hiding source code does inhibit the ability of third parties to respond to 
+       attacker has the source code, the attacker ends up with another advantage. 
+     - Hiding source code does inhibit the ability of third parties to respond to 
        vulnerabilities (because changing software is more difficult without the 
        source code), but this is obviously not a security advantage. 
-       In general, “Security by Obscurity” is widely denigrated."
+       In general, "Security by Obscurity" is widely denigrated.
+    #+END_QUOTE
 
-  - The Office of the Secretary of Defense piloted a successful program to harden
-    Pentagon defenses by engaging the broader community of security experts 
-    (Hack the Pentagon Results):
-    - "Hack the Pentagon" was a recent US Digital Service initiative, where
-      DoD software systems and services at the Pentagon were promoted on a "bug bounty" 
-      system that allowed 3rd party security experts to test the system.
-    - "...allowed more than 1,400 registered hackers to test the defenses of select 
-      open source DoD websites such as Defense.gov. 
-      Hackers who identified security gaps that qualified as valid vulnerabilities were
-      then rewarded with a corresponding bounty price."
-    - "...138 unique and previously undisclosed vulnerabilities were identified by security 
-       researchers and remediated in near real-time by the Defense Media Activity."  
+  - The Office of the Secretary of Defense recently piloted a
+    successful program, called "Hack the Pentagon", to harden Pentagon
+    defenses by engaging the broader community of (third party)
+    security experts to test DoD software systems and services at the
+    Pentagon.  The DoD News article "DoD Announces ‘Hack the Pentagon’
+    Follow-Up Initiative" outlines the results:
+    #+BEGIN_QUOTE
+      ... the pilot program ... allowed more than 1,400 registered
+      hackers to test the defenses of select open source DoD websites
+      such as Defense.gov.  Hackers who identified security gaps that
+      qualified as valid vulnerabilities were then rewarded with a
+      corresponding bounty price.  As a result of this pilot, 138
+      unique and previously undisclosed vulnerabilities were
+      identified by security researchers and remediated in near
+      real-time by the Defense Media Activity."
+    #+END_QUOTE
 
 - "We have no obligation to release if no-one asks."
   - The Federal Source Code Policy mandates that our non-exempt software, like MARATHON 4, is --- at 
