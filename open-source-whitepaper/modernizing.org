@@ -70,7 +70,7 @@ Unfortunately CAA's position, and the policy in AR 5-11, is not compliant with c
 Executive Order and subsequent Office of Management and Budget, Executive Office of the President (OMB) policy.  
 Initiated by President Obama, and continued by President Trump, the default position of the federal
 government towards source code is openness.  This position emerged in 2013 under Executive Order No. 13642,
-"Making Open and Machine Readable the New Default for Government Information" (EO13642). Via EO13642, the Obama administration mandated sharing 
+"Making Open and Machine Readable the New Default for Government Information" (EO 13642). Via EO 13642, the Obama administration mandated sharing 
 government data --- including source code --- between federal agencies, and embraced open-sourcing federal software to spur 
 cost-reduction, reduce redundancy, and place tax-payer funded works in the public domain.
 
@@ -310,7 +310,7 @@ open source release candidate, preferably hosted on GitHub.
   - The AMSO guidance in AR 5-11 contradicts (or in the best case, is ignorant of) 
     Federal Source Code Policy.  The apparent reflexive response to "not share" with federal 
     agencies, and  international partners, is contrary to both the spirit and the policy 
-    codified by EO13642 and OMB M-16-21.
+    codified by EO 13642 and OMB M-16-21.
 
 - "We should protect Army / CAA interests by not sharing source code."
   - The numerous benefits delineated by the DOD/CIO-G6, as well as decades of 
