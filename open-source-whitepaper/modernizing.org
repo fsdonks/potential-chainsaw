@@ -226,8 +226,8 @@ In furtherance of this strategy, agencies should comply with the following princ
 
 - Exceptions
   - FSCP acknowledges exceptions to policy where legislation, or national security precludes 
-    the release of source code.  If source code is either classified, or classified as National 
-    Security System under 44 U.S. Code § 3542, the software is excepted.
+    the release of source code.  If source code is either classified, or classified as a "national 
+    security system" under 44 U.S. Code § 3542, the software is excepted.
 
 ** Management and Oversight
 DoD (and Army) CIO(s) are required to coordinate with the OMB CIO to define and execute 
@@ -331,7 +331,7 @@ open source release candidate, preferably hosted on GitHub.
     and possible community engagement. 
 
 - "We'd expose ourselves to security vulnerability."
-  - MARATHON 4 is not a  "National Security System" as defined by 44 U.S. Code § 3542.
+  - MARATHON 4 is not a national security system, as defined by 44 U.S. Code § 3542.
     MARATHON 4 is merely an instantiation of AR 525-29, a publicly available document 
     detailing Army Force Generation.  Started as a purely unclassified development 
     effort, MARATHON 4 maintains that the source code for the simulation --- including 
@@ -437,7 +437,7 @@ the open source paradigm under the auspices of the governing Federal Source Code
   - The U.S. Government has no copyright or intellectual property claim to MARATHON 4 or 
     any taxpayer-funded creative work.
   - MARATHON does not meet the exceptions provided by the Federal Source Code Policy, 
-    namely the legal, classification, or "National Security System" exceptions.
+    namely the legal, classification, or national security system (44 USC 3542) exceptions.
   - Open development can only serve to strengthen the quality of MARATHON 4 by 
     easing collaboration and community engagement, while fulfilling the 
     Federal Source Code Policy mandate for the Open Source Software Pilot Program, 
