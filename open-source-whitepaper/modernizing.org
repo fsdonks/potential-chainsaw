@@ -9,9 +9,10 @@
 # #+LATEX_CLASS: amsart 
 #+LATEX_CLASS_OPTIONS: [letterpaper,10pt]
 #+LATEX_HEADER: \usepackage{enumitem}
-#+LATEX_HEADER: \setlist[itemize,1]{leftmargin=*}
-#+LATEX_HEADER: \setlist[itemize,2,3]{leftmargin=*,topsep=0mm}
-#+LATEX_HEADER: \setlist[enumerate,1]{leftmargin=*,topsep=0mm,partopsep=0mm}
+#+LATEX_HEADER: \setlist[itemize,1]{leftmargin=*,topsep=0.5em,itemsep=0.5em}
+#+LATEX_HEADER: \setlist[itemize,2,3]{leftmargin=*,topsep=0.5em,itemsep=0.5em}
+#+LATEX_HEADER: \setlist[enumerate,1]{leftmargin=*,topsep=0.5em}
+#+HTML_HEAD: <style>ul li{margin-top:0.5em}ol li{margin-top:0.5em}</style>
 #+LATEX_HEADER: \parindent=0em
 #+LATEX_HEADER: \parskip=1em
 #+LATEX_HEADER: \textwidth=6.5truein
