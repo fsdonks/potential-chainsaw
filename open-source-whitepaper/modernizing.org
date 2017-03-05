@@ -448,8 +448,8 @@ the open source paradigm under the auspices of the governing Federal Source Code
    - CAA should comply with the provisions of the pilot program from M-16-21, that 
      20% of newly-created (or acquired) custom software must be released as open source.
 2) AR 5-11 "Management of Army Modeling and Simulation, 30 May 2014" should be made consistent with the Federal Source Code Policy.
-   - AR 5-11 does not account for the paradigm shift toward Open Source Software development and
-     currently countermands the governing orders regarding the Federal Source Code Policy.
+   - AR 5-11 does not account for the paradigm shift toward Open Source Software development and hence
+     is now incongruous with the governing orders regarding the Federal Source Code Policy.
 3) MARATHON 4 should be hosted on GitHub to enable collaborative team development.
    - CAA should actively leverage modern technology (GitHub and DVCS) to address 
      the long-standing MARATHON developer capability gap.
