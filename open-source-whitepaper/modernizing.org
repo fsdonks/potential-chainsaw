@@ -26,7 +26,7 @@
 #+HTML_HEAD: <style>blockquote{font-style: italic;}</style>
 # Source of hack below: http://tex.stackexchange.com/questions/47306/change-the-font-of-the-block-quote
 #+LATEX_HEADER: \usepackage{etoolbox}
-#+LATEX_HEADER: \AtBeginEnvironment{quote}{\itshape\parskip=0em}
+#+LATEX_HEADER: \AtBeginEnvironment{quote}{\itshape\parskip=0em\leftmargini=1em}
 #+LATEX_HEADER: \usepackage{draftwatermark}
 #+LATEX_HEADER: \SetWatermarkText{\textbf{DRAFT}}
 #+LATEX_HEADER: \SetWatermarkScale{5}
@@ -136,7 +136,9 @@ source code available promotes the following principles.
 
 According to DoD  (DoD/CIO-G6 Clarifying Guidance on Open Source Software, p. 4-5),
 
+#+LATEX: \begingroup
 #+BEGIN_QUOTE
+#+LATEX: \parindent=0em
 (i) The continuous and broad peer-review enabled by publicly available
 source code supports software reliability and security efforts through
 the identification and elimination of defects that might otherwise go
@@ -171,6 +173,7 @@ the Department has sole responsibility for maintenance (e.g., GOTS).
 experimentation, where the ability to “test drive” the software with
 minimal costs and administrative delays can be important.
 #+END_QUOTE
+#+LATEX: \endgroup
 
 Open Source Software has had such undeniable success that even historically closed-source,
 proprietary companies like Microsoft have been making significant investments in opening their 
@@ -376,23 +379,28 @@ open source release candidate, preferably hosted on GitHub.
     within DoD and the Army.  
     Per the (DoD-CIO/G6 OSS FAQ, "Q: Doesn't hiding source code automatically make
     software more secure?"):
+    #+LATEX: \begingroup
     #+BEGIN_QUOTE
-     - Even when the original source is necessary for in-depth analysis, making source
+    #+LATEX: \parskip=0.5em
+       Even when the original source is necessary for in-depth analysis, making source
        code available to the public significantly aids defenders and not just attackers. 
        Continuous and broad peer-review, enabled by publicly available source code, 
        improves software reliability and security through the identification and 
        elimination of defects that might otherwise go unrecognized by the core development
        team.
-     - Conversely, where source code is hidden from the public, attackers can attack the 
+
+       Conversely, where source code is hidden from the public, attackers can attack the 
        software anyway as described above.  In addition, an attacker can often acquire the
        original source code from suppliers anyway (either because the supplier voluntarily
        provides it or via attacks against the supplier). In such cases where only the 
        attacker has the source code, the attacker ends up with another advantage. 
-     - Hiding source code does inhibit the ability of third parties to respond to 
+
+       Hiding source code does inhibit the ability of third parties to respond to 
        vulnerabilities (because changing software is more difficult without the 
        source code), but this is obviously not a security advantage. 
        In general, "Security by Obscurity" is widely denigrated.
     #+END_QUOTE
+    #+LATEX: \endgroup
 
   - The Office of the Secretary of Defense recently piloted a
     successful program, called "Hack the Pentagon", to harden Pentagon
@@ -400,7 +408,9 @@ open source release candidate, preferably hosted on GitHub.
     security experts to test DoD software systems and services at the
     Pentagon.  The DoD News article "DoD Announces ‘Hack the Pentagon’
     Follow-Up Initiative" outlines the results:
+    #+LATEX: \begingroup
     #+BEGIN_QUOTE
+    #+LATEX: \parskip=0.5em
       ... the pilot program ... allowed more than 1,400 registered
       hackers to test the defenses of select open source DoD websites
       such as Defense.gov.  Hackers who identified security gaps that
@@ -410,6 +420,7 @@ open source release candidate, preferably hosted on GitHub.
       identified by security researchers and remediated in near
       real-time by the Defense Media Activity.
     #+END_QUOTE
+    #+LATEX: \endgroup
 
 - "We have no obligation to release if no-one asks."
   - The Federal Source Code Policy mandates that our non-exempt software, like MARATHON 4, is --- at 
