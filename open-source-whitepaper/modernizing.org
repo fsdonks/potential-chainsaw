@@ -82,24 +82,24 @@ the central coordinating repository of government code https://code.gov, CAA has
 mandates of the FSCP and the federal government's modernized policy on sharing and Open Source Software(OSS).  
 
 * Paradigm Shift in Software Development: Embracing Open Source 
-DOD has been an early-adopter and general proponent of the utility of Open Source Software.
-The DOD Chief Information Officer (DOD-CIO/G6) paved the way for broad adoption and use of superior 
-Open Source tools on DOD networks with its 2009 policy, "DOD-CIO/G6 Clarification Guidance Regarding 
-Open Source Software (OSS)".  In conjunction with the memorandum, DOD/CIO-G6 provided an official
+DoD has been an early-adopter and general proponent of the utility of Open Source Software.
+The DoD Chief Information Officer (DoD-CIO/G6) paved the way for broad adoption and use of superior 
+Open Source tools on DoD networks with its 2009 policy, "DoD-CIO/G6 Clarification Guidance Regarding 
+Open Source Software (OSS)".  In conjunction with the memorandum, DoD/CIO-G6 provided an official
 website addressing the benefits, risks, legalities, and practical questions surrounding the use of
-Open Source Software on DOD networks (http://dodcio.defense.gov/Open-Source-Software-FAQ/).
+Open Source Software on DoD networks (http://dodcio.defense.gov/Open-Source-Software-FAQ/).
 
 In many ways, the policy and the website were merely addressing the reality of prevalent usage
-of OSS throughout DOD.  Case in point: CAA initiated and maintains exceptions to 
+of OSS throughout DoD.  Case in point: CAA initiated and maintains exceptions to 
 Army policy for internal networks specifically to leverage the superior capability of both closed 
 and Open Source Software that may not have a Certificate of Networthiness, or otherwise be "approved" 
 software.  Even legacy CAA models and simulations rely heavily on Open Source Software for 
 development, scripting, and processing (both pre and post).
 
-Still, the DOD/CIO-G6 policy focuses on access and use of Open Source Software, rather than
+Still, the DoD/CIO-G6 policy focuses on access and use of Open Source Software, rather than
 sharing existing federal source code or releasing source code into the public domain.
 Notably, the Army CIO/G6 has no additional policy addressing either the use or release of 
-open source software.  Until the emergence of the Federal Source Code Policy, DOD agencies
+open source software.  Until the emergence of the Federal Source Code Policy, DoD agencies
 had the ability to use Open Source Software for mission execution, without the mandate to
 share or otherwise release source code.
   
@@ -122,7 +122,7 @@ source code available promotes
   - Much like academia and industry, reusable source code allows the state of the art 
     to advance more rapidly.
 
-According to DOD  (DOD/CIO-G6 Clarifying Guidance on Open Source Software, p. 4-5),
+According to DoD  (DoD/CIO-G6 Clarifying Guidance on Open Source Software, p. 4-5),
 
 1) The continuous and broad peer-review enabled by publicly available source code supports 
    software reliability and security efforts through the identification and elimination of 
@@ -165,7 +165,7 @@ Software community.
   for interagency reuse.
 
 *** Open Source Software Pilot Program
-  - Government agencies (including DOD) are automatically part of a 3-year Open Source Pilot Program.
+  - Government agencies (including DoD) are automatically part of a 3-year Open Source Pilot Program.
     During the pilot program, policy mandates that 20% of newly created custom software is to be open source.
     This applies to software created by government employees, and software created in execution of a 
     government contract.
@@ -230,7 +230,7 @@ In furtherance of this strategy, agencies should comply with the following princ
     Security System under 44 U.S. Code § 3542, the software is excepted.
 
 ** Management and Oversight
-DOD (and Army) CIO(s) are required to coordinate with the OMB CIO to define and execute 
+DoD (and Army) CIO(s) are required to coordinate with the OMB CIO to define and execute 
 an implementation plan for the OMB guidance.  OMB provides quarterly processes that 
 oversee the growth, maintenance, and overall progress of both the pilot program, and 
 the Federal Source Code Policy compliance.
@@ -313,7 +313,7 @@ open source release candidate, preferably hosted on GitHub.
     codified by EO 13642 and OMB M-16-21.
 
 - "We should protect Army / CAA interests by not sharing source code."
-  - The numerous benefits delineated by the DOD/CIO-G6, as well as decades of 
+  - The numerous benefits delineated by the DoD/CIO-G6, as well as decades of 
     empirical confirmation that "sharing is beneficial" from the software 
     industry and academia support an alternate prospect: CAA would be 
     protecting CAA / Army interests by taking advantage of the massive 
@@ -341,8 +341,8 @@ open source release candidate, preferably hosted on GitHub.
     classified input, would be classified.
 
   - The security benefits of sharing and open sourcing are well-known, even 
-    within DOD and the Army.  
-    Per the (DOD-CIO/G6 OSS FAQ, "Q: Doesn't hiding source code automatically make
+    within DoD and the Army.  
+    Per the (DoD-CIO/G6 OSS FAQ, "Q: Doesn't hiding source code automatically make
     software more secure?"):
      - "Even when the original source is necessary for in-depth analysis, making source
        code available to the public significantly aids defenders and not just attackers. 
@@ -364,7 +364,7 @@ open source release candidate, preferably hosted on GitHub.
     Pentagon defenses by engaging the broader community of security experts 
     (Hack the Pentagon Results):
     - "Hack the Pentagon" was a recent US Digital Service initiative, where
-      DOD software systems and services at the Pentagon were promoted on a "bug bounty" 
+      DoD software systems and services at the Pentagon were promoted on a "bug bounty" 
       system that allowed 3rd party security experts to test the system.
     - "...allowed more than 1,400 registered hackers to test the defenses of select 
       open source DoD websites such as Defense.gov. 
@@ -388,7 +388,7 @@ open source release candidate, preferably hosted on GitHub.
     range of support for MARATHON 4 development, further helping the chronic developer capability
     gap at CAA.
 - "CAA will be legally liable for support and any problems users encounter if we open source."
-  - The default open source posture provided by the FSCP, and DOD/CIO-G6, precludes this possibility.
+  - The default open source posture provided by the FSCP, and DoD/CIO-G6, precludes this possibility.
     Where applicable, open source licenses vetted by DCS/CIO-G6, specifically indemnify the original
     author of the code and provision no warranty for fitness of use or guarantee of support.
 
@@ -465,11 +465,11 @@ the open source paradigm under the auspices of the governing Federal Source Code
 
   http://www.apd.army.mil/epubs/DR_pubs/DR_a/pdf/web/r25_1.pdf	
 
-- DOD-CIO/G6 (Clarification Guidance Regarding Open Source Software (OSS), 16 October 2009)	
+- DoD-CIO/G6 (Clarification Guidance Regarding Open Source Software (OSS), 16 October 2009)	
 
   http://dodcio.defense.gov/Portals/0/Documents/FOSS/2009OSS.pdf	
 
-- DOD-CIO/G6 (Open Source Software FAQ)	
+- DoD-CIO/G6 (Open Source Software FAQ)	
 
   http://dodcio.defense.gov/Open-Source-Software-FAQ/	
 
@@ -504,7 +504,7 @@ the open source paradigm under the auspices of the governing Federal Source Code
 
   - This term shows up in Federal Source Code Policy Memorandum (esp. in section "Exceptions")
 
-- Hack the Pentagon Results, "DOD Announces Hack the Pentagon Follow-up Initiative"
+- Hack the Pentagon Results, "DoD Announces Hack the Pentagon Follow-up Initiative"
   https://www.defense.gov/News/Article/Article/981160/dod-announces-hack-the-pentagon-follow-up-initiative
 
 #+LATEX: \end{footnotesize}
