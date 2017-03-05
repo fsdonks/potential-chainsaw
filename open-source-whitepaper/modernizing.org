@@ -27,6 +27,10 @@
 # Source of hack below: http://tex.stackexchange.com/questions/47306/change-the-font-of-the-block-quote
 #+LATEX_HEADER: \usepackage{etoolbox}
 #+LATEX_HEADER: \AtBeginEnvironment{quote}{\itshape\parskip=0em}
+#+LATEX_HEADER: \usepackage{draftwatermark}
+#+LATEX_HEADER: \SetWatermarkText{\textbf{DRAFT}}
+#+LATEX_HEADER: \SetWatermarkScale{5}
+#+LATEX_HEADER: \SetWatermarkColor[gray]{0.9}
 
 
 * Abstract
