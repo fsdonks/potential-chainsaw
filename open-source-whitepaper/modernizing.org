@@ -31,10 +31,11 @@
 #+LATEX_HEADER: \SetWatermarkText{\textbf{DRAFT}}
 #+LATEX_HEADER: \SetWatermarkScale{5}
 #+LATEX_HEADER: \SetWatermarkColor[gray]{0.9}
+#+HTML_HEAD: <style>.abstract {margin-top:2em;margin-left:auto;margin-right:auto;width:80%;font-size:85%}
+#+HTML_HEAD:        .abstract > p {display:inline;}</style>
 
-
-* Abstract
-
+#+HTML: <div class="abstract"><b>Abstract.</b>
+#+LATEX: \begin{abstract}\noindent
 The Center for Army Analysis (CAA) should re-align its policy for the 
 creation and releasability of Open Source Software (OSS), with the current 
 federal policy mandated by Executive Order and detailed by  the Federal
@@ -48,6 +49,8 @@ across both communities --- such as in the development and maintenance of
 Open Source Software and the collaborative work enabled by internet discussion 
 boards and (pre-web) newsgroups --- successfully brought vast, previously 
 untapped technical resources to bear to solve complicated problems.
+#+LATEX: \end{abstract}
+#+HTML: </div><!-- end Abstract -->
 
 
 * Background
