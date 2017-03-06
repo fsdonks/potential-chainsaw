@@ -1,6 +1,7 @@
 SRC =  modernizing.org
 
-.SUFFIXES: .org .tex .pdf
+.SUFFIXES: .org .html .tex .pdf
+HTML = ${SRC:.org=.html}
 TEX = ${SRC:.org=.tex}
 PDF = ${SRC:.org=.pdf}
 AUX = ${SRC:.org=.aux}
@@ -8,9 +9,14 @@ LOG = ${SRC:.org=.log}
 OUT = ${SRC:.org=.out}
 
 all: test cleanaux
-test: pdf
+test: html pdf
+html: ${HTML}
 tex: ${TEX}
 pdf: ${PDF}
+
+.org.html:
+	@echo '	ORG-EXPORT-TO-HTML' $<
+	@emacs -u "$(id -un)" --batch $< -f org-html-export-to-html 2>/dev/null
 
 .org.tex:
 	@echo '	ORG-EXPORT-TO-LATEX' $<
@@ -25,5 +31,8 @@ pdf: ${PDF}
 cleanaux:
 	@rm -f ${AUX} ${LOG} ${OUT}
 
-clean: cleanaux
-	rm -f ${TEX}
+clean:
+	rm -f ${TEX} ${AUX} ${LOG} ${OUT}
+
+nuke: clean
+	rm -f ${PDF} ${HTML}
