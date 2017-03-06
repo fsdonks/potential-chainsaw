@@ -1,0 +1,13 @@
+2c2
+< \documentclass[letterpaper,10pt]{article}
+---
+> \documentclass[letterpaper,10pt]{amsart}
+26c26
+< \topmargin=-0.6truein
+---
+> \topmargin=-0.4truein
+38,39c38
+< \title{Ensuring Center for Army Analysis Compliance with the Federal Source Code Policy\\\medskip
+< \large Working Paper}
+---
+> \title{Ensuring Center for Army Analysis Compliance with the Federal Source Code Policy}
