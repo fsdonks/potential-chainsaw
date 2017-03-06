@@ -1,5 +1,7 @@
 SRC =  modernizing.org
 
+PDFLATEX = pdflatex -halt-on-error
+
 .SUFFIXES: .org .html .tex .pdf
 HTML = ${SRC:.org=.html}
 TEX = ${SRC:.org=.tex}
@@ -24,9 +26,13 @@ pdf: ${PDF}
 
 .tex.pdf:
 	@echo '	PDFLATEX' $<
-	@pdflatex $*
-	@while grep 'Rerun to get ' $*.log ; do \
-		echo '	RE-PDFLATEX' $< ; pdflatex $* ; done
+	@if ${PDFLATEX} $* >/dev/null; then \
+	   while grep 'Rerun to get ' $*.log ; do \
+		echo '	RE-PDFLATEX' $< ; ${PDFLATEX} $* >/dev/null; done \
+	 else echo '*****' >&2; \
+	      echo '***** ERROR: Dumping last few lines of' $*.log >&2; \
+	      echo '*****' >&2; \
+	      tail -20 $*.log; exit 1; fi
 
 cleanaux:
 	@rm -f ${AUX} ${LOG} ${OUT}
