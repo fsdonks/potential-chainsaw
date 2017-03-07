@@ -3,12 +3,12 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2017-03-05 Sun 20:31 -->
-<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta  name="viewport" content="width=device-width, initial-scale=1" />
+<!-- 2017-03-07 Tue 17:04 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Ensuring Center for Army Analysis Compliance with the Federal Source Code Policy</title>
-<meta  name="generator" content="Org-mode" />
-<meta  name="author" content="Tom Spoon, Rick Hanson and Craig Flewelling" />
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Tom Spoon, Rick Hanson and Craig Flewelling" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
   .title  { text-align: center;
@@ -53,13 +53,97 @@
     border: 1px solid black;
   }
   pre.src:hover:before { display: inline;}
-  pre.src-sh:before    { content: 'sh'; }
-  pre.src-bash:before  { content: 'sh'; }
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
   pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
-  pre.src-R:before     { content: 'R'; }
-  pre.src-perl:before  { content: 'Perl'; }
-  pre.src-java:before  { content: 'Java'; }
-  pre.src-sql:before   { content: 'SQL'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
 
   table { border-collapse:collapse; }
   caption.t-above { caption-side: top; }
@@ -92,6 +176,7 @@
     { font-size: 10px; font-weight: bold; white-space: nowrap; }
   .org-info-js_search-highlight
     { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
   /*]]>*/-->
 </style>
 <style>ul li{margin-top:0.5em}ol li{margin-top:0.5em}</style>
@@ -170,8 +255,8 @@ untapped technical resources to bear to solve complicated problems.
 </div><!-- end Abstract -->
 
 
-<div id="outline-container-orgheadline1" class="outline-2">
-<h2 id="orgheadline1"><span class="section-number-2">1</span> Background</h2>
+<div id="outline-container-org7f6497b" class="outline-2">
+<h2 id="org7f6497b"><span class="section-number-2">1</span> Background</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Like many government agencies, the Center for Army Analysis (CAA) is both a consumer and producer of software.
@@ -204,8 +289,8 @@ are not involved).
 </div>
 </div>
 
-<div id="outline-container-orgheadline2" class="outline-2">
-<h2 id="orgheadline2"><span class="section-number-2">2</span> Problem</h2>
+<div id="outline-container-orgfb25de0" class="outline-2">
+<h2 id="orgfb25de0"><span class="section-number-2">2</span> Problem</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 Unfortunately CAA&rsquo;s position, and the policy in AR 5-11, is not compliant with current policy, namely the Federal Source Code Policy as directed by
@@ -218,7 +303,7 @@ cost-reduction, reduce redundancy, and place tax-payer funded works in the publi
 </p>
 
 <p>
-EO13642 authorized and directed the OMB to define and implement the federal policy to execute the order, which 
+EO 13642 authorized and directed the OMB to define and implement the federal policy to execute the order, which 
 OMB detailed under the Digital Government Initiative (a.k.a. &ldquo;The People&rsquo;s Code&rdquo;) in August of 2016.  The ultimate 
 result emerged in OMB M-16-21, &ldquo;Federal Source Code Policy Memorandum,&rdquo; when the detailed Federal Source Code Policy 
 (FSCP) became the governing policy for all federal agencies.  Since the policy&rsquo;s inception, marked by the 2016 rollout of 
@@ -228,8 +313,8 @@ mandates of the FSCP and the federal government&rsquo;s modernized policy on sha
 </div>
 </div>
 
-<div id="outline-container-orgheadline3" class="outline-2">
-<h2 id="orgheadline3"><span class="section-number-2">3</span> Paradigm Shift in Software Development: Embracing Open Source</h2>
+<div id="outline-container-org18b0052" class="outline-2">
+<h2 id="org18b0052"><span class="section-number-2">3</span> Paradigm Shift in Software Development: Embracing Open Source</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 DoD has been an early-adopter and general proponent of the utility of Open Source Software.
@@ -260,8 +345,8 @@ share or otherwise release source code.
 </div>
 </div>
 
-<div id="outline-container-orgheadline4" class="outline-2">
-<h2 id="orgheadline4"><span class="section-number-2">4</span> Benefits of Open Source and Sharing</h2>
+<div id="outline-container-org4c7b923" class="outline-2">
+<h2 id="org4c7b923"><span class="section-number-2">4</span> Benefits of Open Source and Sharing</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 Open Source Software fundamentally rests on the idea that the open sharing of information 
@@ -354,8 +439,8 @@ historical &ldquo;threats&rdquo; like the Linux operating system.
 </div>
 </div>
 
-<div id="outline-container-orgheadline12" class="outline-2">
-<h2 id="orgheadline12"><span class="section-number-2">5</span> OMB M-16-21, &ldquo;Federal Source Code Policy Memorandum&rdquo;</h2>
+<div id="outline-container-orgccca08d" class="outline-2">
+<h2 id="orgccca08d"><span class="section-number-2">5</span> OMB M-16-21, &ldquo;Federal Source Code Policy Memorandum&rdquo;</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 As a consequence of EO 13642, the OMB established the Federal Source Code Policy via memorandum 
@@ -365,16 +450,16 @@ Software community.
 </p>
 </div>
 
-<div id="outline-container-orgheadline8" class="outline-3">
-<h3 id="orgheadline8"><span class="section-number-3">5.1</span> Provisions</h3>
+<div id="outline-container-org3315b06" class="outline-3">
+<h3 id="org3315b06"><span class="section-number-3">5.1</span> Provisions</h3>
 <div class="outline-text-3" id="text-5-1">
 <p>
 Major provisions of the FSCP include the following.
 </p>
 </div>
 
-<div id="outline-container-orgheadline5" class="outline-4">
-<h4 id="orgheadline5"><span class="section-number-4">5.1.1</span> Government-wide Source Code Sharing</h4>
+<div id="outline-container-org9f574b4" class="outline-4">
+<h4 id="org9f574b4"><span class="section-number-4">5.1.1</span> Government-wide Source Code Sharing</h4>
 <div class="outline-text-4" id="text-5-1-1">
 <p>
 At a minimum, government agencies are mandated to make source code available to the federal government 
@@ -383,8 +468,8 @@ for interagency reuse.
 </div>
 </div>
 
-<div id="outline-container-orgheadline6" class="outline-4">
-<h4 id="orgheadline6"><span class="section-number-4">5.1.2</span> Open Source Software Pilot Program</h4>
+<div id="outline-container-org4971954" class="outline-4">
+<h4 id="org4971954"><span class="section-number-4">5.1.2</span> Open Source Software Pilot Program</h4>
 <div class="outline-text-4" id="text-5-1-2">
 <ul class="org-ul">
 <li>Government agencies (including DoD) are automatically part of a 3-year Open Source Pilot Program.
@@ -400,8 +485,8 @@ on &#x2014; possibly 3rd party &#x2014; platforms with established open source c
 </div>
 </div>
 
-<div id="outline-container-orgheadline7" class="outline-4">
-<h4 id="orgheadline7"><span class="section-number-4">5.1.3</span> code.gov</h4>
+<div id="outline-container-orgf984aa0" class="outline-4">
+<h4 id="orgf984aa0"><span class="section-number-4">5.1.3</span> code.gov</h4>
 <div class="outline-text-4" id="text-5-1-3">
 <p>
 Per the policy, agencies will coordinate and publicize their software with the OMB-managed 
@@ -412,8 +497,8 @@ government source code, to facilitate discovery and ease reuse.
 </div>
 </div>
 
-<div id="outline-container-orgheadline9" class="outline-3">
-<h3 id="orgheadline9"><span class="section-number-3">5.2</span> Participation</h3>
+<div id="outline-container-orgd0eb8b6" class="outline-3">
+<h3 id="orgd0eb8b6"><span class="section-number-3">5.2</span> Participation</h3>
 <div class="outline-text-3" id="text-5-2">
 <p>
 The FSCP encourages participation in the OSS community.  Here is the
@@ -487,8 +572,8 @@ At a minimum, OSS repositories maintained by agencies must include the following
 </blockquote>
 </div>
 </div>
-<div id="outline-container-orgheadline10" class="outline-3">
-<h3 id="orgheadline10"><span class="section-number-3">5.3</span> Exceptions</h3>
+<div id="outline-container-org427d31c" class="outline-3">
+<h3 id="org427d31c"><span class="section-number-3">5.3</span> Exceptions</h3>
 <div class="outline-text-3" id="text-5-3">
 <p>
 The FSCP acknowledges exceptions to policy where legislation, or national security precludes 
@@ -498,8 +583,8 @@ security system&rdquo; under 44 U.S. Code § 3542, the software is excepted.
 </div>
 </div>
 
-<div id="outline-container-orgheadline11" class="outline-3">
-<h3 id="orgheadline11"><span class="section-number-3">5.4</span> Management and Oversight</h3>
+<div id="outline-container-org81ae5e7" class="outline-3">
+<h3 id="org81ae5e7"><span class="section-number-3">5.4</span> Management and Oversight</h3>
 <div class="outline-text-3" id="text-5-4">
 <p>
 DoD (and Army) CIO(s) are required to coordinate with the OMB CIO to define and execute 
@@ -511,8 +596,8 @@ compliance with the Federal Source Code Policy.
 </div>
 </div>
 
-<div id="outline-container-orgheadline13" class="outline-2">
-<h2 id="orgheadline13"><span class="section-number-2">6</span> AR 5-11 &ldquo;Management of Army Modeling and Simulation, 30 May 2014&rdquo;</h2>
+<div id="outline-container-orgd15421b" class="outline-2">
+<h2 id="orgd15421b"><span class="section-number-2">6</span> AR 5-11 &ldquo;Management of Army Modeling and Simulation, 30 May 2014&rdquo;</h2>
 <div class="outline-text-2" id="text-6">
 <p>
 AR 5-11 is problematic for a number of reasons. First, there is no mention (specifically 
@@ -528,8 +613,8 @@ rewritten to account for the FSCP and to clean up antiquated terminology.
 </div>
 </div>
 
-<div id="outline-container-orgheadline14" class="outline-2">
-<h2 id="orgheadline14"><span class="section-number-2">7</span> Forcing Functions</h2>
+<div id="outline-container-orgd61c9d3" class="outline-2">
+<h2 id="orgd61c9d3"><span class="section-number-2">7</span> Forcing Functions</h2>
 <div class="outline-text-2" id="text-7">
 <p>
 There is, at a minimum, a federal mandate for sharing source code across the government, and 
@@ -548,8 +633,8 @@ for &ldquo;Participation in the Open Source Community.&rdquo; GitHub repositorie
 </div>
 </div>
 
-<div id="outline-container-orgheadline17" class="outline-2">
-<h2 id="orgheadline17"><span class="section-number-2">8</span> Toward Open Sourcing MARATHON 4</h2>
+<div id="outline-container-orge342f2a" class="outline-2">
+<h2 id="orge342f2a"><span class="section-number-2">8</span> Toward Open Sourcing MARATHON 4</h2>
 <div class="outline-text-2" id="text-8">
 <p>
 MARATHON 4 is written in an open source language (Clojure), managed with open source 
@@ -564,8 +649,8 @@ open source release candidate, preferably hosted on GitHub.
 </p>
 </div>
 
-<div id="outline-container-orgheadline15" class="outline-3">
-<h3 id="orgheadline15"><span class="section-number-3">8.1</span> Practical Benefits of Open Source Via GitHub</h3>
+<div id="outline-container-org9f058e6" class="outline-3">
+<h3 id="org9f058e6"><span class="section-number-3">8.1</span> Practical Benefits of Open Source Via GitHub</h3>
 <div class="outline-text-3" id="text-8-1">
 <ul class="org-ul">
 <li>It allows for flexible team-based collaboration. 
@@ -608,8 +693,8 @@ control system (DVCS) developer experience with
 </div>
 </div>
 
-<div id="outline-container-orgheadline16" class="outline-3">
-<h3 id="orgheadline16"><span class="section-number-3">8.2</span> Compliance with the Federal Source Code Policy</h3>
+<div id="outline-container-org26e65f4" class="outline-3">
+<h3 id="org26e65f4"><span class="section-number-3">8.2</span> Compliance with the Federal Source Code Policy</h3>
 <div class="outline-text-3" id="text-8-2">
 <ul class="org-ul">
 <li>At a minimum, MARATHON 4 must be shared with other federal agencies.</li>
@@ -622,8 +707,8 @@ software during the current FSCP pilot program period.</li>
 </div>
 </div>
 
-<div id="outline-container-orgheadline18" class="outline-2">
-<h2 id="orgheadline18"><span class="section-number-2">9</span> Possible Objections and Risks</h2>
+<div id="outline-container-org584bf17" class="outline-2">
+<h2 id="org584bf17"><span class="section-number-2">9</span> Possible Objections and Risks</h2>
 <div class="outline-text-2" id="text-9">
 <ul class="org-ul">
 <li>&ldquo;Army Policy Prevents Us From Doing So&rdquo; 
@@ -749,8 +834,8 @@ author of the code and provision no warranty for fitness of use or guarantee of 
 </div>
 </div>
 
-<div id="outline-container-orgheadline19" class="outline-2">
-<h2 id="orgheadline19"><span class="section-number-2">10</span> Desired End State</h2>
+<div id="outline-container-orgd500f41" class="outline-2">
+<h2 id="orgd500f41"><span class="section-number-2">10</span> Desired End State</h2>
 <div class="outline-text-2" id="text-10">
 <p>
 Ideally, CAA will join the ranks of other Federal agencies and embrace the general modernization
@@ -782,8 +867,8 @@ the open source paradigm under the auspices of the governing Federal Source Code
 </div>
 </div>
 
-<div id="outline-container-orgheadline20" class="outline-2">
-<h2 id="orgheadline20"><span class="section-number-2">11</span> Recommendations</h2>
+<div id="outline-container-org6ecd037" class="outline-2">
+<h2 id="org6ecd037"><span class="section-number-2">11</span> Recommendations</h2>
 <div class="outline-text-2" id="text-11">
 <ol class="org-ol">
 <li>CAA should comply with the Federal Source Code Policy.
@@ -828,8 +913,8 @@ and establishing CAA as a leader in modern federal Open Source Software developm
 </div>
 </div>
 
-<div id="outline-container-orgheadline21" class="outline-2">
-<h2 id="orgheadline21"><span class="section-number-2">12</span> References</h2>
+<div id="outline-container-org07de53a" class="outline-2">
+<h2 id="org07de53a"><span class="section-number-2">12</span> References</h2>
 <div class="outline-text-2" id="text-12">
 <ul class="org-ul">
 <li>Code.gov: <a href="https://code.gov">https://code.gov</a></li>
@@ -845,7 +930,7 @@ and establishing CAA as a leader in modern federal Open Source Software developm
 </ul></li>
 
 <li><p>
-AR 5-11 (Management of Army Modeling and Simulation, 30 May 2014)        
+AR 5-11 (Management of Army Modeling and Simulation, 30 May 2014)	
 </p>
 
 <p>
@@ -853,7 +938,7 @@ AR 5-11 (Management of Army Modeling and Simulation, 30 May 2014)
 </p></li>
 
 <li><p>
-AR 25-1 (Army Information Technology, 25 June 2013)        
+AR 25-1 (Army Information Technology, 25 June 2013)	
 </p>
 
 <p>
@@ -861,7 +946,7 @@ AR 25-1 (Army Information Technology, 25 June 2013)
 </p></li>
 
 <li><p>
-DoD-CIO/G6 (Clarification Guidance Regarding Open Source Software (OSS), 16 October 2009)        
+DoD-CIO/G6 (Clarification Guidance Regarding Open Source Software (OSS), 16 October 2009)	
 </p>
 
 <p>
@@ -869,7 +954,7 @@ DoD-CIO/G6 (Clarification Guidance Regarding Open Source Software (OSS), 16 Octo
 </p></li>
 
 <li><p>
-DoD-CIO/G6 (Open Source Software FAQ)        
+DoD-CIO/G6 (Open Source Software FAQ)	
 </p>
 
 <p>
@@ -877,7 +962,7 @@ DoD-CIO/G6 (Open Source Software FAQ)
 </p></li>
 
 <li><p>
-Federal Source Code Policy Memorandum        
+Federal Source Code Policy Memorandum	
 </p>
 
 <p>
@@ -893,8 +978,8 @@ Federal Source Code Policy Memorandum
 </p></li>
 
 <li><p>
-Executive Order 13642, May 9, 2013        
-&ldquo;Making Open and Machine Readable the New Default for Government Information&rdquo;        
+Executive Order 13642, May 9, 2013	
+&ldquo;Making Open and Machine Readable the New Default for Government Information&rdquo;	
 </p>
 
 <p>
@@ -946,7 +1031,7 @@ Hack the Pentagon Results, &ldquo;DoD Announces Hack the Pentagon Follow-up Init
 <div id="postamble" class="status">
 <p class="date">Date: 3 March 2017</p>
 <p class="author">Author: Tom Spoon, Rick Hanson and Craig Flewelling</p>
-<p class="date">Created: 2017-03-05 Sun 20:31</p>
+<p class="date">Created: 2017-03-07 Tue 17:04</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

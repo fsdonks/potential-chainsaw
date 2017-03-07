@@ -88,7 +88,7 @@ government towards source code is openness.  This position emerged in 2013 under
 government data --- including source code --- between federal agencies, and embraced open-sourcing federal software to spur 
 cost-reduction, reduce redundancy, and place tax-payer funded works in the public domain.
 
-EO13642 authorized and directed the OMB to define and implement the federal policy to execute the order, which 
+EO 13642 authorized and directed the OMB to define and implement the federal policy to execute the order, which 
 OMB detailed under the Digital Government Initiative (a.k.a. "The People's Code") in August of 2016.  The ultimate 
 result emerged in OMB M-16-21, "Federal Source Code Policy Memorandum," when the detailed Federal Source Code Policy 
 (FSCP) became the governing policy for all federal agencies.  Since the policy's inception, marked by the 2016 rollout of 
