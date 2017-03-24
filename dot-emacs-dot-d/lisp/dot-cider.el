@@ -7,7 +7,8 @@ directly, bypassing `lein'."
          (command "java")
          (script-name (cider-jack-in-resolve-command project-type))
          (jar-path
-          (concat (getenv "USERPROFILE") ;<- hack, Windoze only. :(
+          (concat (replace-regexp-in-string
+                   "\\\\" "/" (getenv "USERPROFILE")) ;<- hack, Windoze only. :(
                   "/.lein/self-installs/leiningen-2.7.1-standalone.jar"))
          (command-resolved
           (concat "java -Xbootclasspath/a:" jar-path
