@@ -1,0 +1,48 @@
+* DOE
+** Factors
+ARFORGEN (GLOBAL)
+*** ACPolicy  
+  - {1:n forall n in [0 ... 8]}
+  - |ACPolicy| = 9
+*** RCPolicy
+  - {1:n forall n in [1 ... 8]}
+  - |RCPolicy| = 8
+*** NGPolicy
+  - RCPolicy
+  - |NGPolicy| = 8
+** BY SRC
+*** Supply (Indepenent)
+- AC-Supply = [0 ... 300]
+- RC-Supply = [0 ... 300]
+- NG-Supply = [0 ... 300]
+
+- |ACx RC x NG| = 27,000,000
+*** Consistent Mix (Requirements Analysis)
+Mix = 
+- AC = 0.3
+- RC = 0.2
+- NG = 0.2
+
+Mix * alpha = [AC-Supply RC-Supply NG-Supply]
+- forall alpha in [0 ... 300] ?
+
+*** Demand (Peak)
+- Dp = [0 ... 300] ?
+
+** Additional Factors
+*** Surge Policies 
+- AC-s = [1:n forall n in (n < ACPolicy)] = 8
+- RC-s = [1:n forall n in (n < RCPolicy)] = 7
+- NG-s = [1:n forall n in (N < NGPolicy)] = 7
+
+*** Post Surge Policies
+- AC-p = [1 ... n forall n in (ACS<= N <= ACPolicy)] = 8?
+- RC-p = [1 ... n  forall n in (RCS <= N <= RCPolicy)] = 7
+- NG-p = [1 ... n forall n in (NGS <= N <= NGPolicy)] = 7
+
+* Distributed Cluster
+** AWS
+ - ~10cents / hour for T2 Large
+ - 10 machines @ 5 hours -> 4.64
+ - $8/day = 1 cluster
+
