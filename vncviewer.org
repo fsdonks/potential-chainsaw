@@ -1,0 +1,76 @@
+#+Title: TigerVNCviewer setup
+
+* TigerVNCServer Setup
+Follow the tutorial at
+https://websiteforstudents.com/install-and-configure-vnc-server-on-ubuntu-16-04-18-04/
+for a baseline setup.
+
+Setup your EC2 instance.
+
+** Modifications
+
+*** Enable cut/paste
+- install the autocutsel package:
+#+BEGIN_SRC bash
+sudo apt-get install autocutsel
+#+END_SRC
+
+*** Update ~/.vnc/xstartup
+- We need to add ~/usr/bin/autocutsel -s CLIPBOARD -fork~
+- A minimal startup looks like
+
+#+BEGIN_SRC bash
+#!/bin/bash
+xrdb $HOME/.Xresources
+/usr/bin/autocutsel -s CLIPBOARD -fork
+startxfce4 &
+#+END_SRC
+
+*** Restart your vncserver
+
+* Download the Portable Java-based Viewer
+- https://bintray.com/tigervnc/stable/tigervnc/1.9.0
+  - ~VncViewer-1.9.0.jar~
+- Alternately, look in the s3 bucket
+
+* Setup VNCViewer
+- ensure java 1.8> is installed.
+- 2x click to launch.
+** First/main window
+  - Vnc Server: 127.0.0.1:5901
+** Options
+*** Compression
+Leave this alone for now.  You can mess with these settings if there's too much
+latency (e.g. shift color levels to Medium, use less data, or play with 
+compression settings).
+*** Security
+Leave defaults.
+*** Input
+- Accept clipboard from server: true
+- Send clipboard to server: true
+*** Screen
+Leave defaults
+*** Misc
+Leave defaults
+*** SSH 
+- Tunnel VNC over SSH : true
+  - Use SSH gateway :true
+    - username : [your username on the server]
+    - hostname : hostname or ip address of the server you'll ssh to
+    - port : 22 (default)
+** Wrap up
+- Hit "ok<-|" button to return to initial menu.
+- Save your profile just in case (it will autosave the last recent settings).
+** Connection
+- Select "connect <-|" button
+- Primary screen will disappear, to be followed by a login prompt:
+  - This prompt is your SSH login to your user account on the server.
+  - Log in as if you were SSH'ing into your account.
+- A secondary login will appear asking for your password:
+  - This prompt is your Xwindows login
+  - This was set up during the VNCServer setup.
+    - If you forgot it / messed up, you can setup the password again.
+  - This password is local to the VNCServer.
+- You should have a display of an XWindows desktop pop up.
+  - Right click, "Open Terminal Here" to start an XWindows terminal.
+  - You can now use xwindows GUI apps, setup your dev environment, etc.
