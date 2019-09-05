@@ -1,3 +1,13 @@
+# -*- mode: org; -*-
+
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/readtheorg/css/htmlize.css"/>
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/readtheorg/css/readtheorg.css"/>
+
+#+HTML_HEAD: <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+#+HTML_HEAD: <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+#+HTML_HEAD: <script type="text/javascript" src="http://www.pirilampo.org/styles/lib/js/jquery.stickytableheaders.js"></script>
+#+HTML_HEAD: <script type="text/javascript" src="http://www.pirilampo.org/styles/readtheorg/js/readtheorg.js"></script>
+
 * Simple git workflow
 Unlike detailed guides exploring the beauty of git and its branching model,
 this guide is designed to get a user up to minimum viable functionality
@@ -123,8 +133,8 @@ git commit -a -m "Initial commit"
 #+END_SRC 
 
 ** make a change and commit
--Make some changes, e.g. to gitdemo/src/gitdemo/core.clj
- -in emacs, C-x-C-f, navigate to gitdemo/src/gitdemo/core.clj
+- Make some changes, e.g. to gitdemo/src/gitdemo/core.clj
+ - in emacs, C-x-C-f, navigate to gitdemo/src/gitdemo/core.clj
  - Add the comment to the top ";;this is a comment"
  - Save the file
    - C-x-C-s
@@ -134,10 +144,10 @@ git commit -a -m "Made a comment in core"
 #+END_SRC 
 
 ** add a new file, track it
--add a new file, causes.clj 
- -in emacs, C-x-C-f, navigate to ./src/gitdemo/causes.clj
- -write some stuff at the top of the file, "(ns gitdemo.causes")
- -save the file (creates it if new).
+- add a new file, causes.clj 
+ - in emacs, C-x-C-f, navigate to ./src/gitdemo/causes.clj
+ - write some stuff at the top of the file, "(ns gitdemo.causes")
+ - save the file (creates it if new).
    -C-x-C-s
  - add the file to the git repository for tracking
 #+BEGIN_SRC bash
