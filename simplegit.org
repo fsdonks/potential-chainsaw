@@ -1,0 +1,368 @@
+* Simple git workflow
+Unlike detailed guides exploring the beauty of git and its branching model,
+this guide is designed to get a user up to minimum viable functionality
+as fast as possible.
+
+- We focus on the target use-case of a single user working with a single
+repository with a single branch.
+- We only focus on bulk changes.
+- We examine how to work with repositories on github.
+
+** Cloning from an existing repository on a remote machine
+#+BEGIN_SRC bash
+git clone user@some-ip:~/path/to/repository
+#+END_SRC
+
+- This creates a new folder, like-named from the repository folder,
+and populates it with the git repository.
+- Git automatically sets up a "remote" repository, typically "origin",
+  that the cloned repository tracks by default.
+- Services like github will expose a "clone" link to the user for
+  repositories, which they can use similarly.
+#+BEGIN_SRC bash
+git clone https://github.com/fsdonks/potential-chainsaw.git
+#+END_SRC
+- Will clone into a directory called 'potential-chainsaw'
+- Will setup the github repository under fsdonks/potential-chainsaw
+  as the 'origin'
+- Only users with write acces to this repository can push changes.
+- Any user with read-access can freely clone and pull changes.
+
+** Fetch and merge all changes from the remote
+#+BEGIN_SRC bash
+git pull origin master
+#+END_SRC 
+
+- Pulling both fetches changes from a remote repository, and merges them
+  into the specified branch.
+- This example (common) will fetch changes from the master branch, from
+  the remote repository we cloned from (typically 'origin'), and merge
+  them into the local master branch.
+- Simple path to bring our local repository up to speed with remote.
+- It'll require a password each time, unless you setup ssh keys or
+  another transport layer.
+- In many instances when dealing with multiple users, it's 
+  preferable to use the --rebase option to ensure local changes
+  are applied "on top" of remote changes that may have happened
+  asynchronously.
+  - get pull --rebase origin master
+  - for the sole-user, sole-repo case, this probably isn't necessary.
+  - some argue this should be the default behavior for git...
+
+** Add files to the repository (tracking)
+#+BEGIN_SRC bash
+git add *
+# or specify a file/path
+git add thefile.txt
+#a folder
+git add src
+#+END_SRC
+
+- add the specified files/folders to the current repository
+- requires a commit, added files are staged for commit.
+  - a common error is to create new files on the fly, in the working set
+    of files, and forget to "add" them for tracking.
+  - failing to do so will prevent git from versioning them, so they
+    will be absent from the repository for anyone pulling downstream.
+
+** Commit Changes For All Tracked Files
+#+BEGIN_SRC bash
+git commit -a -m "Some Message"
+# or 
+git commit -am "Some Message"
+#+END_SRC
+
+- commit all tracked files, using short message
+- If -m is elided, then git will open a proposed commit
+  in the default text editor (typically vi), allowing
+  the user to write more detailed text in the body
+  of the commit.
+- Git will commit after the message has been saved and the
+  editor buffer exits.
+** Push all changes to the remote
+#+BEGIN_SRC
+git push origin master
+#+END_SRC
+- Synchronizes changes from the local repository with the
+  history of the remote called "origin".
+  - origin is the default remote repository handle for 
+    cloned repositories.
+
+* Basic Workflow (on Machine1)
+** One-time config
+- By default, git doesn't allow us to push to non-bare repositories.
+- To allow our very simple workflow, we'll configure git
+  to allow this to happen for all repositories.
+  - Power users may revisit this decision in the future, and opt in/out
+    for specific repositories
+#+BEGIN_SRC bash
+git config --global receive.denyCurrentBranch updateInstead
+#+END_SRC 
+- We do this one time on the server, although the effects are idempotent
+  if you do it more than once.
+
+** create a clojure project...
+#+BEGIN_SRC bash
+#by convention, we'll stick our repositories in the ~/repos folder.
+#if it doesn't exist, make it.
+#e.g., mkdir ~/repos
+cd ~/repos
+lein new gitdemo
+#+END_SRC
+
+** move into the gitdemo folder and create a git repo
+#+BEGIN_SRC bash
+cd gitdemo
+git init
+#+END_SRC
+
+** track all files and folders
+#+BEGIN_SRC bash
+git add *
+git commit -a -m "Initial commit"
+#+END_SRC 
+
+** make a change and commit
+-Make some changes, e.g. to gitdemo/src/gitdemo/core.clj
+ -in emacs, C-x-C-f, navigate to gitdemo/src/gitdemo/core.clj
+ - Add the comment to the top ";;this is a comment"
+ - Save the file
+   - C-x-C-s
+ - Commit the change
+#+BEGIN_SRC bash
+git commit -a -m "Made a comment in core"
+#+END_SRC 
+
+** add a new file, track it
+-add a new file, causes.clj 
+ -in emacs, C-x-C-f, navigate to ./src/gitdemo/causes.clj
+ -write some stuff at the top of the file, "(ns gitdemo.causes")
+ -save the file (creates it if new).
+   -C-x-C-s
+ - add the file to the git repository for tracking
+#+BEGIN_SRC bash
+git add src/gitdemo/causes.clj
+# or, just add the whole folder and let git find the untracked files. 
+git add src
+#+END_SRC
+
+** Commit changes that reflect the new file.
+
+#+BEGIN_SRC bash
+git commit -a -m "Working on causes problem"
+#+END_SRC
+
+* Basic Workflow (Machine2 clones from Machine1)
+** Clone the gitdemo repository
+#+BEGIN_SRC bash
+git clone user@machine1:~/repos/gitdemo
+cd gitdemo
+#+END_SRC
+** Make some changes
+ -in emacs, C-x-C-f, navigate to ./src/gitdemo/core.clj
+ - Add another comment to the top ";;this is yet another comment!"
+ - Save the file
+   - C-x-C-s
+ - Commit the change
+#+BEGIN_SRC bash
+git commit -a -m "Made another comment in core"
+#+END_SRC 
+** Push changes to origin on Machine1
+#+BEGIN_SRC bash
+git push origin master
+#+END_SRC 
+- Requires password or ssh keys setup.
+** Summary
+- We now have Machine1 (say an EC2 instance) hosting a repository that Machine2
+  has cloned.
+- Machine2 has made changes and pushed them to Machine1.
+- If we make changes on Machine1, Machine2 can (should) pull those changes to
+  ensure it's in sync.
+#+BEGIN_SRC bash
+git pull origin master
+#+END_SRC
+
+- Machine2 could be one of many downstream consumers of Machine1's repo.
+- Development can occur on both Machine1 and Machine2.
+  - Machine2 can pull changes, commit to its history, then push changes
+    "up" to Machine1.
+  - Alternately, Machine1 can simply serve as a host for the repository.
+    - there are better alternatives in this use case, such as "bare"
+      repositories.
+
+* Basic Workflow (Machine1 publishes a repository to GitHub)
+- We now want to share our work on a hosting site like GitHub.
+- Assuming we have a github account, we can create a new repository there.
+- Github will provide a link for us to use, similar to the clone link.
+** Establish the github repository as Origin
+- On Machine1, from our folder ~/repos/gitdemo, assuming the link
+  github gave us was https://github.com/user/gitdemo.git
+#+BEGIN_SRC bash
+git remote add origin  https://github.com/user/gitdemo.git
+#+END_SRC
+- This adds the remote "origin" as a target for both pushing and pulling.
+** Push our repository to GitHub
+#+BEGIN_SRC bash
+git push origin master
+#+END_SRC
+- This will synchronize the repository on Machine1 with the user's
+  GitHub repository.
+
+* Basic Workflow (Machine3 clones a repository from GitHub)
+- On another machine, we now see the repository at https://github.com/user/gitdemo.git
+- We can clone this repository and pull from it in the future:
+#+BEGIN_SRC bash
+git clone https://github.com/user/gitdemo.git
+#+END_SRC
+- If we have access to the 'user' credentials, we can push to this repository
+  as well.
+* Basic Workflow (Bob Forks A Repository On GitHub, then Clones His Fork)
+- User Bob decides that an extant repository is great, but will not have
+  credentials or permission to push changes to the repository on GitHub.
+- Bob still wants to work on this repository, but on his own version.
+- Bob uses github's UI option to "fork" the repository from user.
+- After forking, GitHub creates a new repository in Bob's account,
+  along with a clone link.
+- Bob (or anyone else) may now clone the forked repository like normal.
+- Bob can freely push changes to this fork, since it is physcially 
+  different than the original repository.
+- Bob can submit "pull requests" or patches to the original repository
+  for collaborative development, or simply go on solo.
+
+* Basic Workflow (Bob forks the onramp repository indirectly)
+- Bob navigates to https://github.com/joinr/onramp
+- Bob likes the exercises, but doesn't own the repository.
+- Bob clones the repository and starts working on exercise solutions.
+  - He adds files, modifies files, makes commits, etc.
+  - All history is local to Bob's machine.
+- After making many changes, Bob would like to publish these changes,
+  but he can't push his solutions to the "origin" remote that
+  he cloned from.
+** Bob Creates His Own Repository
+- Via the GitHub ui, bob creates a repository named onramp.
+- After creation, he's given a link https://github.com/bob/onramp.git
+*** Change the origin to the new repository (option 1)
+- Bob can push to https://github.com/bob/onramp, but needs to tell git how.
+- Check the current origin
+#+BEGIN_SRC bash
+git remote origin -v
+origin  https://github.com/joinr/onramp.git (fetch)
+origin  https://github.com/joinr/onramp.git (push)
+#+END_SRC
+- Using the default workflow, git will try to push to joinr's origin.
+  - Bob doesn't have credentials to do so.
+- Bob decides to stick with the simple idiom, that "origin" is "where we
+  cloned from, and where we push changes to."
+  - He uses 'set-url' to change the url for origin to his.
+#+BEGIN_SRC bash
+git remote set-url origin https://github.com/bob/onramp.git
+git remote -v 
+origin  https://github.com/bob/onramp.git (fetch)
+origin  https://github.com/bob/onramp.git (push)
+#+END_SRC
+- Bob can now push his heretofor local changes to origin,
+  per the typical workflow:
+#+BEGIN_SRC bash
+git push origin master
+#+END_SRC
+- Bob's repository on github will now reflect the changes and future
+  pushes.
+  - Bob has effectively forked joinr's repository after-the-fact,
+    and without using GitHub's fork feature.
+  - GitHub doesn't register Bob's fork as an actual fork.
+  - This is fine, since Bob doesn't care about submitting pull requests
+    to merge changes with joinr.
+
+*** Alternately, add a new remote (option 2)
+Instead of modifying origin, Bob can tell git that there's another
+remote to push to.
+#+BEGIN_SRC bash
+git remote add bob https://github.com/bob/onramp.git
+#+END_SRC
+- Bob subsequently pushes his changes to the 'bob' remote
+  instead of 'origin'
+#+BEGIN_SRC bash
+git push bob master
+#+END_SRC
+- Bob's onramp repository on github is now populated with Bob's changes
+  to the original repository from joinr.
+- Adding another remote deviates from the simple "origin" idiom, 
+  but can be useful.
+* Other useful commands
+** Check the commit messages, starting from the most recent:
+#+BEGIN_SRC bash
+git log
+#+END_SRC
+** Check the current status of the repository, including changes 
+   staged for commit (differences in files or added files):
+#+BEGIN_SRC bash
+git status
+#+END_SRC
+** View the fine-grained diff between currently altered files:
+#+BEGIN_SRC bash
+git diff
+#+END_SRC
+* En Toto
+Git has a few fundamental commands and actions the novice should pick up.
+
+** init
+#+BEGIN_SRC bash
+git init
+#+END_SRC
+
+** clone
+#+BEGIN_SRC bash
+git clone https://github.com/bob/onramp.git
+git clone user@Machine1:~/repos/gitdemo
+#+END_SRC
+
+** add 
+#+BEGIN_SRC bash
+git add some-file.txt
+#+END_SRC
+
+** commit 
+#+BEGIN_SRC bash
+git commit -a -m "An informative yet concise commit message"
+#+END_SRC
+
+** push
+#+BEGIN_SRC bash
+git push origin master
+git push bob master
+#+END_SRC
+
+** pull
+
+#+BEGIN_SRC bash
+git pull origin master
+git pull --rebase origin master
+git pull bob master
+#+END_SRC
+
+*** Critical Path
+After initializing a repository via init or clone (cloning is extremely common), 
+most users will leverage add, commit, push, pull for 99% of their work experience.
+
+- Begin Day
+  - Pull changes (if user commited changes from other machines, or other users
+    worked on the repository)
+
+- Work Day 
+  - Make changes locally
+    - Add files
+    - Commit changes
+  - Periodically push changes
+
+- End of the day 
+  - Push changes
+
+*** Advanced features
+Git has an incredibly robust design for distributed version control. We
+explicitly ignored several features, particuarly git's branching model, merges,
+rebasing, cherry picking, and other incredibly powerful and useful features
+to provide a minimal path for the reader to establish a solo workflow.
+
+As the reader progresses in their use of git, they are free to explore these
+features (encouraged!) after establishing the fundamentals of initializing
+and managing simple single-user repositories.

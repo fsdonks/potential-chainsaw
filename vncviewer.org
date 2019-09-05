@@ -5,6 +5,10 @@ Follow the tutorial at
 https://websiteforstudents.com/install-and-configure-vnc-server-on-ubuntu-16-04-18-04/
 for a baseline setup.
 
+- The tutorial does a couple of things differently.
+- 
+
+
 Setup your EC2 instance.
 
 ** Modifications
