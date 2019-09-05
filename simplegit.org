@@ -169,7 +169,7 @@ git clone user@machine1:~/repos/gitdemo
 cd gitdemo
 #+END_SRC
 ** Make some changes
- -in emacs, C-x-C-f, navigate to ./src/gitdemo/core.clj
+ - in emacs, C-x-C-f, navigate to ./src/gitdemo/core.clj
  - Add another comment to the top ";;this is yet another comment!"
  - Save the file
    - C-x-C-s
