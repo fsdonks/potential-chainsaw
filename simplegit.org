@@ -14,7 +14,7 @@ this guide is designed to get a user up to minimum viable functionality
 as fast as possible.
 
 - We focus on the target use-case of a single user working with a single
-repository with a single branch.
+  repository with a single branch.
 - We only focus on bulk changes.
 - We examine how to work with repositories on github.
 
@@ -24,7 +24,7 @@ git clone user@some-ip:~/path/to/repository
 #+END_SRC
 
 - This creates a new folder, like-named from the repository folder,
-and populates it with the git repository.
+  and populates it with the git repository.
 - Git automatically sets up a "remote" repository, typically "origin",
   that the cloned repository tracks by default.
 - Services like github will expose a "clone" link to the user for
