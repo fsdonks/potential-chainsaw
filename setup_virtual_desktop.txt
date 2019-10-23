@@ -1,0 +1,201 @@
+
+
+First setup a new AWS instance with an elastic IP.
+
+Install Git Bash and open it.
+
+To ssh to your instance with the y.pem key file that you created when you started your AWS instance, do:
+ssh -i ~/keys/y.pem ubuntu@ec2-18-765-196-190.us-gov-east-1.compute.amazonaws.com
+
+Add a new user so that you can login with username and password to the vnc viewer, and follow the prompts.
+
+$sudo adduser bill
+
+Set password prompts:
+///////////////////////////////////////////////////////
+Enter new UNIX password:
+Retype new UNIX password:
+passwd: password updated successfully
+///////////////////////////////////////////////////////
+
+Follow the prompts to set the new user’s information. It is fine to accept the defaults to leave all of this information blank.
+
+User information prompts:
+///////////////////////////////////////////////////////
+Changing the user information for username
+Enter the new value, or press ENTER for the default
+    Full Name []:
+    Room Number []:
+    Work Phone []:
+    Home Phone []:
+    Other []:
+Is the information correct? [Y/n]
+///////////////////////////////////////////////////////
+
+Use the usermod command to add the user to the sudo group.
+$usermod -aG sudo username
+
+By default, on Ubuntu, members of the sudo group have sudo privileges.
+
+Test sudo access on new user account
+
+Use the su command to switch to the new user account.
+$su - username
+
+As the new user, verify that you can use sudo by prepending “sudo” to the command that you want to run with superuser privileges.
+
+sudo command_to_run
+
+For example, you can list the contents of the /root directory, which is normally only accessible to the root user.
+$sudo ls -la /root
+
+Now, on your local machine, put a file named "config" in ~/.ssh/ with the following contents where Hostname is the elastic ip and LocalForward should be as shown.  This will allow you to ssh bill@bill:
+----------------------------------------------
+Host bill
+Hostname 18.553.169.140
+User bill
+LocalForward 5901 127.0.0.1:5901
+----------------------------------------------
+
+**************************************
+Not sure if this is required or not, but in order to ssh with username and password you may have to
+1) Edit /etc/ssh/sshd_config
+
+2) For a valid user to login with no key
+PasswordAuthentication yes
+
+3) Also want root to login also with no key
+PermitRootLogin yes
+
+4) Restart the ssh daemon with
+$sudo service ssh restart
+
+Now you can login into your ec2 instance without key pairs.
+**************************************
+
+Install And Configure VNC Server On Ubuntu 16.04 | 18.04
+This brief tutorial shows students and new users how to install Virtual Network Computing (VNC) server on Ubuntu 16.04 | 18.04 servers to allow remote connection via VNC protocol…
+
+VNC is a graphical desktop sharing system that allows users to connect remotely to a system with keyboard and mouse access… This is an open source alternative to Microsoft Remote Desktop Protocol…
+
+When you’re ready to get started with installing and configure VNC server on Ubuntu, follow the steps below:
+
+Step 1: Install Desktop Environment
+By default Ubuntu servers don’t come with a desktop environment and VNC requires desktop environment to function… Since we don’t want to install a full-blown desktop environment, a better alternative is a lightweight environment called Xfce..
+
+To intall Xfce, run the commands below
+
+To find the packages to update:
+$sudo apt update
+
+To update the packages that were found in the last step:
+$sudo apt upgrade
+
+Install stuff for the vncserver
+$sudo apt install xfce4 xfce4-goodies xorg dbus-x11 x11-xserver-utils
+
+Step 2: Install VNC Server
+Now that a lightweight desktop environment is installed, run the commands below to install VNC server… There many VNC servers available, including TightVNC, x11vnc and TigerVNC…. for this post, we’re going to be using TigerVNC...
+
+To install TigerVNC, run the commands below:
+
+$sudo apt install tigervnc-standalone-server tigervnc-common
+
+After installing TigerVNC, run the commands below to setup an initial setup including creating a password to access the desktops…
+
+$vncserver
+
+That should output similar message as below:
+
+You will require a password to access your desktops.
+
+///////////////////////////////////////////////////////
+Password:
+Verify:
+Would you like to enter a view-only password (y/n)? n
+
+New 'ubuntu1804:1 (richrd)' desktop at :1 on machine ubuntu1804
+
+Starting applications specified in /etc/X11/Xvnc-session
+Log file is /home/richrd/.vnc/ubuntu1804:1.log
+
+Use xtigervncviewer -SecurityTypes VncAuth -passwd /home/richrd/.vnc/passwd :1 to connect to the VNC server.
+
+vncserver: Failed command '/etc/X11/Xvnc-session': 256!
+
+=================== tail -15 /home/richrd/.vnc/ubuntu1804:1.log ===================
+Starting applications specified in /etc/X11/Xvnc-session has failed.
+Maybe try something simple first, e.g.,
+    tigervncserver -xstartup /usr/bin/xterm
+
+///////////////////////////////////////////////////////
+
+After that, vncserver command will create a password file and store it in your ~/.vnc folder…
+
+Step 3: Configure VNC Server
+
+Now that VNC server is installed, run the commands below to configure it…
+$vncserver -kill :1
+
+Then create a startup config file..
+
+$nano ~/.vnc/xstartup
+
+add the lines into the file and save..
+
+----------------------------------------------
+#!/bin/sh
+unset SESSION_MANAGER
+unset DBUS_SESSION_BUS_ADDRESS
+exec startxfce4
+----------------------------------------------
+Run the commands below after the above..
+
+$chmod u+x ~/.vnc/xstartup
+
+**************************************
+Now, you should be able to simply use (although this is done automatically after your instance starts up.)
+
+To start the vnc server on port 5901
+$vncserver :1
+
+To kill the vncserver :1 process
+$vncserver :1 -kill
+**************************************
+
+Download the portable Java-based Tiger VNC Viewer jar from:
+https://tigervnc.org/
+
+ssh to your instance with
+ssh -L 5901:127.0.0.1:5901 -N -f -l bill 18.553.169.140
+
+Run the VNC Viewer jar.
+
+Connect to the VNC server through your open SSH by connecting to 127.0.0.1:5901
+
+All other options can be left alone.  "Tunnel VNC over SSH" is unchecked and it should be by default.
+
+In order to get clipboard working with VNC server, 
+make sure
+
+sudo nano ~/.vnc/xstartup
+
+looks like 
+
+#!/bin/sh
+unset SESSION_MANAGER
+unset DBUS_SESSION_BUS_ADDRESS
+autocutsel -fork
+startxfce4 &
+
+Once you modify xstartup, kill the vncserver and start it again.
+
+
+Then try copy and paste from remote to local.  If it still doesn't work, from within your virtual desktop terminal, run 
+
+$vncconfig
+
+Make sure all options are checked and leave this window open without closing it.
+
+
+
