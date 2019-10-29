@@ -18,7 +18,7 @@ Retype new UNIX password:
 passwd: password updated successfully
 ///////////////////////////////////////////////////////
 
-Follow the prompts to set the new user’s information. It is fine to accept the defaults to leave all of this information blank.
+Follow the prompts to set the new user's information. It is fine to accept the defaults to leave all of this information blank.
 
 User information prompts:
 ///////////////////////////////////////////////////////
@@ -42,7 +42,7 @@ Test sudo access on new user account
 Use the su command to switch to the new user account.
 $su - username
 
-As the new user, verify that you can use sudo by prepending “sudo” to the command that you want to run with superuser privileges.
+As the new user, verify that you can use sudo by prepending "sudo" to the command that you want to run with superuser privileges.
 
 sudo command_to_run
 
@@ -74,14 +74,14 @@ Now you can login into your ec2 instance without key pairs.
 **************************************
 
 Install And Configure VNC Server On Ubuntu 16.04 | 18.04
-This brief tutorial shows students and new users how to install Virtual Network Computing (VNC) server on Ubuntu 16.04 | 18.04 servers to allow remote connection via VNC protocol…
+This brief tutorial shows students and new users how to install Virtual Network Computing (VNC) server on Ubuntu 16.04 | 18.04 servers to allow remote connection via VNC protocol.
 
-VNC is a graphical desktop sharing system that allows users to connect remotely to a system with keyboard and mouse access… This is an open source alternative to Microsoft Remote Desktop Protocol…
+VNC is a graphical desktop sharing system that allows users to connect remotely to a system with keyboard and mouse access. This is an open source alternative to Microsoft Remote Desktop Protocol.
 
-When you’re ready to get started with installing and configure VNC server on Ubuntu, follow the steps below:
+When you're ready to get started with installing and configure VNC server on Ubuntu, follow the steps below:
 
 Step 1: Install Desktop Environment
-By default Ubuntu servers don’t come with a desktop environment and VNC requires desktop environment to function… Since we don’t want to install a full-blown desktop environment, a better alternative is a lightweight environment called Xfce..
+By default Ubuntu servers don't come with a desktop environment and VNC requires desktop environment to function. Since we don't want to install a full-blown desktop environment, a better alternative is a lightweight environment called Xfce..
 
 To intall Xfce, run the commands below
 
@@ -95,13 +95,13 @@ Install stuff for the vncserver
 $sudo apt install xfce4 xfce4-goodies xorg dbus-x11 x11-xserver-utils
 
 Step 2: Install VNC Server
-Now that a lightweight desktop environment is installed, run the commands below to install VNC server… There many VNC servers available, including TightVNC, x11vnc and TigerVNC…. for this post, we’re going to be using TigerVNC...
+Now that a lightweight desktop environment is installed, run the commands below to install VNC server. There many VNC servers available, including TightVNC, x11vnc and TigerVNC. for this post, we're going to be using TigerVNC...
 
 To install TigerVNC, run the commands below:
 
 $sudo apt install tigervnc-standalone-server tigervnc-common
 
-After installing TigerVNC, run the commands below to setup an initial setup including creating a password to access the desktops…
+After installing TigerVNC, run the commands below to setup an initial setup including creating a password to access the desktops:
 
 $vncserver
 
@@ -130,11 +130,11 @@ Maybe try something simple first, e.g.,
 
 ///////////////////////////////////////////////////////
 
-After that, vncserver command will create a password file and store it in your ~/.vnc folder…
+After that, vncserver command will create a password file and store it in your ~/.vnc folder.
 
 Step 3: Configure VNC Server
 
-Now that VNC server is installed, run the commands below to configure it…
+Now that VNC server is installed, run the commands below to configure it:
 $vncserver -kill :1
 
 Then create a startup config file..
@@ -163,20 +163,14 @@ To kill the vncserver :1 process
 $vncserver :1 -kill
 **************************************
 
-Download the portable Java-based Tiger VNC Viewer jar from:
-https://tigervnc.org/
+To get the VNC viewer working on your local machine, follow
+the instructions on vncviewer.org.
 
-ssh to your instance with
-ssh -L 5901:127.0.0.1:5901 -N -f -l bill 18.553.169.140
+In order to get clipboard working with VNC server, first
 
-Run the VNC Viewer jar.
+sudo apt-get install autocutsel
 
-Connect to the VNC server through your open SSH by connecting to 127.0.0.1:5901
-
-All other options can be left alone.  "Tunnel VNC over SSH" is unchecked and it should be by default.
-
-In order to get clipboard working with VNC server, 
-make sure
+Then make sure
 
 sudo nano ~/.vnc/xstartup
 
@@ -186,7 +180,7 @@ looks like
 unset SESSION_MANAGER
 unset DBUS_SESSION_BUS_ADDRESS
 autocutsel -fork
-startxfce4 &
+exec startxfce4
 
 Once you modify xstartup, kill the vncserver and start it again.
 
