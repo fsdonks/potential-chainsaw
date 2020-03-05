@@ -1,0 +1,94 @@
+#+OPTIONS: toc:nil        (no default TOC at all)
+
+* Dell Processor Selection
+Looks like I was misled by Dell's site about the AMD epyc builds. Looks like
+it's "just" the processor part (why buy from dell....that's weird). It looks
+like we're stuck with Intel regardless if we go with Dell, which as a contract
+producer offers far and away the widest options so far (I could look at HP, but
+doubtful).
+
+* Contract Availability
+The primary line I'm looking at off of Dell's ITES-3H catalog is the Precision
+5820 tower, although I'm heavily looking at customization. 
+
+Default price is $1584.98 for:
+- i9-10900X 3.7GHz (4.7GHz Turbo)
+- 10 cores
+- 19.25MB L3 Cache
+- 1 x8gb ddr4 2666mhz 
+- with a normal SATA HDD. 
+
+This can be substantially improved upon.
+
+If you bump the specs up to a SATA SSD (I don't "think" we'd really need nvme in
+this case, we're not read/write intensive; a normal SSD should be plenty fine;
+more important to have cpu/ram), and 32GB@4x8GB (quad channel), it's sitting at
+$2156.22.
+
+https://www.dell.com/premier/configure/us/en/rc1351272/?productId=XCTOPT5820CoreXUSR#/
+
+* TAA Compliance
+So far, all of these options are TAA compliant (which was originally a holdup
+with my XPS15 laptop that I got around by similar customization).
+
+* Processor Differences / Research
+I'm still investigating the marketing speak behind i7/i9 and the various gradiations
+in i9 (which has a 10 series now, but it's not 10th gen, hah). The Phoronix
+website has a great series of benchmarks, as does Linus Tech Tips (although
+Linus is really annoying to listen to for a long duration). Phoronix does a
+better job just spewing benchmarks and analysis. 
+
+
+* Prefer Cost Effective i9 Over Xeon
+I'm really unconvinced by the Xeon series, in that I'd rather spend money on a
+faster commodity chip than pay for the guarantees Intel has baked into Xeon.
+We're not running 24/7 server operations or extreme precision scientific
+programming calculations with 0 error tolerance (e.g. aviation, medical
+modeling, etc.); I don't think the assurances on the xeon line are worth it at
+all for our use case (high end desktop / desk side compute).
+
+* Optimization Relative to $Cost
+At this point, if we have a budget cap, I would maximize according to the
+following hierarchical objective function:
+
+Maximize (in order of priority))
+
+- clock frequency 
+- cache
+- core count
+- quad-channel memory
+- SSD performance (the default 256GB storage is probably more than enough)
+- everything else.
+
+Let $ constraints drive what we can get for the money.
+
+* Summary and Naive Performance Estimates
+It's looking like a basic customized 5820 will be in the ballpark of $2.1K, and
+should substantially exceed what we have on-hand performance-wise:
+
+- more cores than my hotrodded (circa 2016) Dell XPS 9550 I7 laptop (10 vs. 4)
+- faster base (e.g. lowest possible) frequency (3.7 vs. 2.6)
+
+- Given actual boosted frequency that I typically see on my I7-6800HQ, with a
+  base freq of 2.6ghz, max boost of 3.5ghz, and an average operating freq of
+  3.2ghz
+  - we'd expect around 4.55ghz per core we'd maybe have 10 cores running at
+   4.55ghz, so about 42% faster per-core
+  - Factoring in hyper threading, 20 threads @ 4.5ghz vs 8 threads @ 3.2ghz
+    gives us 91ghz vs 25.6ghz of naive parallel work (~ 3.55x more CPU throughput).
+
+- more shared cache for the cores (19.25mb vs 6mb) ~3.2x 
+  - should be friendlier with the JVM heap and GC, particularly with multiple
+    threads.
+
+- more memory throughput (8gb@2666mhz x 4 vs. 8gb@2133x2) 
+  (again, particularly conducive with the jvm and GC).
+
+* Testing
+I really wish I could run our stuff on a similar rig to see what the actual
+performance differences would be, but outside of doing that, I think this is a
+reasonable assessment. I am open to any other opinion or analysis that would
+show differently.
+
+If we have any systems at CAA that approach these stats, it could be useful to
+run some benchmarks on them for comparison.
