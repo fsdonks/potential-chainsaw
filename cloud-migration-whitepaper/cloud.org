@@ -1,0 +1,191 @@
+#+TITLE:  Cloud Migration Implications For The Center for Army Analysis
+#+SUBTITLE: Working Paper
+#+AUTHOR: Tom Spoon
+#+DATE: 25 January 2022
+#+VERSION: 1.0
+#+STARTUP: showall
+#+LANGUAGE: en
+#+OPTIONS: ':t toc:nil
+# #+LATEX_CLASS: amsart 
+#+LATEX_CLASS_OPTIONS: [letterpaper,10pt]
+#+LATEX_HEADER: \usepackage{enumitem}
+#+LATEX_HEADER: \setlist[itemize,1]{leftmargin=*,topsep=0.5em,itemsep=0.5em}
+#+LATEX_HEADER: \setlist[itemize,2,3]{leftmargin=*,topsep=0.5em,itemsep=0.5em}
+#+LATEX_HEADER: \setlist[enumerate,1]{leftmargin=*,topsep=0.5em}
+#+HTML_HEAD: <style>ul li{margin-top:0.5em}ol li{margin-top:0.5em}</style>
+#+LATEX_HEADER: \parindent=0em
+#+LATEX_HEADER: \parskip=1em
+#+LATEX_HEADER: \textwidth=6.5truein
+#+LATEX_HEADER: \oddsidemargin=0.0truein
+#+LATEX_HEADER: \evensidemargin=0.0truein
+#+LATEX_HEADER: \topmargin=-0.6truein
+#+LATEX_HEADER: \textheight=9truein
+#+LATEX_HEADER: \hyphenation{MAR-A-THON}
+#+LATEX_HEADER: \hypersetup{colorlinks,citecolor=black, filecolor=black, linkcolor=blue, urlcolor=black}
+# Put quotes in italics, so we don't have to quote them.
+#+HTML_HEAD: <style>blockquote{font-style: italic;}</style>
+# Source of hack below: http://tex.stackexchange.com/questions/47306/change-the-font-of-the-block-quote
+#+LATEX_HEADER: \usepackage{etoolbox}
+#+LATEX_HEADER: \AtBeginEnvironment{quote}{\itshape\parskip=0em\leftmargini=1em}
+#+LATEX_HEADER: \usepackage{draftwatermark}
+#+LATEX_HEADER: \SetWatermarkText{\textbf{DRAFT}}
+#+LATEX_HEADER: \SetWatermarkScale{5}
+#+LATEX_HEADER: \SetWatermarkColor[gray]{0.9}
+#+HTML_HEAD: <style>.abstract {margin-top:2em;margin-left:auto;margin-right:auto;width:80%;font-size:85%}
+#+HTML_HEAD:        .abstract > p {display:inline;}</style>
+
+#+HTML: <div class="abstract"><b>Abstract.</b>
+#+LATEX: \begin{abstract}\noindent
+The Center for Army Analysis (CAA) faces the daunting prospect of shifting
+several decades worth of computational and data storage services - developed
+with specific assumptions of on-premises hardware, administration, development,
+testing, and production - to a perniciously vague notion of "the cloud." This
+paper serves to cut through the abstract terms and buzz words proferred by many
+"cloud" proponents to focus on the concrete reality of CAA's existing
+on-premises computational story and what a practical migration toward an
+off-premises computational model could look like. Non-trivial but important
+topics like Risk Management Framework (RMF) and Authority To Operate (ATO) are
+acknowledged but intentionally excluded to focus on the technological and
+infrastrucural requirements as communicated to a relatively non-technical
+audience. Specific focus is placed on the perceived impedance mismatch between
+extant enterprise cloud offerings (namely cReate and similar products) and the
+majority of CAA's extant computational architecture, with a focus on lower-level
+infrastructure options (like as cArmy). Finally, emergent computational models
+are examined such as the cPROBE browser-based data analytics environment
+(effectively analytics as a service), along with potential migration toward
+container-based deployment strategies that could enable CAA to leverage services
+like cReate in the future. Ultimately the near and mid term operating
+requirements dictate that CAA will have to adopt a cloud migration strategy
+based on virtual machines running on a virtual private network with
+authenticated remote desktop access for users; effectively a near-total replication
+of the existing internal network in a remote environment off-premises.
+
+CAA should bin cReate and similar cloud native pipelines into the long term
+research and development category, while focusing on either cArmy infrastructure
+services or (absent availability) planning to directly negotiate with cloud service
+providers for our own specific needs.
+
+#+LATEX: \end{abstract}
+#+HTML: </div><!-- end Abstract -->
+
+* Background
+
+* Overloaded Terms
+the term "application" is so overloaded
+
+add in container fluff, cloud native, etc.
+
+** Application vs. Service, Local vs. Remote
+- Where does it execute?
+- How is it accessed?
+- Who invokes it?
+- How is it updated/changed?
+- Where does development occur?
+- What happens if there is an error?
+- Who is responsible for execution?
+- Who is reponsible for development?
+- Who is responsible for security? 
+
+** Container
+** Virtual Machine
+
+* Implication of "Cloud Native" Applications
+In the envisioned army enterprise cloud-native world, nothing exists outside of
+a microservice running in a container. This means that the application is
+
+- developed (e.g. programmed) external to the execution environment
+(how and where this accomplished is left as an exercise for the reader),
+
+- submitted into the CI/CD pipeline as a reproducible recipe (e.g. source code
+  repo, docker file, base image),
+
+- built, packaged, and tested
+- security swept
+- deployed into production as a container onto a coordination service like kubernetes
+  - where the cloud coordination service offramps older containers and routes
+    new traffic (network requests) to the new containers, on a distributed cluster.
+
+
+** Containers and Microservices
+** Continuous Integration / Continuous Delivery
+** Development / Test / Production
+** DevSecOps
+
+* Unspoken Assumptions
+A lot of the problem here seems to boil down to the fundamental (and extremely
+implicit / taken for granted / unspoken) assumption that we are developing and
+using distributed services in some form or fashion. For a majority of work this
+is simply not the case. If you fail to account for that or understand the
+implications therein, and then compound that with the tonnage from the cloud
+friendly buzzwords and processes, almost none of it applies in a constructive
+fashion and leads to confusion, fear, or excitement depending on one's place in
+the hype cycle.
+
+There is a complete ignorance/preclusion of non-network based applications /
+services, since these are outside the scope of remotely executed
+network-situated microservices running in containers under "modern software
+development" tenets. In this context, "modern software development" is eliding
+the valid uses of locally developed, tested, and run software (e.g. common cases
+for research, modeling, business, and scientific applications).
+
+* How Does CAA Compare?
+
+We have 0 on site requirement for kubernetes coordination/clustering. None of
+our deployment processes leverage containers, because our run/test/production
+processes are typically managed on premises (often times on the same machine for
+research cases, if CI/CD is even being leveraged).
+
+* Fundamental Impedance Mismatch
+
+cReate and the cloud native paradigm is currently an inherent impedance mismatch
+when compared to how the vast preponderance of CAA actually leverages
+computational infrastructure. This mismatch typically glides by without explicit
+notice, and repeatedly causes a subtle (yet recurring) dissonance in cloud
+migration discussions. 
+
+Consequently, I am certain that nobody involved in these discussions (including
+me up until yesterday afternoon) has as a full clue about "cloud migration" and
+the implications therein. Further, the services being pointed to as a panacea
+are a complete mismatch for the majority of our work/use cases, and are not
+patterened toward our actual day to day operations (outside of individuals who
+have learned to live within the means provided, e.g. accepted cprobe and its ilk
+as acceptable environments).
+
+* Organizational Ignorance
+
+
+* Baseline Migration
+
+Starting from the premise that we are not positioned for the cloud native
+paradigm, leveraging vm's and simply lifting SNET into a virtual private network
+with access via authenticated VNC desktops or a similar CLI means (ssh is
+obvious but possibly invalidated due to specific tokens we use) seems like the
+baseline.
+
+In the short term it does not make sense for the bulk of our operations and
+seems impractical to do so without expecting service disruption or work
+stoppage.
+
+The entirety of the cReate architecture presupposes this latter course of
+action, for which we have a substantial impedance mismatch. cloud considerations
+should appropriately bin cReate into the research-and-development stage for the
+preponderance of our current operations and applications.
+
+** Lower Level Substrate 
+cArmy appears to offer the lower substrate and service provision to negotiate
+rates and provisioning of cloud resources, specifically virtual machines.
+However there is no guarantee (other than a verbal pitch of concierge
+service/support throughout the RMF/ATO process) of easing the burden on CAA for
+migrating existing network configurations and machines toward a VPC. The degree
+to which the existing physical network configuration and machine images (SNET
+gold master + custom configuration) can be reproduced under reciprocity is
+unknown and would likely need to be determined bilaterally between our G6 and
+the CIO-G6.
+
+** Remote Analytics
+where possible, services like rstudio server (or similar web servers) can
+provide a psuedo desktop environment with a limited access to a curated set of
+development and analysis tools. There is nothing stopping CAA - today - from
+deploying a similar setup on SNET as a a local web service, absent the lack of
+need due to the aforementioned local development / deployment process we
+typically employ.
