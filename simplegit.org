@@ -350,7 +350,7 @@ git pull --rebase origin master
 git pull bob master
 #+END_SRC
 
-*** Critical Path
+** Critical Path
 After initializing a repository via init or clone (cloning is extremely common), 
 most users will leverage add, commit, push, pull for 99% of their work experience.
 
@@ -367,7 +367,7 @@ most users will leverage add, commit, push, pull for 99% of their work experienc
 - End of the day 
   - Push changes
 
-*** Advanced features
+* Advanced features
 Git has an incredibly robust design for distributed version control. We
 explicitly ignored several features, particuarly git's branching model, merges,
 rebasing, cherry picking, and other incredibly powerful and useful features
@@ -376,3 +376,44 @@ to provide a minimal path for the reader to establish a solo workflow.
 As the reader progresses in their use of git, they are free to explore these
 features (encouraged!) after establishing the fundamentals of initializing
 and managing simple single-user repositories.
+
+** tagging
+Git tags are just a way of marking commits.
+
+We should create a new tag in the master branch each time we are done
+working on a new feature or a bug fix. If we are working in a Clojure
+project, we would have just updated the version string in project.clj
+before creating the tag.
+
+Tags help us keep track of when we release new versions of our
+applications.
+
+*** Create a new tag on the current commit for a version 1.0 release:
+We annotate our tag with a message in order to make it easy to push
+our tag to a remote along with the commit.
+#+BEGIN_SRC bash
+git tag 1.0 -m "released new version 1.0"
+#+END_SRC
+
+*** Set an alias tagm to always annotate your tag with a message:
+#+BEGIN_SRC bash
+git config --global alias.tagm "!git tag \"$1\" -m \"version bump\" #"
+#+END_SRC
+
+*** Push a single tag to a remote
+#+BEGIN_SRC bash
+git push tag-name
+#+END_SRC
+
+*** Make sure git pushes all annotated tags with each push to a remote
+Pushing each tag individually is cumbersome so we prefer to make sure
+all of our annotated tags are pushed along with each commit that we
+push.
+#+BEGIN_SRC bash
+git config --global push.followTags true
+#+END_SRC
+
+
+
+
+
