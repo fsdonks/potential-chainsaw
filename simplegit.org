@@ -377,6 +377,10 @@ As the reader progresses in their use of git, they are free to explore these
 features (encouraged!) after establishing the fundamentals of initializing
 and managing simple single-user repositories.
 
+** convenience script
+a script containing all of the following global configs is maintained
+in gitconfig.sh in this repo.  This makes it easier for consistent
+setup on a new dev machine.
 ** tagging
 Git tags are just a way of marking commits.
 
