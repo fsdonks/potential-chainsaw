@@ -413,7 +413,12 @@ push.
 git config --global push.followTags true
 #+END_SRC
 
-
+*** maintaining tag consistency with remotes, to include pruning
+#+BEGIN_SRC bash
+git config --global remote.origin.tagopt --tags
+git config --global remote.origin.prune true
+git config --global remote.origin.pruneTags true
+#+END_SRC
 
 
 
