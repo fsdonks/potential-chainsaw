@@ -49,14 +49,6 @@ sudo command_to_run
 For example, you can list the contents of the /root directory, which is normally only accessible to the root user.
 $sudo ls -la /root
 
-Now, on your local machine, put a file named "config" in ~/.ssh/ with the following contents where Hostname is the elastic ip and LocalForward should be as shown.  This will allow you to ssh bill@bill:
-----------------------------------------------
-Host bill
-Hostname 18.553.169.140
-User bill
-LocalForward 5901 127.0.0.1:5901
-----------------------------------------------
-
 **************************************
 Not sure if this is required or not, but in order to ssh with username and password you may have to
 1) Edit /etc/ssh/sshd_config
@@ -192,4 +184,15 @@ $vncconfig
 Make sure all options are checked and leave this window open without closing it.
 
 
+__________________________________________________________Optional Stuff________________________________________________________________
+If you wanted to just use the command
+ssh bill@bill 
+then on your local machine, put a file named "config" in ~/.ssh/ with the following contents where Hostname 
+is the elastic ip and LocalForward should be as shown.  This will allow you to ssh bill@bill:
+----------------------------------------------
+Host bill
+Hostname 18.553.169.140
+User bill
+LocalForward 5901 127.0.0.1:5901
+----------------------------------------------
 
