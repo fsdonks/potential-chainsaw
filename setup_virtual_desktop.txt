@@ -33,7 +33,7 @@ Is the information correct? [Y/n]
 ///////////////////////////////////////////////////////
 
 Use the usermod command to add the user to the sudo group.
-$usermod -aG sudo username
+$sudo usermod -aG sudo username
 
 By default, on Ubuntu, members of the sudo group have sudo privileges.
 
@@ -50,7 +50,7 @@ For example, you can list the contents of the /root directory, which is normally
 $sudo ls -la /root
 
 **************************************
-Not sure if this is required or not, but in order to ssh with username and password you may have to
+In order to ssh with username and password you have to
 1) Edit /etc/ssh/sshd_config
 
 2) For a valid user to login with no key
@@ -63,6 +63,7 @@ PermitRootLogin yes
 $sudo service ssh restart
 
 Now you can login into your ec2 instance without key pairs.
+$ssh bill@ec2-18-252-3-162.us-gov-east-1.compute.amazonaws.com
 **************************************
 
 Install And Configure VNC Server On Ubuntu 16.04 | 18.04
