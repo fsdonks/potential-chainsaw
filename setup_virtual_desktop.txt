@@ -154,6 +154,14 @@ $vncserver :1
 
 To kill the vncserver :1 process
 $vncserver :1 -kill
+
+If your vncserver is no starting on startup, you can start it through cron with
+
+crontab -e
+
+Then add the line
+
+@reboot /usr/bin/vncserver :1
 **************************************
 
 To get the VNC viewer working on your local machine, follow
@@ -183,6 +191,12 @@ Then try copy and paste from remote to local.  If it still doesn't work, from wi
 $vncconfig
 
 Make sure all options are checked and leave this window open without closing it.
+
+If that worked and you want to run this vncconfig command automatically when you log in, go to
+
+Applications->Settings->Session and Startup->Application Autostart 
+
+and add the vncconfig command.
 
 
 __________________________________________________________Optional Stuff________________________________________________________________
